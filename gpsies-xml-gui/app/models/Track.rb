@@ -18,7 +18,10 @@ class Track
 		[ PointOfInterest.new "test1", PointOfInterest.new "test2" ]
 	end
 	
-	def self.findAll()
+	def self.all()
 		[ Track.new, Track.new ]
+	end
+
+	def self.find(params)
 	end
 end

@@ -1,9 +1,10 @@
 GpsiesXmlGui::Application.routes.draw do
-  get "search/index"
+  get "track/index"
+  get "track/show"
 
-  post "search/query"
+  # post "track/query"
 
-  match 'search' => 'search#index'
+  match 'track' => 'search#index'
 
   # The priority is based upon order of creation:
   # first created -> highest priority.
@@ -56,7 +57,7 @@ GpsiesXmlGui::Application.routes.draw do
   # just remember to delete public/index.html.
   # root :to => 'welcome#index'
 
-  root :to => 'search#index'
+  root :to => 'track#index'
 
   # See how all your routes lay out with "rake routes"
 
