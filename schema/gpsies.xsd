@@ -21,8 +21,8 @@
                 <xsd:complexType>
                   <xsd:sequence>
                     <xsd:element name="title" type="xsd:string" />
-                    <xsd:element name="fieldId" type="xsd:string" />
-                    <xsd:element name="createdDate" type="xsd:date" />
+                    <xsd:element name="fileId" type="xsd:string" />
+                    <xsd:element name="createdDate" type="xsd:string" />
                     <xsd:element name="description" type="xsd:string" />
                     <xsd:element name="startPointLat" type="xsd:float" />
                     <xsd:element name="startPointLon" type="xsd:float" />
