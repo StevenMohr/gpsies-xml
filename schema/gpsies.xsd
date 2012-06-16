@@ -10,9 +10,13 @@
         <xsd:element name="meta">
           <xsd:complexType>
             <xsd:sequence>
-              <xsd:element name="requestUrl" type="xsd:string" />
+              <xsd:element name="requestUrl" type="xsd:anyURI" />
+              <xsd:element name="country" type="xsd:string" />
+              <xsd:element name="trackType" type="xsd:string" maxOccurs="unbounded" />
               <xsd:element name="resultPage" type="xsd:integer" />
               <xsd:element name="limit" type="xsd:integer" />
+              <xsd:element name="filetype" type="xsd:string" />
+              <xsd:element name="downloadBaseUrl" type="xsd:anyURI" />
               <xsd:element name="resultSize" type="xsd:integer" />
             </xsd:sequence>
           </xsd:complexType>
@@ -22,26 +26,29 @@
             <xsd:sequence>
               <xsd:element name="track" minOccurs="0" maxOccurs="unbounded">
                 <xsd:complexType>
-                  <xsd:sequence>
-                    <xsd:element name="title" type="xsd:string" />
+                  <xsd:all>
+                    <xsd:element name="title" type="xsd:string" minOccurs="0"/>
                     <xsd:element name="fileId" type="xsd:string" />
-                    <xsd:element name="createdDate" type="xsd:string" />
-                    <xsd:element name="description" type="xsd:string" />
-                    <xsd:element name="startPointLat" type="xsd:float" />
-                    <xsd:element name="startPointLon" type="xsd:float" />
-                    <xsd:element name="endPointLat" type="xsd:float" />
-                    <xsd:element name="endPointLon" type="xsd:float" />
-                    <xsd:element name="startPointCountry" type="xsd:string" />
-                    <xsd:element name="endPointCountry" type="xsd:string" />
-                    <xsd:element name="trackLengthM" type="xsd:float" />
-                    <xsd:element name="countTrackpoints" type="xsd:integer" />
-                    <xsd:element name="externalLink" type="xsd:string" />
-                    <xsd:element name="altitudeMinHeightM" type="xsd:float" />
-                    <xsd:element name="altitudeMaxHeightM" type="xsd:float" />
-                    <xsd:element name="altitudeDifferenceM" type="xsd:float" />
-                    <xsd:element name="totalAscentM" type="xsd:float" />
-                    <xsd:element name="totalDescentM" type="xsd:float" />
-                  </xsd:sequence>
+                    <xsd:element name="downloadLink" type="xsd:anyURI" />
+                    <xsd:element name="externalLink" type="xsd:anyURI" minOccurs="0" />
+                    <xsd:element name="createdDate" type="xsd:string" minOccurs="0" />
+                    <xsd:element name="changedDate" type="xsd:string" minOccurs="0" />
+                    <xsd:element name="description" type="xsd:string" minOccurs="0" />
+                    <xsd:element name="trackProperty" type="xsd:string" minOccurs="0" />
+                    <xsd:element name="startPointLat" type="xsd:float" minOccurs="0" />
+                    <xsd:element name="startPointLon" type="xsd:float" minOccurs="0" />
+                    <xsd:element name="endPointLat" type="xsd:float" minOccurs="0" />
+                    <xsd:element name="endPointLon" type="xsd:float" minOccurs="0" />
+                    <xsd:element name="startPointCountry" type="xsd:string" minOccurs="0" />
+                    <xsd:element name="endPointCountry" type="xsd:string" minOccurs="0" />
+                    <xsd:element name="trackLengthM" type="xsd:float" minOccurs="0" />
+                    <xsd:element name="countTrackpoints" type="xsd:integer" minOccurs="0" />
+                    <xsd:element name="altitudeMinHeightM" type="xsd:float" minOccurs="0" />
+                    <xsd:element name="altitudeMaxHeightM" type="xsd:float" minOccurs="0" />
+                    <xsd:element name="altitudeDifferenceM" type="xsd:float" minOccurs="0" />
+                    <xsd:element name="totalAscentM" type="xsd:float" minOccurs="0" />
+                    <xsd:element name="totalDescentM" type="xsd:float" minOccurs="0" />
+                  </xsd:all>
                 </xsd:complexType>
               </xsd:element>
             </xsd:sequence>
