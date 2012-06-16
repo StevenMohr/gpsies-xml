@@ -1,5 +1,5 @@
 <?xml version="1.0" ?>
-<database>
+<database xmlns="https://github.com/StevenMohr/gpsies-xml/schema/database.xsd">
   <tracks>
     <track>
       <uid>1</uid>

@@ -1,16 +1,19 @@
 <?xml version="1.0" ?>
-<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+<xsd:schema xmlns="https://github.com/StevenMohr/gpsies-xml/schema/database.xsd"
+  xmlns:xsd="http://www.w3.org/2001/XMLSchema"
   targetNamespace="https://github.com/StevenMohr/gpsies-xml/schema/database.xsd"
   elementFormDefault="qualified"
   attributeFormDefault="unqualified">
   <xsd:complexType name="locationType">
-    <xsd:attribute name="latitude" type="double"/>
-    <xsd:attribute name="longitude" type="double"/>
+    <xsd:attribute name="latitude" type="xsd:double" use="required" />
+    <xsd:attribute name="longitude" type="xsd:double" use="required" />
   </xsd:complexType>
   <xsd:complexType name="poiType">
-    <xsd:attribute name="title" type="string" />
-    <xsd:attribute name="link" type="string" />
-    <xsd:attribute name="location" type="locationType"/>
+    <xsd:sequence>
+      <xsd:element name="title" type="xsd:string" />
+      <xsd:element name="link" type="xsd:string" />
+      <xsd:element name="location" type="locationType"/>
+    </xsd:sequence>
   </xsd:complexType>
   <xsd:element name="database">
     <xsd:complexType>
@@ -53,7 +56,7 @@
                         </xsd:sequence>
                       </xsd:complexType>
                     </xsd:element>
-                  </xsd:sequence>
+                  </xsd:all>
                 </xsd:complexType>
               </xsd:element>
             </xsd:sequence>
@@ -63,16 +66,3 @@
     </xsd:complexType>
   </xsd:element>
 </xsd:schema>
-
-
-
-
-<!--
-        <xsd:element name="tracks">
-          <xsd:complexType>
-            <xsd:sequence>
-              
-            </xsd:sequence>
-          </xsd:complexType>
-        </xsd:element>
- -->
