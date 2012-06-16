@@ -2,9 +2,10 @@ GpsiesXmlGui::Application.routes.draw do
   get "track/index"
   get "track/show"
 
-  # post "track/query"
+  match 'track/:id' => 'track#show'
+  match 'track' => 'track#index'
 
-  match 'track' => 'search#index'
+  # post "track/query"
 
   # The priority is based upon order of creation:
   # first created -> highest priority.

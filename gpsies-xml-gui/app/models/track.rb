@@ -16,6 +16,12 @@ class Track
 		[ Track.new( description: "Es klappt! :)", track_length: 123, title: "Testt!!") , Track.new ]
 	end
 
-	def self.find(params)
+	def self.find(id)
+		Track.new(
+			description: "Es klappt! :)",
+			track_length: 123,
+			title: "Testt!!",
+			uid: id.to_s,
+			created_date: DateTime.now )
 	end
 end
