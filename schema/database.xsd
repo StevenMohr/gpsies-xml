@@ -28,10 +28,7 @@
                     <xsd:element name="title" type="xsd:string" />
                     <xsd:element name="description" type="xsd:string" />
                     <xsd:element name="createdDate" type="xsd:dateTime" />
-                    <xsd:element name="startPoint" type="locationType" />
-                    <xsd:element name="endPoint" type="locationType" />
                     <xsd:element name="trackLength" type="xsd:float" />
-                    <xsd:element name="countTrackpoints" type="xsd:integer" />
                     <xsd:element name="altitudeMinHeight" type="xsd:float" />
                     <xsd:element name="altitudeMaxHeight" type="xsd:float" />
                     <xsd:element name="totalAscent" type="xsd:float" />

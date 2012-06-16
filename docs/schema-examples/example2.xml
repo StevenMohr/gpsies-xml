@@ -6,10 +6,7 @@
       <title>First Track</title>
       <description>Lorem Ipsum Blah Blorgh Foobar.</description>
       <createdDate>2012-06-12T13:37:00Z</createdDate>
-      <startPoint latitude="48.7736479" longitude="8.22421099" />
-      <endPoint latitude="48.7628189" longitude="8.26425997" />
       <trackLength>123.4</trackLength>
-      <countTrackpoints>1234</countTrackpoints>
       <altitudeMinHeight>11.0</altitudeMinHeight>
       <altitudeMaxHeight>91.1</altitudeMaxHeight>
       <totalAscent>101.0</totalAscent>
@@ -22,10 +19,7 @@
       <title>Second Track</title>
       <description>Lorem Ipsum Blah Blorgh Foobar2.</description>
       <createdDate>2012-06-12T13:38:00Z</createdDate>
-      <startPoint latitude="48.7837479" longitude="8.22841099" />
-      <endPoint latitude="48.7622479" longitude="8.26825997" />
       <trackLength>1599.4</trackLength>
-      <countTrackpoints>12345</countTrackpoints>
       <altitudeMinHeight>12.0</altitudeMinHeight>
       <altitudeMaxHeight>81.1</altitudeMaxHeight>
       <totalAscent>111.0</totalAscent>
@@ -38,15 +32,12 @@
       </waypoints>
       <pois/>
     </track>
-     <track>
+    <track>
       <uid>blah-2</uid>
       <title>Second Track (enriched)</title>
       <description>Lorem Ipsum Blah Blorgh Foobar2dgapdjgnlans sf.</description>
       <createdDate>2012-06-12T14:38:00Z</createdDate>
-      <startPoint latitude="48.7837479" longitude="8.22841099" />
-      <endPoint latitude="48.7622479" longitude="8.26825997" />
       <trackLength>1599.4</trackLength>
-      <countTrackpoints>12345</countTrackpoints>
       <altitudeMinHeight>12.0</altitudeMinHeight>
       <altitudeMaxHeight>81.1</altitudeMaxHeight>
       <totalAscent>111.0</totalAscent>

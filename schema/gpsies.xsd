@@ -1,5 +1,6 @@
 <?xml version="1.0" ?>
-<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+<xsd:schema xmlns="https://github.com/StevenMohr/gpsies-xml/schema/gpsies.xsd"
+  xmlns:xsd="http://www.w3.org/2001/XMLSchema"
   targetNamespace="https://github.com/StevenMohr/gpsies-xml/schema/gpsies.xsd"
   elementFormDefault="qualified"
   attributeFormDefault="unqualified">
