@@ -1,7 +1,7 @@
 GpsiesXmlGui::Application.routes.draw do
   get "search/index"
 
-  get "search/query"
+  post "search/query"
 
   match 'search' => 'search#index'
 
