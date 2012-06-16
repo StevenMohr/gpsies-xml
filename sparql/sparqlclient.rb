@@ -1,67 +1,50 @@
 require 'rubygems'
 require 'sparql/client'
-sparql = SPARQL::Client.new("http://dbpedia.org/sparql")
 
-#takes an array of hashes (latitude-longitude pairs :lat :long)
-#and an interval for the points
-#returns a SPARQL-Query
-def querybuilder(points, interval)
-  query = "SELECT DISTINCT ?subject ?label ?abstract ?lat ?long WHERE
-    {"
-    points.each do |p|
+require 'xbaseaccess.rb'
+require 'queryhelper.rb'
+
+
+def get_pois(id)
+  sparql = SPARQL::Client.new("http://dbpedia.org/sparql")
+
+  result = get_waypoints(id)
+  coords = create_coord_array(result)
+
+  interval = 0.005
+  queryString = querybuilder(coords, interval)
+
+  if queryString
+    query = sparql.query(queryString)
     
-      query += " {
-        ?subject geo:lat ?lat.
-        ?subject geo:long ?long.
-        ?subject rdfs:comment ?abstract. 
-        ?subject rdfs:label ?label.
-        OPTIONAL { ?subject dbpprop:type ?type } 
-        FILTER(
-        ?lat - #{p[:lat]} <= #{interval} && 
-        #{p[:lat]} - ?lat <= #{interval} && 
-        ?long - #{p[:long]} <= #{interval} &&
-        #{p[:long]} - ?long <= #{interval} && 
-        lang(?label) = \"de\" && 
-        lang(?abstract) = \"de\"
-        && ?type != \"Quarter\"@en
-        ).
-        "
-       query += "} UNION " unless p == points.last
+    result = Array.new
+    i = 0
+    
+    query.each_solution do |solution|
+      page = solution[:subject].to_s.split('/').last
+      link = "http://en.wikipedia.org/wiki/#{page}"
+      result[i] = ""
+      result[i] += "<poi>
+      <title>#{solution[:label]}</title>
+      <link>#{link}</link>
+      <location latitutde=\"#{solution[:lat]}\" longitude=\"#{solution[:long]}\" />
+      </poi>"
+      i += 1
     end
-  query += "} }"
+
+    return result
+  else
+    puts "No Waypoints found"
+    return nil
+  end
 end
 
-start = Time.now
+#nullrequest
+#result = get_pois("1")
+#puts result if !result.nil?
 
-coords = Array.new
+id = "blah"
+result = get_pois(id)
+puts result if !result.nil?
 
-coords[0] = Hash.new
-coords[0][:lat] = 52.5163
-coords[0][:long] = 13.3777
-
-coords[1] = Hash.new
-coords[1][:lat] = 48.3986
-coords[1][:long] = 9.9925
-
-interval = 0.005
-queryString = querybuilder(coords, interval)
-
-start = Time.now
-
-
-query = sparql.query(queryString)
-
-#puts query.inspect
-
-query.each_solution do |solution|
-  puts solution[:subject]
-  puts solution[:label]
-  puts solution[:abstract]
-  puts solution[:lat]
-  puts solution[:long]
-  puts "--------------------------"
-end
-
-finish = Time.now
-  
-puts (finish - start) * 1000.0
+insert_pois(id, result)
