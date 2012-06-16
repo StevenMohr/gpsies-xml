@@ -1,0 +1,13 @@
+<h1>Query the XII enriched XML Database</h1>
+<%= form_tag('/search/query') do -%>
+	<%= text_field_tag "searchquery", nil, {:maxlength => 50, :placeholder => "Enter search query here..."} %>
+	<%= radio_button_tag "treat_as", "keyword", true %>
+	<%= label_tag 'treat_as_keyword', 'Keyword' %>
+	<%= radio_button_tag "treat_as", "location" %>
+	<%= label_tag 'treat_as_location', 'Location' %>
+	<%= radio_button_tag "treat_as", "zip" %>
+	<%= label_tag 'treat_as_zip', 'ZIP' %>
+	<%= submit_tag "Be Awesome!" %>
+<% end -%>
+<br />
+Loaded: <%= @date %>
