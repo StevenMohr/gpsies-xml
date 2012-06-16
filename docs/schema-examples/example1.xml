@@ -1,0 +1,4 @@
+<?xml version="1.0" ?>
+<database xmlns="https://github.com/StevenMohr/gpsies-xml/schema/database.xsd">
+  <tracks/>
+</database>
