@@ -32,9 +32,9 @@ class TrackExtractTest(unittest.TestCase):
             <totalAscentM>402</totalAscentM>
             <totalDescentM>251</totalDescentM>
             </track> """
-        track_extract = TrackExtract(track_xml = test_data)
+        track_extract = TrackExtract(track_string_xml = test_data)
         result_xml = track_extract.analyze()
-        assert len(result_xml) > 0
+        assert len(result_xml.getroot()) > 0
         print result_xml
         #Validate against XSD 
 

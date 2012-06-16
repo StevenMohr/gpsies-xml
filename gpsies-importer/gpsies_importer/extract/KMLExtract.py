@@ -3,9 +3,8 @@ Created on 16.06.2012
 
 @author: steven
 '''
-from lxml.etree import XML, Element, SubElement
+from lxml.etree import Element, SubElement
 from lxml import etree
-from xml.etree.ElementTree import ElementTree
 from gpsies_importer.geo import geo
 
 class KMLExtract(object):
@@ -39,8 +38,8 @@ class KMLExtract(object):
         
         for point in waypoints:
             waypoint = SubElement(root, "waypoint")
-            waypoint.attrib['lat'] = point[0]
-            waypoint.attrib['long'] = point[1]
+            waypoint.attrib['latitude'] = point[0]
+            waypoint.attrib['longitude'] = point[1]
            
-        return etree.tostring(root)
+        return root
             
