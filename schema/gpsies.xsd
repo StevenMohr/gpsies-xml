@@ -1,0 +1,50 @@
+<?xml version="1.0" ?>
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+  targetNamespace="XML/theDirtyDozen">
+  <xsd:element name="gpsies">
+    <xsd:complexType>
+      <xsd:sequence>
+        <xsd:element name="meta">
+          <xsd:complexType>
+            <xsd:sequence>
+              <xsd:element name="requestUrl" type="xsd:string" />
+              <xsd:element name="resultPage" type="xsd:integer" />
+              <xsd:element name="limit" type="xsd:integer" />
+              <xsd:element name="resultSize" type="xsd:integer" />
+            </xsd:sequence>
+          </xsd:complexType>
+        </xsd:element>
+        <xsd:element name="tracks">
+          <xsd:complexType>
+            <xsd:sequence>
+              <xsd:element name="track" minOccurs="0" maxOccurs="unbounded">
+                <xsd:complexType>
+                  <xsd:sequence>
+                    <xsd:element name="title" type="xsd:string" />
+                    <xsd:element name="fieldId" type="xsd:string" />
+                    <xsd:element name="createdDate" type="xsd:date" />
+                    <xsd:element name="description" type="xsd:string" />
+                    <xsd:element name="startPointLat" type="xsd:float" />
+                    <xsd:element name="startPointLon" type="xsd:float" />
+                    <xsd:element name="endPointLat" type="xsd:float" />
+                    <xsd:element name="endPointLon" type="xsd:float" />
+                    <xsd:element name="startPointCountry" type="xsd:string" />
+                    <xsd:element name="endPointCountry" type="xsd:string" />
+                    <xsd:element name="trackLengthM" type="xsd:float" />
+                    <xsd:element name="countTrackpoints" type="xsd:integer" />
+                    <xsd:element name="externalLink" type="xsd:string" />
+                    <xsd:element name="altitudeMinHeightM" type="xsd:float" />
+                    <xsd:element name="altitudeMaxHeightM" type="xsd:float" />
+                    <xsd:element name="altitudeDifferenceM" type="xsd:float" />
+                    <xsd:element name="totalAscentM" type="xsd:float" />
+                    <xsd:element name="totalDescentM" type="xsd:float" />
+                  </xsd:sequence>
+                </xsd:complexType>
+              </xsd:element>
+            </xsd:sequence>
+          </xsd:complexType>
+        </xsd:element>
+      </xsd:sequence>
+    </xsd:complexType>
+  </xsd:element>
+</xsd:schema>
