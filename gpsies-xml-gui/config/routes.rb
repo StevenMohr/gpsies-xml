@@ -1,4 +1,8 @@
 GpsiesXmlGui::Application.routes.draw do
+  get "search/index"
+
+  get "search/query"
+
   # The priority is based upon order of creation:
   # first created -> highest priority.
 
