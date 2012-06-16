@@ -1,0 +1,2167 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<gpsies>
+  <meta>
+    <requestUrl>http://www.gpsies.org/api.do?trackTypes=jogging&amp;limit=100000&amp;resultPage=1&amp;filetype=kml&amp;key=czxpyyinrqaektof&amp;country=DE</requestUrl>
+    <country>DE</country>
+    <trackType>jogging</trackType>
+    <trackType>jogging</trackType>
+    <resultPage>1</resultPage>
+    <limit>100</limit>
+    <filetype>kml</filetype>
+    <downloadBaseUrl>http://www.gpsies.com/download.do?</downloadBaseUrl>
+    <resultSize>100</resultSize>
+  </meta>
+  <tracks>
+    <track>
+      <title>Leinsweiler Walking Schwarz</title>
+      <fileId>fwgvtcjltycxdrvu</fileId>
+      <downloadLink>http://www.gpsies.com/download.do?fileId=fwgvtcjltycxdrvu&amp;filetype=kml</downloadLink>
+      <createdDate>2006-08-01 00:00:00.0</createdDate>
+      <changedDate>2012-02-06 08:46:06.0</changedDate>
+      <description>Offizielle Nordic Walking Tour von Leinsweiler</description>
+      <startPointLat>49.1853130</startPointLat>
+      <startPointLon>8.01135200</startPointLon>
+      <endPointLat>49.1852810</endPointLat>
+      <endPointLon>8.01140900</endPointLon>
+      <startPointCountry>DE</startPointCountry>
+      <endPointCountry>DE</endPointCountry>
+      <trackLengthM>8858.25048473527</trackLengthM>
+      <countTrackpoints>823</countTrackpoints>
+      <trackProperty>roundTrip</trackProperty>
+      <altitudeMinHeightM>242</altitudeMinHeightM>
+      <altitudeMaxHeightM>550</altitudeMaxHeightM>
+      <altitudeDifferenceM>308</altitudeDifferenceM>
+      <totalAscentM>880</totalAscentM>
+      <totalDescentM>857</totalDescentM>
+    </track>
+    <track>
+      <title>Lichtenrader Meile</title>
+      <fileId>zxdmtfbtfhrunusf</fileId>
+      <downloadLink>http://www.gpsies.com/download.do?fileId=zxdmtfbtfhrunusf&amp;filetype=kml</downloadLink>
+      <createdDate>2006-08-01 00:00:00.0</createdDate>
+      <changedDate>2012-02-06 08:46:09.0</changedDate>
+      <description>Sehr nette Laufveranstaltung im Süden von Berlin für die ganze Familie.   Mögliche Strecken sind:  0,5 km (Kinder)  1 km (Kinder)  2 km (Kinder)  1 Meile (7,5 km) 2 Meilen (15 km) Außerdem finden noch Starts zum Walking und Nordig Walking statt. Diese sind jedoch ohne Wertung.</description>
+      <startPointLat>52.3962660</startPointLat>
+      <startPointLon>13.3783490</startPointLon>
+      <endPointLat>52.3964780</endPointLat>
+      <endPointLon>13.3780120</endPointLon>
+      <startPointCountry>DE</startPointCountry>
+      <endPointCountry>DE</endPointCountry>
+      <trackLengthM>14706.887572684</trackLengthM>
+      <countTrackpoints>891</countTrackpoints>
+      <trackProperty>roundTrip</trackProperty>
+      <externalLink>http://www.lichtenrader-meile.de/</externalLink>
+      <altitudeMinHeightM>11</altitudeMinHeightM>
+      <altitudeMaxHeightM>74</altitudeMaxHeightM>
+      <altitudeDifferenceM>63</altitudeDifferenceM>
+      <totalAscentM>298</totalAscentM>
+      <totalDescentM>302</totalDescentM>
+    </track>
+    <track>
+      <title>Teltowkanal</title>
+      <fileId>vzpczbanyleixgsj</fileId>
+      <downloadLink>http://www.gpsies.com/download.do?fileId=vzpczbanyleixgsj&amp;filetype=kml</downloadLink>
+      <createdDate>2006-08-01 00:00:00.0</createdDate>
+      <changedDate>2012-02-06 08:46:10.0</changedDate>
+      <startPointLat>52.4531790</startPointLat>
+      <startPointLon>13.3367240</startPointLon>
+      <endPointLat>52.4530450</endPointLat>
+      <endPointLon>13.3368370</endPointLon>
+      <startPointCountry>DE</startPointCountry>
+      <endPointCountry>DE</endPointCountry>
+      <trackLengthM>9374.7174534733</trackLengthM>
+      <countTrackpoints>698</countTrackpoints>
+      <trackProperty>roundTrip</trackProperty>
+      <altitudeMinHeightM>17</altitudeMinHeightM>
+      <altitudeMaxHeightM>125</altitudeMaxHeightM>
+      <altitudeDifferenceM>108</altitudeDifferenceM>
+      <totalAscentM>556</totalAscentM>
+      <totalDescentM>538</totalDescentM>
+    </track>
+    <track>
+      <title>25 km von Berlin 2006</title>
+      <fileId>pwncqisqmuueidtu</fileId>
+      <downloadLink>http://www.gpsies.com/download.do?fileId=pwncqisqmuueidtu&amp;filetype=kml</downloadLink>
+      <createdDate>2006-08-01 00:00:00.0</createdDate>
+      <changedDate>2012-02-06 08:46:10.0</changedDate>
+      <startPointLat>52.5152200</startPointLat>
+      <startPointLon>13.2459270</startPointLon>
+      <endPointLat>52.5149624</endPointLat>
+      <endPointLon>13.2391396</endPointLon>
+      <startPointCountry>DE</startPointCountry>
+      <endPointCountry>DE</endPointCountry>
+      <trackLengthM>25102.0209553012</trackLengthM>
+      <countTrackpoints>509</countTrackpoints>
+      <trackProperty>roundTrip</trackProperty>
+      <altitudeMinHeightM>30</altitudeMinHeightM>
+      <altitudeMaxHeightM>75</altitudeMaxHeightM>
+      <altitudeDifferenceM>45</altitudeDifferenceM>
+      <totalAscentM>179</totalAscentM>
+      <totalDescentM>172</totalDescentM>
+    </track>
+    <track>
+      <title>Zwischenahner Meer</title>
+      <fileId>ppovzurosabjxhik</fileId>
+      <downloadLink>http://www.gpsies.com/download.do?fileId=ppovzurosabjxhik&amp;filetype=kml</downloadLink>
+      <createdDate>2006-08-01 00:00:00.0</createdDate>
+      <changedDate>2012-02-06 08:46:10.0</changedDate>
+      <startPointLat>53.1866000</startPointLat>
+      <startPointLon>7.99620700</startPointLon>
+      <endPointLat>53.1867140</endPointLat>
+      <endPointLon>7.99611900</endPointLon>
+      <startPointCountry>DE</startPointCountry>
+      <endPointCountry>DE</endPointCountry>
+      <trackLengthM>11746.2154907223</trackLengthM>
+      <countTrackpoints>742</countTrackpoints>
+      <trackProperty>roundTrip</trackProperty>
+      <altitudeMinHeightM>-8</altitudeMinHeightM>
+      <altitudeMaxHeightM>35</altitudeMaxHeightM>
+      <altitudeDifferenceM>43</altitudeDifferenceM>
+      <totalAscentM>447</totalAscentM>
+      <totalDescentM>429</totalDescentM>
+    </track>
+    <track>
+      <title>Halbmarathon Berlin</title>
+      <fileId>pnasurzgpruolfkk</fileId>
+      <downloadLink>http://www.gpsies.com/download.do?fileId=pnasurzgpruolfkk&amp;filetype=kml</downloadLink>
+      <createdDate>2006-08-01 00:00:00.0</createdDate>
+      <changedDate>2012-02-06 08:46:10.0</changedDate>
+      <startPointLat>52.5169400</startPointLat>
+      <startPointLon>13.3894050</startPointLon>
+      <endPointLat>52.5177730</endPointLat>
+      <endPointLon>13.3998900</endPointLon>
+      <startPointCountry>DE</startPointCountry>
+      <endPointCountry>DE</endPointCountry>
+      <trackLengthM>21574.023051988</trackLengthM>
+      <countTrackpoints>361</countTrackpoints>
+      <trackProperty>oneWayTrip</trackProperty>
+      <altitudeMinHeightM>7</altitudeMinHeightM>
+      <altitudeMaxHeightM>259</altitudeMaxHeightM>
+      <altitudeDifferenceM>252</altitudeDifferenceM>
+      <totalAscentM>579</totalAscentM>
+      <totalDescentM>595</totalDescentM>
+    </track>
+    <track>
+      <title>Gesches Kurs</title>
+      <fileId>kdzmmwypuhzzzdoz</fileId>
+      <downloadLink>http://www.gpsies.com/download.do?fileId=kdzmmwypuhzzzdoz&amp;filetype=kml</downloadLink>
+      <createdDate>2006-08-01 00:00:00.0</createdDate>
+      <changedDate>2012-02-06 08:46:11.0</changedDate>
+      <startPointLat>52.4531260</startPointLat>
+      <startPointLon>13.3364830</startPointLon>
+      <endPointLat>52.4531020</endPointLat>
+      <endPointLon>13.3366310</endPointLon>
+      <startPointCountry>DE</startPointCountry>
+      <endPointCountry>DE</endPointCountry>
+      <trackLengthM>4989.7326319013</trackLengthM>
+      <countTrackpoints>393</countTrackpoints>
+      <trackProperty>roundTrip</trackProperty>
+      <altitudeMinHeightM>26</altitudeMinHeightM>
+      <altitudeMaxHeightM>78</altitudeMaxHeightM>
+      <altitudeDifferenceM>52</altitudeDifferenceM>
+      <totalAscentM>202</totalAscentM>
+      <totalDescentM>194</totalDescentM>
+    </track>
+    <track>
+      <title>Wende Am Stichkanal</title>
+      <fileId>ikxxrokiizpcuixf</fileId>
+      <downloadLink>http://www.gpsies.com/download.do?fileId=ikxxrokiizpcuixf&amp;filetype=kml</downloadLink>
+      <createdDate>2006-08-01 00:00:00.0</createdDate>
+      <changedDate>2012-02-06 08:46:11.0</changedDate>
+      <startPointLat>52.4531160</startPointLat>
+      <startPointLon>13.3369050</startPointLon>
+      <endPointLat>52.4531420</endPointLat>
+      <endPointLon>13.3366740</endPointLon>
+      <startPointCountry>DE</startPointCountry>
+      <endPointCountry>DE</endPointCountry>
+      <trackLengthM>13781.555090846601</trackLengthM>
+      <countTrackpoints>988</countTrackpoints>
+      <trackProperty>roundTrip</trackProperty>
+      <altitudeMinHeightM>14</altitudeMinHeightM>
+      <altitudeMaxHeightM>91</altitudeMaxHeightM>
+      <altitudeDifferenceM>77</altitudeDifferenceM>
+      <totalAscentM>620</totalAscentM>
+      <totalDescentM>610</totalDescentM>
+    </track>
+    <track>
+      <title>5x5 km Staffel 2006</title>
+      <fileId>fyzsatdldjjwlkuc</fileId>
+      <downloadLink>http://www.gpsies.com/download.do?fileId=fyzsatdldjjwlkuc&amp;filetype=kml</downloadLink>
+      <createdDate>2006-08-01 00:00:00.0</createdDate>
+      <changedDate>2012-02-06 08:46:12.0</changedDate>
+      <description>Teamstaffellauf im Berliner Tiergarten. Unter ganz vielen anderen war auch die mediaworx AG aus Berlin mit 20 LäuferInnen am Start.</description>
+      <startPointLat>52.5135890</startPointLat>
+      <startPointLon>13.3750610</startPointLon>
+      <endPointLat>52.5138750</endPointLat>
+      <endPointLon>13.3755300</endPointLon>
+      <startPointCountry>DE</startPointCountry>
+      <endPointCountry>DE</endPointCountry>
+      <trackLengthM>5044.2416692426505</trackLengthM>
+      <countTrackpoints>308</countTrackpoints>
+      <trackProperty>roundTrip</trackProperty>
+      <externalLink>http://www.scc-events.com/events/teamstaffel/2006/</externalLink>
+      <altitudeMinHeightM>12</altitudeMinHeightM>
+      <altitudeMaxHeightM>60</altitudeMaxHeightM>
+      <altitudeDifferenceM>48</altitudeDifferenceM>
+      <totalAscentM>173</totalAscentM>
+      <totalDescentM>168</totalDescentM>
+    </track>
+    <track>
+      <title>Engelsmeer</title>
+      <fileId>etofjhlzyxxosfps</fileId>
+      <downloadLink>http://www.gpsies.com/download.do?fileId=etofjhlzyxxosfps&amp;filetype=kml</downloadLink>
+      <createdDate>2006-08-01 00:00:00.0</createdDate>
+      <changedDate>2012-02-06 08:46:12.0</changedDate>
+      <startPointLat>53.1544914</startPointLat>
+      <startPointLon>7.98435688</startPointLon>
+      <endPointLat>53.1548002</endPointLat>
+      <endPointLon>7.98405647</endPointLon>
+      <startPointCountry>DE</startPointCountry>
+      <endPointCountry>DE</endPointCountry>
+      <trackLengthM>17212.834093130597</trackLengthM>
+      <countTrackpoints>81</countTrackpoints>
+      <trackProperty>roundTrip</trackProperty>
+      <altitudeMinHeightM>3</altitudeMinHeightM>
+      <altitudeMaxHeightM>20</altitudeMaxHeightM>
+      <altitudeDifferenceM>17</altitudeDifferenceM>
+      <totalAscentM>56</totalAscentM>
+      <totalDescentM>56</totalDescentM>
+    </track>
+    <track>
+      <title>Berlin Grunewald</title>
+      <fileId>bbwsudwayjwkwiae</fileId>
+      <downloadLink>http://www.gpsies.com/download.do?fileId=bbwsudwayjwkwiae&amp;filetype=kml</downloadLink>
+      <createdDate>2006-08-01 00:00:00.0</createdDate>
+      <changedDate>2012-02-06 08:46:12.0</changedDate>
+      <startPointLat>52.4685100</startPointLat>
+      <startPointLon>13.2776200</startPointLon>
+      <endPointLat>52.4686200</endPointLat>
+      <endPointLon>13.2777790</endPointLon>
+      <startPointCountry>DE</startPointCountry>
+      <endPointCountry>DE</endPointCountry>
+      <trackLengthM>12590.9041803584</trackLengthM>
+      <countTrackpoints>1026</countTrackpoints>
+      <trackProperty>roundTrip</trackProperty>
+      <altitudeMinHeightM>34</altitudeMinHeightM>
+      <altitudeMaxHeightM>84</altitudeMaxHeightM>
+      <altitudeDifferenceM>50</altitudeDifferenceM>
+      <totalAscentM>484</totalAscentM>
+      <totalDescentM>499</totalDescentM>
+    </track>
+    <track>
+      <title>Berlin Südgelände</title>
+      <fileId>acuirrjqnynzjrsz</fileId>
+      <downloadLink>http://www.gpsies.com/download.do?fileId=acuirrjqnynzjrsz&amp;filetype=kml</downloadLink>
+      <createdDate>2006-08-01 00:00:00.0</createdDate>
+      <changedDate>2012-02-06 08:46:12.0</changedDate>
+      <startPointLat>52.4530270</startPointLat>
+      <startPointLon>13.3367460</startPointLon>
+      <endPointLat>52.4531850</endPointLat>
+      <endPointLon>13.3368930</endPointLon>
+      <startPointCountry>DE</startPointCountry>
+      <endPointCountry>DE</endPointCountry>
+      <trackLengthM>7194.46578626215</trackLengthM>
+      <countTrackpoints>542</countTrackpoints>
+      <trackProperty>roundTrip</trackProperty>
+      <altitudeMinHeightM>42</altitudeMinHeightM>
+      <altitudeMaxHeightM>113</altitudeMaxHeightM>
+      <altitudeDifferenceM>71</altitudeDifferenceM>
+      <totalAscentM>330</totalAscentM>
+      <totalDescentM>260</totalDescentM>
+    </track>
+    <track>
+      <title>Leinsweiler Walking Rot</title>
+      <fileId>xjhjvjsvopqcbpxd</fileId>
+      <downloadLink>http://www.gpsies.com/download.do?fileId=xjhjvjsvopqcbpxd&amp;filetype=kml</downloadLink>
+      <createdDate>2006-08-01 00:00:00.0</createdDate>
+      <changedDate>2012-02-06 08:46:13.0</changedDate>
+      <description>Offizielle Nordic Walking Tour von Leinsweiler</description>
+      <startPointLat>49.1851230</startPointLat>
+      <startPointLon>8.01152100</startPointLon>
+      <endPointLat>49.1852440</endPointLat>
+      <endPointLon>8.01137400</endPointLon>
+      <startPointCountry>DE</startPointCountry>
+      <endPointCountry>DE</endPointCountry>
+      <trackLengthM>7186.292839956211</trackLengthM>
+      <countTrackpoints>660</countTrackpoints>
+      <trackProperty>roundTrip</trackProperty>
+      <altitudeMinHeightM>248</altitudeMinHeightM>
+      <altitudeMaxHeightM>459</altitudeMaxHeightM>
+      <altitudeDifferenceM>211</altitudeDifferenceM>
+      <totalAscentM>569</totalAscentM>
+      <totalDescentM>583</totalDescentM>
+    </track>
+    <track>
+      <title>Leinsweiler Hausstrecke</title>
+      <fileId>qnwvfoxtwzoxkdxi</fileId>
+      <downloadLink>http://www.gpsies.com/download.do?fileId=qnwvfoxtwzoxkdxi&amp;filetype=kml</downloadLink>
+      <createdDate>2006-08-01 00:00:00.0</createdDate>
+      <changedDate>2012-02-06 08:46:13.0</changedDate>
+      <startPointLat>49.1860460</startPointLat>
+      <startPointLon>8.01235700</startPointLon>
+      <endPointLat>49.1860140</endPointLat>
+      <endPointLon>8.01223300</endPointLon>
+      <startPointCountry>DE</startPointCountry>
+      <endPointCountry>DE</endPointCountry>
+      <trackLengthM>7678.76927260204</trackLengthM>
+      <countTrackpoints>648</countTrackpoints>
+      <trackProperty>roundTrip</trackProperty>
+      <altitudeMinHeightM>282</altitudeMinHeightM>
+      <altitudeMaxHeightM>442</altitudeMaxHeightM>
+      <altitudeDifferenceM>160</altitudeDifferenceM>
+      <totalAscentM>379</totalAscentM>
+      <totalDescentM>380</totalDescentM>
+    </track>
+    <track>
+      <title>Wanderung im Grenzgebiet</title>
+      <fileId>hbkyxfzjwpugpujk</fileId>
+      <downloadLink>http://www.gpsies.com/download.do?fileId=hbkyxfzjwpugpujk&amp;filetype=kml</downloadLink>
+      <createdDate>2006-08-02 13:52:55.0</createdDate>
+      <changedDate>2012-02-06 08:46:13.0</changedDate>
+      <startPointLat>49.0685770</startPointLat>
+      <startPointLon>7.79902300</startPointLon>
+      <endPointLat>49.0618380</endPointLat>
+      <endPointLon>7.71513900</endPointLon>
+      <startPointCountry>DE</startPointCountry>
+      <endPointCountry>DE</endPointCountry>
+      <trackLengthM>17068.3811872771</trackLengthM>
+      <countTrackpoints>267</countTrackpoints>
+      <trackProperty>oneWayTrip</trackProperty>
+      <altitudeMinHeightM>0</altitudeMinHeightM>
+      <altitudeMaxHeightM>550</altitudeMaxHeightM>
+      <altitudeDifferenceM>550</altitudeDifferenceM>
+      <totalAscentM>2052</totalAscentM>
+      <totalDescentM>2035</totalDescentM>
+    </track>
+    <track>
+      <title>Waldwanderung im Pfälzerwald</title>
+      <fileId>hjnosrqdogcwymrq</fileId>
+      <downloadLink>http://www.gpsies.com/download.do?fileId=hjnosrqdogcwymrq&amp;filetype=kml</downloadLink>
+      <createdDate>2006-08-02 13:52:58.0</createdDate>
+      <changedDate>2012-02-06 08:46:13.0</changedDate>
+      <startPointLat>49.1888760</startPointLat>
+      <startPointLon>7.85602500</startPointLon>
+      <endPointLat>49.2762600</endPointLat>
+      <endPointLon>8.04635300</endPointLon>
+      <startPointCountry>DE</startPointCountry>
+      <endPointCountry>DE</endPointCountry>
+      <trackLengthM>35866.6395606891</trackLengthM>
+      <countTrackpoints>482</countTrackpoints>
+      <trackProperty>oneWayTrip</trackProperty>
+      <altitudeMinHeightM>0</altitudeMinHeightM>
+      <altitudeMaxHeightM>510</altitudeMaxHeightM>
+      <altitudeDifferenceM>510</altitudeDifferenceM>
+      <totalAscentM>2241</totalAscentM>
+      <totalDescentM>2173</totalDescentM>
+    </track>
+    <track>
+      <title>Trippstadt</title>
+      <fileId>zektmmmybejakhzw</fileId>
+      <downloadLink>http://www.gpsies.com/download.do?fileId=zektmmmybejakhzw&amp;filetype=kml</downloadLink>
+      <createdDate>2006-08-02 13:52:58.0</createdDate>
+      <changedDate>2012-02-06 08:46:13.0</changedDate>
+      <startPointLat>49.3554530</startPointLat>
+      <startPointLon>7.77124300</startPointLon>
+      <endPointLat>49.3555390</endPointLat>
+      <endPointLon>7.77085500</endPointLon>
+      <startPointCountry>DE</startPointCountry>
+      <endPointCountry>DE</endPointCountry>
+      <trackLengthM>4934.40473155855</trackLengthM>
+      <countTrackpoints>98</countTrackpoints>
+      <trackProperty>roundTrip</trackProperty>
+      <altitudeMinHeightM>311</altitudeMinHeightM>
+      <altitudeMaxHeightM>404</altitudeMaxHeightM>
+      <altitudeDifferenceM>93</altitudeDifferenceM>
+      <totalAscentM>218</totalAscentM>
+      <totalDescentM>218</totalDescentM>
+    </track>
+    <track>
+      <title>Imsbach</title>
+      <fileId>ompzbrbepdrfzqcg</fileId>
+      <downloadLink>http://www.gpsies.com/download.do?fileId=ompzbrbepdrfzqcg&amp;filetype=kml</downloadLink>
+      <createdDate>2006-08-02 13:52:58.0</createdDate>
+      <changedDate>2012-02-06 08:46:13.0</changedDate>
+      <startPointLat>49.5833460</startPointLat>
+      <startPointLon>7.88032700</startPointLon>
+      <endPointLat>49.5831490</endPointLat>
+      <endPointLon>7.88045600</endPointLon>
+      <startPointCountry>DE</startPointCountry>
+      <endPointCountry>DE</endPointCountry>
+      <trackLengthM>6174.3700772271095</trackLengthM>
+      <countTrackpoints>112</countTrackpoints>
+      <trackProperty>roundTrip</trackProperty>
+      <altitudeMinHeightM>280</altitudeMinHeightM>
+      <altitudeMaxHeightM>435</altitudeMaxHeightM>
+      <altitudeDifferenceM>155</altitudeDifferenceM>
+      <totalAscentM>307</totalAscentM>
+      <totalDescentM>306</totalDescentM>
+    </track>
+    <track>
+      <title>Landstuhl</title>
+      <fileId>dclaugtskygolcah</fileId>
+      <downloadLink>http://www.gpsies.com/download.do?fileId=dclaugtskygolcah&amp;filetype=kml</downloadLink>
+      <createdDate>2006-08-02 13:52:58.0</createdDate>
+      <changedDate>2012-02-06 08:46:13.0</changedDate>
+      <startPointLat>49.2621250</startPointLat>
+      <startPointLon>7.57746100</startPointLon>
+      <endPointLat>49.4098310</endPointLat>
+      <endPointLon>7.57348800</endPointLon>
+      <startPointCountry>DE</startPointCountry>
+      <endPointCountry>DE</endPointCountry>
+      <trackLengthM>26445.830533032702</trackLengthM>
+      <countTrackpoints>293</countTrackpoints>
+      <trackProperty>oneWayTrip</trackProperty>
+      <altitudeMinHeightM>239</altitudeMinHeightM>
+      <altitudeMaxHeightM>421</altitudeMaxHeightM>
+      <altitudeDifferenceM>182</altitudeDifferenceM>
+      <totalAscentM>982</totalAscentM>
+      <totalDescentM>891</totalDescentM>
+    </track>
+    <track>
+      <title>Waldhaus</title>
+      <fileId>cutfbobysjqpjawh</fileId>
+      <downloadLink>http://www.gpsies.com/download.do?fileId=cutfbobysjqpjawh&amp;filetype=kml</downloadLink>
+      <createdDate>2006-08-02 13:52:59.0</createdDate>
+      <changedDate>2012-02-06 08:46:13.0</changedDate>
+      <startPointLat>49.6261740</startPointLat>
+      <startPointLon>7.92711300</startPointLon>
+      <endPointLat>49.6261740</endPointLat>
+      <endPointLon>7.92719600</endPointLon>
+      <startPointCountry>DE</startPointCountry>
+      <endPointCountry>DE</endPointCountry>
+      <trackLengthM>4987.40618723622</trackLengthM>
+      <countTrackpoints>83</countTrackpoints>
+      <trackProperty>roundTrip</trackProperty>
+      <altitudeMinHeightM>569</altitudeMinHeightM>
+      <altitudeMaxHeightM>692</altitudeMaxHeightM>
+      <altitudeDifferenceM>123</altitudeDifferenceM>
+      <totalAscentM>153</totalAscentM>
+      <totalDescentM>153</totalDescentM>
+    </track>
+    <track>
+      <title>Hildener Heide</title>
+      <fileId>sirepdrjcmrsmbfe</fileId>
+      <downloadLink>http://www.gpsies.com/download.do?fileId=sirepdrjcmrsmbfe&amp;filetype=kml</downloadLink>
+      <createdDate>2006-08-07 22:26:10.0</createdDate>
+      <changedDate>2012-01-11 00:03:35.0</changedDate>
+      <startPointLat>51.1797218</startPointLat>
+      <startPointLon>6.95956579</startPointLon>
+      <endPointLat>51.1797600</endPointLat>
+      <endPointLon>6.95959297</endPointLon>
+      <startPointCountry>DE</startPointCountry>
+      <endPointCountry>DE</endPointCountry>
+      <trackLengthM>9591.45742261317</trackLengthM>
+      <countTrackpoints>94</countTrackpoints>
+      <trackProperty>roundTrip</trackProperty>
+      <altitudeMinHeightM>64</altitudeMinHeightM>
+      <altitudeMaxHeightM>94</altitudeMaxHeightM>
+      <altitudeDifferenceM>30</altitudeDifferenceM>
+      <totalAscentM>92</totalAscentM>
+      <totalDescentM>90</totalDescentM>
+    </track>
+    <track>
+      <title>Test_courses</title>
+      <fileId>akixiycpmpkqjzyy</fileId>
+      <downloadLink>http://www.gpsies.com/download.do?fileId=akixiycpmpkqjzyy&amp;filetype=kml</downloadLink>
+      <createdDate>2006-08-08 00:12:10.0</createdDate>
+      <changedDate>2012-01-11 00:03:35.0</changedDate>
+      <startPointLat>50.1328440</startPointLat>
+      <startPointLon>8.61912400</startPointLon>
+      <endPointLat>50.1330760</endPointLat>
+      <endPointLon>8.61973600</endPointLon>
+      <startPointCountry>DE</startPointCountry>
+      <endPointCountry>DE</endPointCountry>
+      <trackLengthM>3939.3832923465498</trackLengthM>
+      <countTrackpoints>1440</countTrackpoints>
+      <trackProperty>roundTrip</trackProperty>
+      <altitudeMinHeightM>98</altitudeMinHeightM>
+      <altitudeMaxHeightM>115</altitudeMaxHeightM>
+      <altitudeDifferenceM>17</altitudeDifferenceM>
+      <totalAscentM>228</totalAscentM>
+      <totalDescentM>235</totalDescentM>
+    </track>
+    <track>
+      <title>Laufen Westhofen</title>
+      <fileId>tnvnbixbrwfogcso</fileId>
+      <downloadLink>http://www.gpsies.com/download.do?fileId=tnvnbixbrwfogcso&amp;filetype=kml</downloadLink>
+      <createdDate>2006-08-08 05:59:10.0</createdDate>
+      <changedDate>2012-01-11 00:03:35.0</changedDate>
+      <startPointLat>51.4184543</startPointLat>
+      <startPointLon>7.57177018</startPointLon>
+      <endPointLat>51.4184600</endPointLat>
+      <endPointLon>7.57123273</endPointLon>
+      <startPointCountry>DE</startPointCountry>
+      <endPointCountry>DE</endPointCountry>
+      <trackLengthM>12540.8955661827</trackLengthM>
+      <countTrackpoints>845</countTrackpoints>
+      <trackProperty>roundTrip</trackProperty>
+      <altitudeMinHeightM>88</altitudeMinHeightM>
+      <altitudeMaxHeightM>152</altitudeMaxHeightM>
+      <altitudeDifferenceM>64</altitudeDifferenceM>
+      <totalAscentM>851</totalAscentM>
+      <totalDescentM>844</totalDescentM>
+    </track>
+    <track>
+      <title>Usedom</title>
+      <fileId>iidfqvcnycddbdys</fileId>
+      <downloadLink>http://www.gpsies.com/download.do?fileId=iidfqvcnycddbdys&amp;filetype=kml</downloadLink>
+      <createdDate>2006-08-08 09:43:41.0</createdDate>
+      <changedDate>2012-01-11 00:03:35.0</changedDate>
+      <description>Sehr anstregend bei Wind! Man kann gut am Rand zwischen Meer und Strand laufen.</description>
+      <startPointLat>53.9743930</startPointLat>
+      <startPointLon>14.1446090</startPointLon>
+      <endPointLat>53.9741720</endPointLat>
+      <endPointLon>14.1446240</endPointLon>
+      <startPointCountry>DE</startPointCountry>
+      <endPointCountry>DE</endPointCountry>
+      <trackLengthM>25300.74809065</trackLengthM>
+      <countTrackpoints>1658</countTrackpoints>
+      <trackProperty>roundTrip</trackProperty>
+      <externalLink>http://www.bechtold.net</externalLink>
+      <altitudeMinHeightM>-11</altitudeMinHeightM>
+      <altitudeMaxHeightM>40</altitudeMaxHeightM>
+      <altitudeDifferenceM>51</altitudeDifferenceM>
+      <totalAscentM>527</totalAscentM>
+      <totalDescentM>526</totalDescentM>
+    </track>
+    <track>
+      <title>Lauf um Schwetzingen</title>
+      <fileId>ifmdrugpcwhiqxle</fileId>
+      <downloadLink>http://www.gpsies.com/download.do?fileId=ifmdrugpcwhiqxle&amp;filetype=kml</downloadLink>
+      <createdDate>2006-08-08 11:46:41.0</createdDate>
+      <changedDate>2012-01-11 00:03:35.0</changedDate>
+      <startPointLat>49.3794750</startPointLat>
+      <startPointLon>8.56794200</startPointLon>
+      <endPointLat>49.3794630</endPointLat>
+      <endPointLon>8.56786100</endPointLon>
+      <startPointCountry>DE</startPointCountry>
+      <endPointCountry>DE</endPointCountry>
+      <trackLengthM>42109.4890942001</trackLengthM>
+      <countTrackpoints>234</countTrackpoints>
+      <trackProperty>roundTrip</trackProperty>
+      <altitudeMinHeightM>0</altitudeMinHeightM>
+      <altitudeMaxHeightM>127</altitudeMaxHeightM>
+      <altitudeDifferenceM>127</altitudeDifferenceM>
+      <totalAscentM>0</totalAscentM>
+      <totalDescentM>0</totalDescentM>
+    </track>
+    <track>
+      <title>Stegen</title>
+      <fileId>glgzkeoyeispxevn</fileId>
+      <downloadLink>http://www.gpsies.com/download.do?fileId=glgzkeoyeispxevn&amp;filetype=kml</downloadLink>
+      <createdDate>2006-08-08 13:02:21.0</createdDate>
+      <changedDate>2012-02-06 08:46:14.0</changedDate>
+      <startPointLat>47.9979050</startPointLat>
+      <startPointLon>11.1721700</startPointLon>
+      <endPointLat>48.0761283</endPointLat>
+      <endPointLon>11.1333333</endPointLon>
+      <startPointCountry>DE</startPointCountry>
+      <endPointCountry>DE</endPointCountry>
+      <trackLengthM>17986.6400014019</trackLengthM>
+      <countTrackpoints>297</countTrackpoints>
+      <trackProperty>oneWayTrip</trackProperty>
+      <altitudeMinHeightM>531</altitudeMinHeightM>
+      <altitudeMaxHeightM>630</altitudeMaxHeightM>
+      <altitudeDifferenceM>99</altitudeDifferenceM>
+      <totalAscentM>431</totalAscentM>
+      <totalDescentM>443</totalDescentM>
+    </track>
+    <track>
+      <title>Altenbeken nach Willebadessen</title>
+      <fileId>zsdnsshhqfkttxwh</fileId>
+      <downloadLink>http://www.gpsies.com/download.do?fileId=zsdnsshhqfkttxwh&amp;filetype=kml</downloadLink>
+      <createdDate>2006-08-11 20:07:38.0</createdDate>
+      <changedDate>2012-02-06 08:46:14.0</changedDate>
+      <startPointLat>51.8707600</startPointLat>
+      <startPointLon>008.926150</startPointLon>
+      <endPointLat>51.7633000</endPointLat>
+      <endPointLon>008.944223</endPointLon>
+      <startPointCountry>DE</startPointCountry>
+      <endPointCountry>DE</endPointCountry>
+      <trackLengthM>16881.2904344936</trackLengthM>
+      <countTrackpoints>258</countTrackpoints>
+      <trackProperty>oneWayTrip</trackProperty>
+      <altitudeMinHeightM>245</altitudeMinHeightM>
+      <altitudeMaxHeightM>459</altitudeMaxHeightM>
+      <altitudeDifferenceM>214</altitudeDifferenceM>
+      <totalAscentM>494</totalAscentM>
+      <totalDescentM>495</totalDescentM>
+    </track>
+    <track>
+      <title>Blankenrode nach Marsberg</title>
+      <fileId>adusazkiqycjlbgk</fileId>
+      <downloadLink>http://www.gpsies.com/download.do?fileId=adusazkiqycjlbgk&amp;filetype=kml</downloadLink>
+      <createdDate>2006-08-11 21:09:33.0</createdDate>
+      <changedDate>2012-02-06 08:46:14.0</changedDate>
+      <startPointLat>51.5382030</startPointLat>
+      <startPointLon>008.907670</startPointLon>
+      <endPointLat>51.4614730</endPointLat>
+      <endPointLon>008.853138</endPointLon>
+      <startPointCountry>DE</startPointCountry>
+      <endPointCountry>DE</endPointCountry>
+      <trackLengthM>13097.3820416355</trackLengthM>
+      <countTrackpoints>191</countTrackpoints>
+      <trackProperty>oneWayTrip</trackProperty>
+      <altitudeMinHeightM>250</altitudeMinHeightM>
+      <altitudeMaxHeightM>424</altitudeMaxHeightM>
+      <altitudeDifferenceM>174</altitudeDifferenceM>
+      <totalAscentM>360</totalAscentM>
+      <totalDescentM>489</totalDescentM>
+    </track>
+    <track>
+      <title>Andechs</title>
+      <fileId>pigrrugbrlxycwlb</fileId>
+      <downloadLink>http://www.gpsies.com/download.do?fileId=pigrrugbrlxycwlb&amp;filetype=kml</downloadLink>
+      <createdDate>2006-08-11 21:11:30.0</createdDate>
+      <changedDate>2012-02-06 08:46:14.0</changedDate>
+      <startPointLat>47.9943383</startPointLat>
+      <startPointLon>11.1694783</startPointLon>
+      <endPointLat>47.9948800</endPointLat>
+      <endPointLon>11.1687833</endPointLon>
+      <startPointCountry>DE</startPointCountry>
+      <endPointCountry>DE</endPointCountry>
+      <trackLengthM>8139.79801309566</trackLengthM>
+      <countTrackpoints>182</countTrackpoints>
+      <trackProperty>roundTrip</trackProperty>
+      <altitudeMinHeightM>531</altitudeMinHeightM>
+      <altitudeMaxHeightM>711</altitudeMaxHeightM>
+      <altitudeDifferenceM>180</altitudeDifferenceM>
+      <totalAscentM>235</totalAscentM>
+      <totalDescentM>231</totalDescentM>
+    </track>
+    <track>
+      <title>Brückenrunde</title>
+      <fileId>kqpyuykpgdotxxhg</fileId>
+      <downloadLink>http://www.gpsies.com/download.do?fileId=kqpyuykpgdotxxhg&amp;filetype=kml</downloadLink>
+      <createdDate>2006-08-15 16:07:14.0</createdDate>
+      <changedDate>2012-01-11 00:03:35.0</changedDate>
+      <description>Unser Maß der Dinge. Der Vorteil dieser Stecke liegt darin</description>
+      <startPointLat>50.2818260</startPointLat>
+      <startPointLon>7.45462989</startPointLon>
+      <endPointLat>50.2820587</endPointLat>
+      <endPointLon>7.45480537</endPointLon>
+      <startPointCountry>DE</startPointCountry>
+      <endPointCountry>DE</endPointCountry>
+      <trackLengthM>15449.9170331773</trackLengthM>
+      <countTrackpoints>928</countTrackpoints>
+      <trackProperty>roundTrip</trackProperty>
+      <externalLink>http://www.swr.de/lauftreff/forum/phpbb/viewtopic.php?t=5786&amp;sid=3e425b32af1149c039385e85ee8a282a</externalLink>
+      <altitudeMinHeightM>57</altitudeMinHeightM>
+      <altitudeMaxHeightM>91</altitudeMaxHeightM>
+      <altitudeDifferenceM>34</altitudeDifferenceM>
+      <totalAscentM>344</totalAscentM>
+      <totalDescentM>344</totalDescentM>
+    </track>
+    <track>
+      <title>Der Karmelenberg</title>
+      <fileId>zgmgvqtcpbnydtxf</fileId>
+      <downloadLink>http://www.gpsies.com/download.do?fileId=zgmgvqtcpbnydtxf&amp;filetype=kml</downloadLink>
+      <createdDate>2006-08-16 12:15:41.0</createdDate>
+      <changedDate>2012-01-11 00:03:35.0</changedDate>
+      <description>Von der Mosel durch den Wald hoch auf den Karmelenberg. Hier gibt es auf der Strecke wunderbare Naturdenkmäler und auf dem Rückweg eine gigantische Aussicht. Hier machen viele Urlaub und wir sind glücklich hier zu leben.</description>
+      <startPointLat>50.2834000</startPointLat>
+      <startPointLon>7.45479000</startPointLon>
+      <endPointLat>50.2834000</endPointLat>
+      <endPointLon>7.45469000</endPointLon>
+      <startPointCountry>DE</startPointCountry>
+      <endPointCountry>DE</endPointCountry>
+      <trackLengthM>23744.5284908769</trackLengthM>
+      <countTrackpoints>425</countTrackpoints>
+      <trackProperty>roundTrip</trackProperty>
+      <altitudeMinHeightM>73</altitudeMinHeightM>
+      <altitudeMaxHeightM>371</altitudeMaxHeightM>
+      <altitudeDifferenceM>298</altitudeDifferenceM>
+      <totalAscentM>742</totalAscentM>
+      <totalDescentM>742</totalDescentM>
+    </track>
+    <track>
+      <title>Rothenbach</title>
+      <fileId>sxdcwszbeeidcuei</fileId>
+      <downloadLink>http://www.gpsies.com/download.do?fileId=sxdcwszbeeidcuei&amp;filetype=kml</downloadLink>
+      <createdDate>2006-08-16 13:14:42.0</createdDate>
+      <changedDate>2012-01-11 00:03:35.0</changedDate>
+      <startPointLat>50.8117109</startPointLat>
+      <startPointLon>7.23711490</startPointLon>
+      <endPointLat>50.8116567</endPointLat>
+      <endPointLon>7.23713636</endPointLon>
+      <startPointCountry>DE</startPointCountry>
+      <endPointCountry>DE</endPointCountry>
+      <trackLengthM>8985.12790601802</trackLengthM>
+      <countTrackpoints>32</countTrackpoints>
+      <trackProperty>roundTrip</trackProperty>
+      <altitudeMinHeightM>0</altitudeMinHeightM>
+      <altitudeMaxHeightM>151</altitudeMaxHeightM>
+      <altitudeDifferenceM>151</altitudeDifferenceM>
+      <totalAscentM>800</totalAscentM>
+      <totalDescentM>807</totalDescentM>
+    </track>
+    <track>
+      <title>Hausstrecke Bad Neustadt</title>
+      <fileId>sctmrxbiunhsjxmk</fileId>
+      <downloadLink>http://www.gpsies.com/download.do?fileId=sctmrxbiunhsjxmk&amp;filetype=kml</downloadLink>
+      <createdDate>2006-08-16 19:57:53.0</createdDate>
+      <changedDate>2012-01-11 00:03:35.0</changedDate>
+      <description>Schöner Rundkurs mit unterschiedlichen Untergründen</description>
+      <startPointLat>50.3226810</startPointLat>
+      <startPointLon>10.2045670</startPointLon>
+      <endPointLat>50.3227450</endPointLat>
+      <endPointLon>10.2046580</endPointLon>
+      <startPointCountry>DE</startPointCountry>
+      <endPointCountry>DE</endPointCountry>
+      <trackLengthM>8950.33234830565</trackLengthM>
+      <countTrackpoints>708</countTrackpoints>
+      <trackProperty>roundTrip</trackProperty>
+      <altitudeMinHeightM>236</altitudeMinHeightM>
+      <altitudeMaxHeightM>276</altitudeMaxHeightM>
+      <altitudeDifferenceM>40</altitudeDifferenceM>
+      <totalAscentM>323</totalAscentM>
+      <totalDescentM>323</totalDescentM>
+    </track>
+    <track>
+      <title>Berlin</title>
+      <fileId>ulbilhkfnlclgnvp</fileId>
+      <downloadLink>http://www.gpsies.com/download.do?fileId=ulbilhkfnlclgnvp&amp;filetype=kml</downloadLink>
+      <createdDate>2006-08-16 20:07:21.0</createdDate>
+      <changedDate>2012-01-11 00:03:35.0</changedDate>
+      <description>Schöne Laufstrecke durch Berlin</description>
+      <startPointLat>52.5008890</startPointLat>
+      <startPointLon>13.3216390</startPointLon>
+      <endPointLat>52.5010280</endPointLat>
+      <endPointLon>13.3216670</endPointLon>
+      <startPointCountry>DE</startPointCountry>
+      <endPointCountry>DE</endPointCountry>
+      <trackLengthM>12505.5445192334</trackLengthM>
+      <countTrackpoints>69</countTrackpoints>
+      <trackProperty>roundTrip</trackProperty>
+      <altitudeMinHeightM>30</altitudeMinHeightM>
+      <altitudeMaxHeightM>48</altitudeMaxHeightM>
+      <altitudeDifferenceM>18</altitudeDifferenceM>
+      <totalAscentM>76</totalAscentM>
+      <totalDescentM>76</totalDescentM>
+    </track>
+    <track>
+      <title>Ditzingen</title>
+      <fileId>ucperkqawjzgjqcf</fileId>
+      <downloadLink>http://www.gpsies.com/download.do?fileId=ucperkqawjzgjqcf&amp;filetype=kml</downloadLink>
+      <createdDate>2006-08-18 08:39:41.0</createdDate>
+      <changedDate>2012-01-11 00:03:35.0</changedDate>
+      <description>(Lange) Laufstrecke mit Start und Ziel in Ditzingen</description>
+      <startPointLat>48.8264683</startPointLat>
+      <startPointLon>9.07867240</startPointLon>
+      <endPointLat>48.8264683</endPointLat>
+      <endPointLon>9.07867240</endPointLon>
+      <startPointCountry>DE</startPointCountry>
+      <endPointCountry>DE</endPointCountry>
+      <trackLengthM>25847.1707813295</trackLengthM>
+      <countTrackpoints>505</countTrackpoints>
+      <trackProperty>roundTrip</trackProperty>
+      <externalLink>http://www.jahreslauf.de</externalLink>
+      <altitudeMinHeightM>0</altitudeMinHeightM>
+      <altitudeMaxHeightM>448</altitudeMaxHeightM>
+      <altitudeDifferenceM>448</altitudeDifferenceM>
+      <totalAscentM>448</totalAscentM>
+      <totalDescentM>448</totalDescentM>
+    </track>
+    <track>
+      <title>Stadtlauf München (Sportscheck)</title>
+      <fileId>pydgeotcvpxxiqmm</fileId>
+      <downloadLink>http://www.gpsies.com/download.do?fileId=pydgeotcvpxxiqmm&amp;filetype=kml</downloadLink>
+      <createdDate>2006-08-19 21:13:10.0</createdDate>
+      <changedDate>2012-01-11 00:03:35.0</changedDate>
+      <description>Halbmarathon vom Marienplatz zum Englischen Garten und zurück</description>
+      <startPointLat>48.1380170</startPointLat>
+      <startPointLon>11.5753210</startPointLon>
+      <endPointLat>48.1376060</endPointLat>
+      <endPointLon>11.5748230</endPointLon>
+      <startPointCountry>DE</startPointCountry>
+      <endPointCountry>DE</endPointCountry>
+      <trackLengthM>20635.5756206203</trackLengthM>
+      <countTrackpoints>401</countTrackpoints>
+      <trackProperty>roundTrip</trackProperty>
+      <externalLink>http://www.sportscheck.de</externalLink>
+      <altitudeMinHeightM>467</altitudeMinHeightM>
+      <altitudeMaxHeightM>533</altitudeMaxHeightM>
+      <altitudeDifferenceM>66</altitudeDifferenceM>
+      <totalAscentM>331</totalAscentM>
+      <totalDescentM>319</totalDescentM>
+    </track>
+    <track>
+      <title>Stuttgarter Zeitungs Lauf 2006 - Halbmarathon</title>
+      <fileId>lwrpnhwzqdjkabuc</fileId>
+      <downloadLink>http://www.gpsies.com/download.do?fileId=lwrpnhwzqdjkabuc&amp;filetype=kml</downloadLink>
+      <createdDate>2006-08-19 21:19:09.0</createdDate>
+      <changedDate>2012-01-11 00:03:35.0</changedDate>
+      <startPointLat>48.7948370</startPointLat>
+      <startPointLon>9.23100200</startPointLon>
+      <endPointLat>48.7919510</endPointLat>
+      <endPointLon>9.23139300</endPointLon>
+      <startPointCountry>DE</startPointCountry>
+      <endPointCountry>DE</endPointCountry>
+      <trackLengthM>21332.5897944717</trackLengthM>
+      <countTrackpoints>680</countTrackpoints>
+      <trackProperty>roundTrip</trackProperty>
+      <altitudeMinHeightM>194</altitudeMinHeightM>
+      <altitudeMaxHeightM>340</altitudeMaxHeightM>
+      <altitudeDifferenceM>146</altitudeDifferenceM>
+      <totalAscentM>684</totalAscentM>
+      <totalDescentM>666</totalDescentM>
+    </track>
+    <track>
+      <title>12km Trainingsstrecke in Rot an der Rot</title>
+      <fileId>qrgopvdkeflbvles</fileId>
+      <downloadLink>http://www.gpsies.com/download.do?fileId=qrgopvdkeflbvles&amp;filetype=kml</downloadLink>
+      <createdDate>2006-08-19 21:21:57.0</createdDate>
+      <changedDate>2012-01-11 00:03:35.0</changedDate>
+      <startPointLat>48.0166680</startPointLat>
+      <startPointLon>10.0358960</startPointLon>
+      <endPointLat>48.0175490</endPointLat>
+      <endPointLon>10.0378870</endPointLon>
+      <startPointCountry>DE</startPointCountry>
+      <endPointCountry>DE</endPointCountry>
+      <trackLengthM>11648.505133770801</trackLengthM>
+      <countTrackpoints>549</countTrackpoints>
+      <trackProperty>roundTrip</trackProperty>
+      <altitudeMinHeightM>595</altitudeMinHeightM>
+      <altitudeMaxHeightM>713</altitudeMaxHeightM>
+      <altitudeDifferenceM>118</altitudeDifferenceM>
+      <totalAscentM>352</totalAscentM>
+      <totalDescentM>357</totalDescentM>
+    </track>
+    <track>
+      <title>Bad Buchau Halbmarathon um den Federsee</title>
+      <fileId>sysygkwklopljaub</fileId>
+      <downloadLink>http://www.gpsies.com/download.do?fileId=sysygkwklopljaub&amp;filetype=kml</downloadLink>
+      <createdDate>2006-08-19 21:22:04.0</createdDate>
+      <changedDate>2012-01-11 00:03:35.0</changedDate>
+      <description>Bad Buchau befindet sich in Oberschwaben - und hier ist´s hügelig ;-)</description>
+      <startPointLat>48.0657840</startPointLat>
+      <startPointLon>9.60977200</startPointLon>
+      <endPointLat>48.0657910</endPointLat>
+      <endPointLon>9.60979700</endPointLon>
+      <startPointCountry>DE</startPointCountry>
+      <endPointCountry>DE</endPointCountry>
+      <trackLengthM>21261.4673702847</trackLengthM>
+      <countTrackpoints>565</countTrackpoints>
+      <trackProperty>roundTrip</trackProperty>
+      <altitudeMinHeightM>551</altitudeMinHeightM>
+      <altitudeMaxHeightM>624</altitudeMaxHeightM>
+      <altitudeDifferenceM>73</altitudeDifferenceM>
+      <totalAscentM>501</totalAscentM>
+      <totalDescentM>507</totalDescentM>
+    </track>
+    <track>
+      <title>Berliner Mauerweg im Süden</title>
+      <fileId>iuqhnivnzeajocxz</fileId>
+      <downloadLink>http://www.gpsies.com/download.do?fileId=iuqhnivnzeajocxz&amp;filetype=kml</downloadLink>
+      <createdDate>2006-08-20 10:23:13.0</createdDate>
+      <changedDate>2012-02-06 08:46:15.0</changedDate>
+      <description>Entlang der ehemaligen Berliner Mauer auf dem Fahrweg der DDR Grenzsoldaten</description>
+      <startPointLat>52.4531010</startPointLat>
+      <startPointLon>13.3367460</startPointLon>
+      <endPointLat>52.3871080</endPointLat>
+      <endPointLon>13.3965210</endPointLon>
+      <startPointCountry>DE</startPointCountry>
+      <endPointCountry>DE</endPointCountry>
+      <trackLengthM>17570.6413468317</trackLengthM>
+      <countTrackpoints>1190</countTrackpoints>
+      <trackProperty>oneWayTrip</trackProperty>
+      <externalLink>http://www.radzeit.de/berliner_mauerweg</externalLink>
+      <altitudeMinHeightM>25</altitudeMinHeightM>
+      <altitudeMaxHeightM>92</altitudeMaxHeightM>
+      <altitudeDifferenceM>67</altitudeDifferenceM>
+      <totalAscentM>561</totalAscentM>
+      <totalDescentM>578</totalDescentM>
+    </track>
+    <track>
+      <title>Teltowkanal von Steglitz nach Teltow und zurück</title>
+      <fileId>xpfjvmvdrxmhcvbm</fileId>
+      <downloadLink>http://www.gpsies.com/download.do?fileId=xpfjvmvdrxmhcvbm&amp;filetype=kml</downloadLink>
+      <createdDate>2006-08-20 11:25:47.0</createdDate>
+      <changedDate>2012-02-06 08:46:15.0</changedDate>
+      <startPointLat>52.4530020</startPointLat>
+      <startPointLon>13.3365590</startPointLon>
+      <endPointLat>52.4531050</endPointLat>
+      <endPointLon>13.3368610</endPointLon>
+      <startPointCountry>DE</startPointCountry>
+      <endPointCountry>DE</endPointCountry>
+      <trackLengthM>15576.325266865499</trackLengthM>
+      <countTrackpoints>1106</countTrackpoints>
+      <trackProperty>roundTrip</trackProperty>
+      <altitudeMinHeightM>28</altitudeMinHeightM>
+      <altitudeMaxHeightM>113</altitudeMaxHeightM>
+      <altitudeDifferenceM>85</altitudeDifferenceM>
+      <totalAscentM>404</totalAscentM>
+      <totalDescentM>445</totalDescentM>
+    </track>
+    <track>
+      <title>Heiko's Hausstrecke</title>
+      <fileId>fnughtvagnydcgjc</fileId>
+      <downloadLink>http://www.gpsies.com/download.do?fileId=fnughtvagnydcgjc&amp;filetype=kml</downloadLink>
+      <createdDate>2006-08-29 21:17:38.0</createdDate>
+      <changedDate>2012-01-11 00:03:35.0</changedDate>
+      <description>überwiegend Sandwege</description>
+      <startPointLat>53.1522690</startPointLat>
+      <startPointLon>7.99822900</startPointLon>
+      <endPointLat>53.1526870</endPointLat>
+      <endPointLon>7.99874700</endPointLon>
+      <startPointCountry>DE</startPointCountry>
+      <endPointCountry>DE</endPointCountry>
+      <trackLengthM>8479.96913653364</trackLengthM>
+      <countTrackpoints>2768</countTrackpoints>
+      <trackProperty>roundTrip</trackProperty>
+      <altitudeMinHeightM>0</altitudeMinHeightM>
+      <altitudeMaxHeightM>11</altitudeMaxHeightM>
+      <altitudeDifferenceM>11</altitudeDifferenceM>
+      <totalAscentM>411</totalAscentM>
+      <totalDescentM>412</totalDescentM>
+    </track>
+    <track>
+      <title>Lauftreff Lehmen</title>
+      <fileId>elpvdsguyaiyheeh</fileId>
+      <downloadLink>http://www.gpsies.com/download.do?fileId=elpvdsguyaiyheeh&amp;filetype=kml</downloadLink>
+      <createdDate>2006-08-30 10:45:43.0</createdDate>
+      <changedDate>2012-02-06 08:46:15.0</changedDate>
+      <startPointLat>50.2783000</startPointLat>
+      <startPointLon>7.43693000</startPointLon>
+      <endPointLat>50.2709000</endPointLat>
+      <endPointLon>7.44822000</endPointLon>
+      <startPointCountry>DE</startPointCountry>
+      <endPointCountry>DE</endPointCountry>
+      <trackLengthM>8726.76923174735</trackLengthM>
+      <countTrackpoints>57</countTrackpoints>
+      <trackProperty>oneWayTrip</trackProperty>
+      <externalLink>http://www.swr.de/lauftreff/forum/phpbb/viewtopic.php?t=5813</externalLink>
+      <altitudeMinHeightM>210</altitudeMinHeightM>
+      <altitudeMaxHeightM>246</altitudeMaxHeightM>
+      <altitudeDifferenceM>36</altitudeDifferenceM>
+      <totalAscentM>132</totalAscentM>
+      <totalDescentM>149</totalDescentM>
+    </track>
+    <track>
+      <title>Berliner Sightseeinglauf</title>
+      <fileId>ixztuvvvbdmoogbo</fileId>
+      <downloadLink>http://www.gpsies.com/download.do?fileId=ixztuvvvbdmoogbo&amp;filetype=kml</downloadLink>
+      <createdDate>2006-08-30 10:46:51.0</createdDate>
+      <changedDate>2012-02-06 08:46:15.0</changedDate>
+      <description>Jens rennt in Berlin mit Mücke (Quelle: SWR) Eigentlich wollte Onlineredakteur Jens Freitag nur ein paar Tage Urlaub in der Hauptstadt machen, aber da Urlaub ohne Laufen für ihn kaum noch vorstellbar ist, musste schon vorab ein ortskundiger Laufpartner gefunden werden. Und wer wäre da besser geeignet als Hans-Jürgen Mücke, der wahrscheinlich sympatischste Protagonist der TV-Doku von-null-auf-42. Klar sagte Mücke direkt zu und schnell war man sich über die Laufstrecke einig. Obwohl der Lauf frühzeitig bekannt gegeben wurde, waren dann am Samstag Morgen nur Mücke und Jens am vereinbarten Treffpunkt. Schade eigentlich, aber die beiden hatten trotzdem viel Spaß auf der Strecke.  Startpunkt: Potsdamer Platz  Einst der befahrenste Platz Berlins ist er nun eine Flaniermeile. Shoppen und Schauen ist angesagt, und die Architektur ist schon beeindruckend. Quer durch die Häuserschluchten läßt sich vortrefflich laufen. Aber Vorsicht, nicht zu viel nach oben schauen, sonst besteht Stolpergefahr!  Tiergarten  Relativ schnell ist dann der Tiergarten erreicht und Mücke hat viele Geschichten über den Stadtwald parat. Nach dem Krieg in erster Linie als Brennholzlieferant und Treffpunkt für Schmuggler beliebt, hat sich der Grünstreifen glücklicherweise wieder gut erholt und ist mit seinen vielen Wegen optimal für Läufer geeignet.  Siegessäule  Nach ein paar Minuten ist die Siegessäule erreicht, die von den Berlinern auch liebevoll "Goldelse" genannt wird. Ursprünglich vor dem Reichstag errichtet, zog das Denkmal übrigens erst 1939 an seinen jetzigen Standort um.  Neuer Hauptbahnhof  Vorbei geht der Weg am Schloß und an der schwangeren Auster. Mücke erzählt von Projekten, die er als Architekt verantwortet. Kurz darauf erreichen die beiden die Spree. Viele neue Bauwerke säumen hier die Strecke, besonders der gerade erst eingeweihte neue Hauptbahnhof sticht hervor.  Kanzleramt  Die nächste Etappe führt Jens und Mücke zum neuen Bundeskanzleramt. Im Zuge der Hauptstadtverlagerung erst 2001 im Spreebogenpark errichtet, fällt das Gebäude durch seine moderne verglaste Fassade ins Auge. Heute allerdings ist es erstaunlich ruhig hier - niemand scheint zu arbeiten.  Reichstag  Vor dem Reichtag bilden sich lange Schlangen. Jens ist froh, schon ein Ticket zu haben, mit dem er das Anstellen später umgehen kann. An der Ecke des Gebäudes zeigt Mücke ihm seinen persönlichen Meeting-Point beim Berlin Marathon. Ein guter Zeitpunkt, ein bisschen für die Vorzüge des Hauptstadtlaufes zu werben.  Brandenburger Tor  Weiter geht es zum Brandenburger Tor. Hindurch zu laufen ist für Mücke mit seiner Ostberliner Vergangenheit immer noch keine Selbstverständlichkeit. Viele Erinnerungen verbinden sich für ihn mit dem Weg vom Pariser Platz zur Prachtstraße "Unter den Linden".  Hotel Adlon  Nur wenige Meter weiter steht das wohl bekannteste und vielleicht luxuriöseste Hotel Deutschlands, das "Adlon". In ihren Laufklamotten haben Jens und Mücke jedoch keine Chance einen Blick hineinzuwerfen. Aber bei den gesalzenen Preisen der Hotelbar wäre es wahrscheinlich sowieso nur bei diesem Blick geblieben.  Mahnmal  Bevor es zurück zum Hotel geht, kommen die beiden noch beim Holocaust-Mahnmal vorbei, dem Denkmal für die ermordeten Juden Europas. Das Mahnmal steht sehr im öffentlichen Focus, die Meinungen darüber gehen stark auseinander. Eine Institution wie das benachbarte Jüdische Museum ist Mückes Ansicht nach besser zur Aufklärung geeignet.</description>
+      <startPointLat>52.5048428</startPointLat>
+      <startPointLon>13.3837244</startPointLon>
+      <endPointLat>52.5048428</endPointLat>
+      <endPointLon>13.3837244</endPointLon>
+      <startPointCountry>DE</startPointCountry>
+      <endPointCountry>DE</endPointCountry>
+      <trackLengthM>8169.797240468601</trackLengthM>
+      <countTrackpoints>65</countTrackpoints>
+      <trackProperty>roundTrip</trackProperty>
+      <externalLink>http://www.swr.de/lauftreff/vorort/beitrag19.html</externalLink>
+      <altitudeMinHeightM>26</altitudeMinHeightM>
+      <altitudeMaxHeightM>59</altitudeMaxHeightM>
+      <altitudeDifferenceM>33</altitudeDifferenceM>
+      <totalAscentM>71</totalAscentM>
+      <totalDescentM>71</totalDescentM>
+    </track>
+    <track>
+      <title>Bretzenheimer Feld</title>
+      <fileId>jodtzibedglipjae</fileId>
+      <downloadLink>http://www.gpsies.com/download.do?fileId=jodtzibedglipjae&amp;filetype=kml</downloadLink>
+      <createdDate>2006-08-30 11:44:58.0</createdDate>
+      <changedDate>2012-02-06 08:46:15.0</changedDate>
+      <startPointLat>49.9848070</startPointLat>
+      <startPointLon>8.25394000</startPointLon>
+      <endPointLat>49.9852170</endPointLat>
+      <endPointLon>8.25396261</endPointLon>
+      <startPointCountry>DE</startPointCountry>
+      <endPointCountry>DE</endPointCountry>
+      <trackLengthM>6982.29527712019</trackLengthM>
+      <countTrackpoints>133</countTrackpoints>
+      <trackProperty>roundTrip</trackProperty>
+      <externalLink>http://www.swr.de/lauftreff/forum/phpbb/viewtopic.php?t=5813</externalLink>
+      <altitudeMinHeightM>108</altitudeMinHeightM>
+      <altitudeMaxHeightM>138</altitudeMaxHeightM>
+      <altitudeDifferenceM>30</altitudeDifferenceM>
+      <totalAscentM>80</totalAscentM>
+      <totalDescentM>80</totalDescentM>
+    </track>
+    <track>
+      <title>Mainzer Dreibrückenlauf</title>
+      <fileId>iofaivcwmkihzfzr</fileId>
+      <downloadLink>http://www.gpsies.com/download.do?fileId=iofaivcwmkihzfzr&amp;filetype=kml</downloadLink>
+      <createdDate>2006-08-30 13:46:02.0</createdDate>
+      <changedDate>2012-01-11 00:03:35.0</changedDate>
+      <startPointLat>49.9963253</startPointLat>
+      <startPointLon>8.28279180</startPointLon>
+      <endPointLat>49.9963253</endPointLat>
+      <endPointLon>8.28279180</endPointLon>
+      <startPointCountry>DE</startPointCountry>
+      <endPointCountry>DE</endPointCountry>
+      <trackLengthM>8221.915394180121</trackLengthM>
+      <countTrackpoints>79</countTrackpoints>
+      <trackProperty>roundTrip</trackProperty>
+      <externalLink>http://www.swr.de/blog/aktiv/2007/07/11/uber-drei-hei-brucken-musst-du-gehen/</externalLink>
+      <altitudeMinHeightM>79</altitudeMinHeightM>
+      <altitudeMaxHeightM>91</altitudeMaxHeightM>
+      <altitudeDifferenceM>12</altitudeDifferenceM>
+      <totalAscentM>75</totalAscentM>
+      <totalDescentM>75</totalDescentM>
+    </track>
+    <track>
+      <title>Ab durch die Mitte und in den Tiergarten</title>
+      <fileId>xgkbftafzswllmpp</fileId>
+      <downloadLink>http://www.gpsies.com/download.do?fileId=xgkbftafzswllmpp&amp;filetype=kml</downloadLink>
+      <createdDate>2006-08-31 19:18:14.0</createdDate>
+      <changedDate>2012-01-11 00:03:35.0</changedDate>
+      <startPointLat>52.5352974</startPointLat>
+      <startPointLon>13.4015232</startPointLon>
+      <endPointLat>52.5353500</endPointLat>
+      <endPointLon>13.4017610</endPointLon>
+      <startPointCountry>DE</startPointCountry>
+      <endPointCountry>DE</endPointCountry>
+      <trackLengthM>17803.2380900432</trackLengthM>
+      <countTrackpoints>1154</countTrackpoints>
+      <trackProperty>roundTrip</trackProperty>
+      <altitudeMinHeightM>26</altitudeMinHeightM>
+      <altitudeMaxHeightM>58</altitudeMaxHeightM>
+      <altitudeDifferenceM>32</altitudeDifferenceM>
+      <totalAscentM>75</totalAscentM>
+      <totalDescentM>75</totalDescentM>
+    </track>
+    <track>
+      <title>Dkm_courses</title>
+      <fileId>cgmzwllamcqoxzfz</fileId>
+      <downloadLink>http://www.gpsies.com/download.do?fileId=cgmzwllamcqoxzfz&amp;filetype=kml</downloadLink>
+      <createdDate>2006-08-31 19:24:22.0</createdDate>
+      <changedDate>2012-01-11 00:03:35.0</changedDate>
+      <startPointLat>52.6115420</startPointLat>
+      <startPointLon>13.3092360</startPointLon>
+      <endPointLat>52.5239590</endPointLat>
+      <endPointLon>13.4092130</endPointLon>
+      <startPointCountry>DE</startPointCountry>
+      <endPointCountry>DE</endPointCountry>
+      <trackLengthM>51497.3079526338</trackLengthM>
+      <countTrackpoints>3419</countTrackpoints>
+      <trackProperty>oneWayTrip</trackProperty>
+      <altitudeMinHeightM>2</altitudeMinHeightM>
+      <altitudeMaxHeightM>162</altitudeMaxHeightM>
+      <altitudeDifferenceM>160</altitudeDifferenceM>
+      <totalAscentM>4707</totalAscentM>
+      <totalDescentM>4716</totalDescentM>
+    </track>
+    <track>
+      <title>060831</title>
+      <fileId>ygrgnscyhlezygzq</fileId>
+      <downloadLink>http://www.gpsies.com/download.do?fileId=ygrgnscyhlezygzq&amp;filetype=kml</downloadLink>
+      <createdDate>2006-09-01 07:45:38.0</createdDate>
+      <changedDate>2012-01-11 00:03:35.0</changedDate>
+      <startPointLat>52.5365150</startPointLat>
+      <startPointLon>13.4009850</startPointLon>
+      <endPointLat>52.5355340</endPointLat>
+      <endPointLon>13.4014560</endPointLon>
+      <startPointCountry>DE</startPointCountry>
+      <endPointCountry>DE</endPointCountry>
+      <trackLengthM>12378.6350653311</trackLengthM>
+      <countTrackpoints>820</countTrackpoints>
+      <trackProperty>roundTrip</trackProperty>
+      <altitudeMinHeightM>20</altitudeMinHeightM>
+      <altitudeMaxHeightM>126</altitudeMaxHeightM>
+      <altitudeDifferenceM>106</altitudeDifferenceM>
+      <totalAscentM>1277</totalAscentM>
+      <totalDescentM>1288</totalDescentM>
+    </track>
+    <track>
+      <title>060830</title>
+      <fileId>fuidogiddsrugsgl</fileId>
+      <downloadLink>http://www.gpsies.com/download.do?fileId=fuidogiddsrugsgl&amp;filetype=kml</downloadLink>
+      <createdDate>2006-09-01 07:50:13.0</createdDate>
+      <changedDate>2012-01-11 00:03:35.0</changedDate>
+      <startPointLat>52.5366890</startPointLat>
+      <startPointLon>13.4010150</startPointLon>
+      <endPointLat>52.5356850</endPointLat>
+      <endPointLon>13.4013840</endPointLon>
+      <startPointCountry>DE</startPointCountry>
+      <endPointCountry>DE</endPointCountry>
+      <trackLengthM>12784.4686595697</trackLengthM>
+      <countTrackpoints>815</countTrackpoints>
+      <trackProperty>roundTrip</trackProperty>
+      <altitudeMinHeightM>-11</altitudeMinHeightM>
+      <altitudeMaxHeightM>186</altitudeMaxHeightM>
+      <altitudeDifferenceM>197</altitudeDifferenceM>
+      <totalAscentM>1795</totalAscentM>
+      <totalDescentM>1719</totalDescentM>
+    </track>
+    <track>
+      <title>060901</title>
+      <fileId>atcwqgjqmiqfstem</fileId>
+      <downloadLink>http://www.gpsies.com/download.do?fileId=atcwqgjqmiqfstem&amp;filetype=kml</downloadLink>
+      <createdDate>2006-09-02 12:00:07.0</createdDate>
+      <changedDate>2012-01-11 00:03:35.0</changedDate>
+      <startPointLat>52.5366660</startPointLat>
+      <startPointLon>13.4009960</startPointLon>
+      <endPointLat>52.5360180</endPointLat>
+      <endPointLon>13.4000470</endPointLon>
+      <startPointCountry>DE</startPointCountry>
+      <endPointCountry>DE</endPointCountry>
+      <trackLengthM>7079.932122864409</trackLengthM>
+      <countTrackpoints>486</countTrackpoints>
+      <trackProperty>roundTrip</trackProperty>
+      <altitudeMinHeightM>13</altitudeMinHeightM>
+      <altitudeMaxHeightM>145</altitudeMaxHeightM>
+      <altitudeDifferenceM>132</altitudeDifferenceM>
+      <totalAscentM>793</totalAscentM>
+      <totalDescentM>806</totalDescentM>
+    </track>
+    <track>
+      <title>3 Seen Tour im Grunewald</title>
+      <fileId>ktteotpafmbmospa</fileId>
+      <downloadLink>http://www.gpsies.com/download.do?fileId=ktteotpafmbmospa&amp;filetype=kml</downloadLink>
+      <createdDate>2006-09-02 20:20:27.0</createdDate>
+      <changedDate>2012-02-06 08:46:15.0</changedDate>
+      <description>Eine schöne Runde entlang des Grunewaldsees</description>
+      <startPointLat>52.4602710</startPointLat>
+      <startPointLon>13.2762000</startPointLon>
+      <endPointLat>52.4600930</endPointLat>
+      <endPointLon>13.2763220</endPointLon>
+      <startPointCountry>DE</startPointCountry>
+      <endPointCountry>DE</endPointCountry>
+      <trackLengthM>17092.2787034549</trackLengthM>
+      <countTrackpoints>1299</countTrackpoints>
+      <trackProperty>roundTrip</trackProperty>
+      <altitudeMinHeightM>-37</altitudeMinHeightM>
+      <altitudeMaxHeightM>103</altitudeMaxHeightM>
+      <altitudeDifferenceM>140</altitudeDifferenceM>
+      <totalAscentM>946</totalAscentM>
+      <totalDescentM>960</totalDescentM>
+    </track>
+    <track>
+      <title>Tegler Halbmarathon</title>
+      <fileId>hcwqkpdgqkbmvtnk</fileId>
+      <downloadLink>http://www.gpsies.com/download.do?fileId=hcwqkpdgqkbmvtnk&amp;filetype=kml</downloadLink>
+      <createdDate>2006-09-03 12:40:25.0</createdDate>
+      <changedDate>2012-01-11 00:03:35.0</changedDate>
+      <startPointLat>52.5774290</startPointLat>
+      <startPointLon>13.2967180</startPointLon>
+      <endPointLat>52.5776170</endPointLat>
+      <endPointLon>13.2965930</endPointLon>
+      <startPointCountry>DE</startPointCountry>
+      <endPointCountry>DE</endPointCountry>
+      <trackLengthM>21161.3458339389</trackLengthM>
+      <countTrackpoints>1309</countTrackpoints>
+      <trackProperty>roundTrip</trackProperty>
+      <altitudeMinHeightM>19</altitudeMinHeightM>
+      <altitudeMaxHeightM>99</altitudeMaxHeightM>
+      <altitudeDifferenceM>80</altitudeDifferenceM>
+      <totalAscentM>1047</totalAscentM>
+      <totalDescentM>1023</totalDescentM>
+    </track>
+    <track>
+      <title>München Marathon 2005</title>
+      <fileId>jxgsmuiscgjwtoej</fileId>
+      <downloadLink>http://www.gpsies.com/download.do?fileId=jxgsmuiscgjwtoej&amp;filetype=kml</downloadLink>
+      <createdDate>2006-09-04 15:59:32.0</createdDate>
+      <changedDate>2012-01-11 00:03:35.0</changedDate>
+      <startPointLat>48.1720040</startPointLat>
+      <startPointLon>11.5448350</startPointLon>
+      <endPointLat>48.1726320</endPointLat>
+      <endPointLon>11.5461680</endPointLon>
+      <startPointCountry>DE</startPointCountry>
+      <endPointCountry>DE</endPointCountry>
+      <trackLengthM>43150.7064032481</trackLengthM>
+      <countTrackpoints>809</countTrackpoints>
+      <trackProperty>roundTrip</trackProperty>
+      <altitudeMinHeightM>490</altitudeMinHeightM>
+      <altitudeMaxHeightM>697</altitudeMaxHeightM>
+      <altitudeDifferenceM>207</altitudeDifferenceM>
+      <totalAscentM>1420</totalAscentM>
+      <totalDescentM>1391</totalDescentM>
+    </track>
+    <track>
+      <title>060904</title>
+      <fileId>zzooewdcxgnuojtw</fileId>
+      <downloadLink>http://www.gpsies.com/download.do?fileId=zzooewdcxgnuojtw&amp;filetype=kml</downloadLink>
+      <createdDate>2006-09-04 21:57:32.0</createdDate>
+      <changedDate>2012-01-11 00:03:35.0</changedDate>
+      <startPointLat>52.5351550</startPointLat>
+      <startPointLon>13.3993490</startPointLon>
+      <endPointLat>52.5357250</endPointLat>
+      <endPointLon>13.4008530</endPointLon>
+      <startPointCountry>DE</startPointCountry>
+      <endPointCountry>DE</endPointCountry>
+      <trackLengthM>17271.5447550596</trackLengthM>
+      <countTrackpoints>1139</countTrackpoints>
+      <trackProperty>roundTrip</trackProperty>
+      <altitudeMinHeightM>-47</altitudeMinHeightM>
+      <altitudeMaxHeightM>100</altitudeMaxHeightM>
+      <altitudeDifferenceM>147</altitudeDifferenceM>
+      <totalAscentM>1415</totalAscentM>
+      <totalDescentM>1407</totalDescentM>
+    </track>
+    <track>
+      <title>Leipzig - Auenwald</title>
+      <fileId>ktkrrdlplxtqhmzm</fileId>
+      <downloadLink>http://www.gpsies.com/download.do?fileId=ktkrrdlplxtqhmzm&amp;filetype=kml</downloadLink>
+      <createdDate>2006-09-06 21:04:22.0</createdDate>
+      <changedDate>2012-01-11 00:03:35.0</changedDate>
+      <startPointLat>51.3639000</startPointLat>
+      <startPointLon>12.3131730</startPointLon>
+      <endPointLat>51.3652080</endPointLat>
+      <endPointLon>12.3102340</endPointLon>
+      <startPointCountry>DE</startPointCountry>
+      <endPointCountry>DE</endPointCountry>
+      <trackLengthM>13536.5102599331</trackLengthM>
+      <countTrackpoints>887</countTrackpoints>
+      <trackProperty>roundTrip</trackProperty>
+      <altitudeMinHeightM>29</altitudeMinHeightM>
+      <altitudeMaxHeightM>163</altitudeMaxHeightM>
+      <altitudeDifferenceM>134</altitudeDifferenceM>
+      <totalAscentM>1340</totalAscentM>
+      <totalDescentM>1334</totalDescentM>
+    </track>
+    <track>
+      <title>060905</title>
+      <fileId>qfxcgfrbqfiykklx</fileId>
+      <downloadLink>http://www.gpsies.com/download.do?fileId=qfxcgfrbqfiykklx&amp;filetype=kml</downloadLink>
+      <createdDate>2006-09-06 23:12:25.0</createdDate>
+      <changedDate>2012-01-11 00:03:35.0</changedDate>
+      <startPointLat>52.5365190</startPointLat>
+      <startPointLon>13.4011680</startPointLon>
+      <endPointLat>52.5354740</endPointLat>
+      <endPointLon>13.4012120</endPointLon>
+      <startPointCountry>DE</startPointCountry>
+      <endPointCountry>DE</endPointCountry>
+      <trackLengthM>12043.776600975001</trackLengthM>
+      <countTrackpoints>804</countTrackpoints>
+      <trackProperty>roundTrip</trackProperty>
+      <altitudeMinHeightM>2</altitudeMinHeightM>
+      <altitudeMaxHeightM>120</altitudeMaxHeightM>
+      <altitudeDifferenceM>118</altitudeDifferenceM>
+      <totalAscentM>1453</totalAscentM>
+      <totalDescentM>1442</totalDescentM>
+    </track>
+    <track>
+      <title>060906_1</title>
+      <fileId>kyhlhbbjaxsknkli</fileId>
+      <downloadLink>http://www.gpsies.com/download.do?fileId=kyhlhbbjaxsknkli&amp;filetype=kml</downloadLink>
+      <createdDate>2006-09-06 23:13:53.0</createdDate>
+      <changedDate>2012-01-11 00:03:35.0</changedDate>
+      <startPointLat>52.5365110</startPointLat>
+      <startPointLon>13.4011570</startPointLon>
+      <endPointLat>52.5355110</endPointLat>
+      <endPointLon>13.4012830</endPointLon>
+      <startPointCountry>DE</startPointCountry>
+      <endPointCountry>DE</endPointCountry>
+      <trackLengthM>11919.7055761278</trackLengthM>
+      <countTrackpoints>759</countTrackpoints>
+      <trackProperty>roundTrip</trackProperty>
+      <altitudeMinHeightM>9</altitudeMinHeightM>
+      <altitudeMaxHeightM>172</altitudeMaxHeightM>
+      <altitudeDifferenceM>163</altitudeDifferenceM>
+      <totalAscentM>1065</totalAscentM>
+      <totalDescentM>1038</totalDescentM>
+    </track>
+    <track>
+      <title>060906_2</title>
+      <fileId>jfypcopqnixiixwr</fileId>
+      <downloadLink>http://www.gpsies.com/download.do?fileId=jfypcopqnixiixwr&amp;filetype=kml</downloadLink>
+      <createdDate>2006-09-06 23:15:09.0</createdDate>
+      <changedDate>2012-01-11 00:03:35.0</changedDate>
+      <startPointLat>52.5364550</startPointLat>
+      <startPointLon>13.4009650</startPointLon>
+      <endPointLat>52.5356220</endPointLat>
+      <endPointLon>13.4017020</endPointLon>
+      <startPointCountry>DE</startPointCountry>
+      <endPointCountry>DE</endPointCountry>
+      <trackLengthM>13069.5371466244</trackLengthM>
+      <countTrackpoints>839</countTrackpoints>
+      <trackProperty>roundTrip</trackProperty>
+      <altitudeMinHeightM>-9</altitudeMinHeightM>
+      <altitudeMaxHeightM>341</altitudeMaxHeightM>
+      <altitudeDifferenceM>350</altitudeDifferenceM>
+      <totalAscentM>1502</totalAscentM>
+      <totalDescentM>1505</totalDescentM>
+    </track>
+    <track>
+      <title>Holzgerlingen - Dettenhausen</title>
+      <fileId>bztebqewyuogyqcc</fileId>
+      <downloadLink>http://www.gpsies.com/download.do?fileId=bztebqewyuogyqcc&amp;filetype=kml</downloadLink>
+      <createdDate>2006-09-08 08:58:22.0</createdDate>
+      <changedDate>2012-01-11 00:03:35.0</changedDate>
+      <description>Schöner Weg über Felder und durch Wald von Holzgerlingen nach Dettenhausen(je nach Kondition zurück mit der Bahn).</description>
+      <startPointLat>48.6510080</startPointLat>
+      <startPointLon>9.01083700</startPointLon>
+      <endPointLat>48.6063970</endPointLat>
+      <endPointLon>9.09439700</endPointLon>
+      <startPointCountry>DE</startPointCountry>
+      <endPointCountry>DE</endPointCountry>
+      <trackLengthM>10812.0824677461</trackLengthM>
+      <countTrackpoints>662</countTrackpoints>
+      <trackProperty>oneWayTrip</trackProperty>
+      <altitudeMinHeightM>412</altitudeMinHeightM>
+      <altitudeMaxHeightM>516</altitudeMaxHeightM>
+      <altitudeDifferenceM>104</altitudeDifferenceM>
+      <totalAscentM>411</totalAscentM>
+      <totalDescentM>502</totalDescentM>
+    </track>
+    <track>
+      <title>Hohensyburg Schwerte</title>
+      <fileId>zbseoigfqjccuxgm</fileId>
+      <downloadLink>http://www.gpsies.com/download.do?fileId=zbseoigfqjccuxgm&amp;filetype=kml</downloadLink>
+      <createdDate>2006-09-09 08:32:31.0</createdDate>
+      <changedDate>2012-01-11 00:03:35.0</changedDate>
+      <description>Dies ist eine Rundstrecke die ich am Wochenende öfters laufe. Sie ist nicht sehr anstrengend da kaum Steigungen drin sind.</description>
+      <startPointLat>51.4184240</startPointLat>
+      <startPointLon>7.57179200</startPointLon>
+      <endPointLat>51.4185160</endPointLat>
+      <endPointLon>7.57097400</endPointLon>
+      <startPointCountry>DE</startPointCountry>
+      <endPointCountry>DE</endPointCountry>
+      <trackLengthM>23032.130297897398</trackLengthM>
+      <countTrackpoints>1631</countTrackpoints>
+      <trackProperty>roundTrip</trackProperty>
+      <altitudeMinHeightM>91</altitudeMinHeightM>
+      <altitudeMaxHeightM>153</altitudeMaxHeightM>
+      <altitudeDifferenceM>62</altitudeDifferenceM>
+      <totalAscentM>1299</totalAscentM>
+      <totalDescentM>1303</totalDescentM>
+    </track>
+    <track>
+      <title>Kiel Stadt</title>
+      <fileId>cjbslrivttiwqbxr</fileId>
+      <downloadLink>http://www.gpsies.com/download.do?fileId=cjbslrivttiwqbxr&amp;filetype=kml</downloadLink>
+      <createdDate>2006-09-09 10:22:01.0</createdDate>
+      <changedDate>2012-01-11 00:03:35.0</changedDate>
+      <startPointLat>54.3499170</startPointLat>
+      <startPointLon>10.1435350</startPointLon>
+      <endPointLat>54.3500980</endPointLat>
+      <endPointLon>10.1424990</endPointLon>
+      <startPointCountry>DE</startPointCountry>
+      <endPointCountry>DE</endPointCountry>
+      <trackLengthM>8285.75156986835</trackLengthM>
+      <countTrackpoints>190</countTrackpoints>
+      <trackProperty>roundTrip</trackProperty>
+      <altitudeMinHeightM>-8</altitudeMinHeightM>
+      <altitudeMaxHeightM>39</altitudeMaxHeightM>
+      <altitudeDifferenceM>47</altitudeDifferenceM>
+      <totalAscentM>136</totalAscentM>
+      <totalDescentM>127</totalDescentM>
+    </track>
+    <track>
+      <title>060909_2</title>
+      <fileId>sfwzrvrlfnhkxsfn</fileId>
+      <downloadLink>http://www.gpsies.com/download.do?fileId=sfwzrvrlfnhkxsfn&amp;filetype=kml</downloadLink>
+      <createdDate>2006-09-09 18:54:27.0</createdDate>
+      <changedDate>2012-01-11 00:03:35.0</changedDate>
+      <startPointLat>52.5364780</startPointLat>
+      <startPointLon>13.4012750</startPointLon>
+      <endPointLat>52.5368830</endPointLat>
+      <endPointLon>13.4008050</endPointLon>
+      <startPointCountry>DE</startPointCountry>
+      <endPointCountry>DE</endPointCountry>
+      <trackLengthM>31023.087126187</trackLengthM>
+      <countTrackpoints>2103</countTrackpoints>
+      <trackProperty>roundTrip</trackProperty>
+      <altitudeMinHeightM>11</altitudeMinHeightM>
+      <altitudeMaxHeightM>143</altitudeMaxHeightM>
+      <altitudeDifferenceM>132</altitudeDifferenceM>
+      <totalAscentM>2394</totalAscentM>
+      <totalDescentM>2398</totalDescentM>
+    </track>
+    <track>
+      <title>Kiel - Landwehr</title>
+      <fileId>xysqztlsvmeoraav</fileId>
+      <downloadLink>http://www.gpsies.com/download.do?fileId=xysqztlsvmeoraav&amp;filetype=kml</downloadLink>
+      <createdDate>2006-09-14 11:55:12.0</createdDate>
+      <changedDate>2012-01-11 00:03:35.0</changedDate>
+      <description>Lauf- oder Radstrecke entlang des NOK.Besonderheiten:- Holtenauer Hochbrücke ( 50m)- Lewensauer Hochbrücken ( 50m)- Fähre Landwehrein Wechsel der Kanalseite ist an den Hochbrücken und an der Kanalfähre ( kostenlos ) möglich</description>
+      <startPointLat>54.3712970</startPointLat>
+      <startPointLon>10.1387600</startPointLon>
+      <endPointLat>54.3713750</endPointLat>
+      <endPointLon>10.1385000</endPointLon>
+      <startPointCountry>DE</startPointCountry>
+      <endPointCountry>DE</endPointCountry>
+      <trackLengthM>23153.498625028</trackLengthM>
+      <countTrackpoints>668</countTrackpoints>
+      <trackProperty>roundTrip</trackProperty>
+      <altitudeMinHeightM>-33</altitudeMinHeightM>
+      <altitudeMaxHeightM>23</altitudeMaxHeightM>
+      <altitudeDifferenceM>56</altitudeDifferenceM>
+      <totalAscentM>547</totalAscentM>
+      <totalDescentM>549</totalDescentM>
+    </track>
+    <track>
+      <title>Testlauf Course Creator im Grunewald</title>
+      <fileId>kvggimcqowkxdtrk</fileId>
+      <downloadLink>http://www.gpsies.com/download.do?fileId=kvggimcqowkxdtrk&amp;filetype=kml</downloadLink>
+      <createdDate>2006-09-16 15:23:19.0</createdDate>
+      <changedDate>2012-02-06 08:46:15.0</changedDate>
+      <description>Heute probiere ich zusammen mit Carsten einen Kurs mit Navigation durch den Grunewald nachzulaufen.</description>
+      <startPointLat>52.4470647</startPointLat>
+      <startPointLon>13.2300066</startPointLon>
+      <endPointLat>52.4471301</endPointLat>
+      <endPointLon>13.2300066</endPointLon>
+      <startPointCountry>DE</startPointCountry>
+      <endPointCountry>DE</endPointCountry>
+      <trackLengthM>12210.5567018295</trackLengthM>
+      <countTrackpoints>69</countTrackpoints>
+      <trackProperty>roundTrip</trackProperty>
+      <altitudeMinHeightM>37</altitudeMinHeightM>
+      <altitudeMaxHeightM>93</altitudeMaxHeightM>
+      <altitudeDifferenceM>56</altitudeDifferenceM>
+      <totalAscentM>160</totalAscentM>
+      <totalDescentM>162</totalDescentM>
+    </track>
+    <track>
+      <title>Emscherlauf</title>
+      <fileId>gqoxfpghggqtesjb</fileId>
+      <downloadLink>http://www.gpsies.com/download.do?fileId=gqoxfpghggqtesjb&amp;filetype=kml</downloadLink>
+      <createdDate>2006-09-17 09:30:12.0</createdDate>
+      <changedDate>2012-01-11 00:03:35.0</changedDate>
+      <startPointLat>51.4934614</startPointLat>
+      <startPointLon>6.94332006</startPointLon>
+      <endPointLat>51.4937401</endPointLat>
+      <endPointLon>6.94339516</endPointLon>
+      <startPointCountry>DE</startPointCountry>
+      <endPointCountry>DE</endPointCountry>
+      <trackLengthM>15409.5725031479</trackLengthM>
+      <countTrackpoints>4732</countTrackpoints>
+      <trackProperty>roundTrip</trackProperty>
+      <altitudeMinHeightM>10</altitudeMinHeightM>
+      <altitudeMaxHeightM>79</altitudeMaxHeightM>
+      <altitudeDifferenceM>69</altitudeDifferenceM>
+      <totalAscentM>1279</totalAscentM>
+      <totalDescentM>1294</totalDescentM>
+    </track>
+    <track>
+      <title>Wischlingen 12.5 km</title>
+      <fileId>fnsfnvblyxaqrrky</fileId>
+      <downloadLink>http://www.gpsies.com/download.do?fileId=fnsfnvblyxaqrrky&amp;filetype=kml</downloadLink>
+      <createdDate>2006-09-17 12:13:31.0</createdDate>
+      <changedDate>2012-01-11 00:03:35.0</changedDate>
+      <startPointLat>51.5201880</startPointLat>
+      <startPointLon>7.40645349</startPointLon>
+      <endPointLat>51.5201847</endPointLat>
+      <endPointLon>7.40645080</endPointLon>
+      <startPointCountry>DE</startPointCountry>
+      <endPointCountry>DE</endPointCountry>
+      <trackLengthM>12294.5799906832</trackLengthM>
+      <countTrackpoints>375</countTrackpoints>
+      <trackProperty>roundTrip</trackProperty>
+      <altitudeMinHeightM>65</altitudeMinHeightM>
+      <altitudeMaxHeightM>98</altitudeMaxHeightM>
+      <altitudeDifferenceM>33</altitudeDifferenceM>
+      <totalAscentM>196</totalAscentM>
+      <totalDescentM>196</totalDescentM>
+    </track>
+    <track>
+      <title>Schwaneburg</title>
+      <fileId>mybeuasenpwpbnjy</fileId>
+      <downloadLink>http://www.gpsies.com/download.do?fileId=mybeuasenpwpbnjy&amp;filetype=kml</downloadLink>
+      <createdDate>2006-09-17 12:40:18.0</createdDate>
+      <changedDate>2012-01-11 00:03:35.0</changedDate>
+      <startPointLat>53.0488950</startPointLat>
+      <startPointLon>7.82644987</startPointLon>
+      <endPointLat>53.0490433</endPointLat>
+      <endPointLon>7.82602071</endPointLon>
+      <startPointCountry>DE</startPointCountry>
+      <endPointCountry>DE</endPointCountry>
+      <trackLengthM>4714.51785163933</trackLengthM>
+      <countTrackpoints>45</countTrackpoints>
+      <trackProperty>roundTrip</trackProperty>
+      <altitudeMinHeightM>2</altitudeMinHeightM>
+      <altitudeMaxHeightM>12</altitudeMaxHeightM>
+      <altitudeDifferenceM>10</altitudeDifferenceM>
+      <totalAscentM>28</totalAscentM>
+      <totalDescentM>27</totalDescentM>
+    </track>
+    <track>
+      <title>Wischlingen kleine Runde</title>
+      <fileId>dppquqsnnwrrxfzh</fileId>
+      <downloadLink>http://www.gpsies.com/download.do?fileId=dppquqsnnwrrxfzh&amp;filetype=kml</downloadLink>
+      <createdDate>2006-09-17 16:20:53.0</createdDate>
+      <changedDate>2012-01-11 00:03:35.0</changedDate>
+      <startPointLat>51.5201863</startPointLat>
+      <startPointLon>7.40644812</startPointLon>
+      <endPointLat>51.5201863</endPointLat>
+      <endPointLon>7.40644544</endPointLon>
+      <startPointCountry>DE</startPointCountry>
+      <endPointCountry>DE</endPointCountry>
+      <trackLengthM>4398.43389165131</trackLengthM>
+      <countTrackpoints>170</countTrackpoints>
+      <trackProperty>roundTrip</trackProperty>
+      <altitudeMinHeightM>64</altitudeMinHeightM>
+      <altitudeMaxHeightM>79</altitudeMaxHeightM>
+      <altitudeDifferenceM>15</altitudeDifferenceM>
+      <totalAscentM>64</totalAscentM>
+      <totalDescentM>64</totalDescentM>
+    </track>
+    <track>
+      <title>Hengsteysee</title>
+      <fileId>ldbpmufbgwwjavxy</fileId>
+      <downloadLink>http://www.gpsies.com/download.do?fileId=ldbpmufbgwwjavxy&amp;filetype=kml</downloadLink>
+      <createdDate>2006-09-17 17:06:06.0</createdDate>
+      <changedDate>2012-01-11 00:03:35.0</changedDate>
+      <startPointLat>51.4029689</startPointLat>
+      <startPointLon>7.45426118</startPointLon>
+      <endPointLat>51.4029639</endPointLat>
+      <endPointLon>7.45425581</endPointLon>
+      <startPointCountry>DE</startPointCountry>
+      <endPointCountry>DE</endPointCountry>
+      <trackLengthM>6603.63005647536</trackLengthM>
+      <countTrackpoints>210</countTrackpoints>
+      <trackProperty>roundTrip</trackProperty>
+      <altitudeMinHeightM>93</altitudeMinHeightM>
+      <altitudeMaxHeightM>141</altitudeMaxHeightM>
+      <altitudeDifferenceM>48</altitudeDifferenceM>
+      <totalAscentM>267</totalAscentM>
+      <totalDescentM>267</totalDescentM>
+    </track>
+    <track>
+      <title>Limburg Dietkirchen</title>
+      <fileId>xpjjevxudwtppjci</fileId>
+      <downloadLink>http://www.gpsies.com/download.do?fileId=xpjjevxudwtppjci&amp;filetype=kml</downloadLink>
+      <createdDate>2006-09-17 17:10:25.0</createdDate>
+      <changedDate>2012-01-11 00:03:35.0</changedDate>
+      <description>Es ist eine schöne Strecke an der Lahn entlang</description>
+      <startPointLat>50.4006946</startPointLat>
+      <startPointLon>8.09713840</startPointLon>
+      <endPointLat>50.4006946</endPointLat>
+      <endPointLon>8.09707403</endPointLon>
+      <startPointCountry>DE</startPointCountry>
+      <endPointCountry>DE</endPointCountry>
+      <trackLengthM>8229.07712761487</trackLengthM>
+      <countTrackpoints>43</countTrackpoints>
+      <trackProperty>roundTrip</trackProperty>
+      <altitudeMinHeightM>107</altitudeMinHeightM>
+      <altitudeMaxHeightM>134</altitudeMaxHeightM>
+      <altitudeDifferenceM>27</altitudeDifferenceM>
+      <totalAscentM>78</totalAscentM>
+      <totalDescentM>77</totalDescentM>
+    </track>
+    <track>
+      <title>Lebenslaeufe - Bolmke</title>
+      <fileId>jxkhmlmwtrhravtd</fileId>
+      <downloadLink>http://www.gpsies.com/download.do?fileId=jxkhmlmwtrhravtd&amp;filetype=kml</downloadLink>
+      <createdDate>2006-09-17 17:35:31.0</createdDate>
+      <changedDate>2012-01-11 00:03:35.0</changedDate>
+      <startPointLat>51.4890961</startPointLat>
+      <startPointLon>7.44591146</startPointLon>
+      <endPointLat>51.4890927</endPointLat>
+      <endPointLon>7.44590878</endPointLon>
+      <startPointCountry>DE</startPointCountry>
+      <endPointCountry>DE</endPointCountry>
+      <trackLengthM>4357.00560346476</trackLengthM>
+      <countTrackpoints>194</countTrackpoints>
+      <trackProperty>roundTrip</trackProperty>
+      <altitudeMinHeightM>85</altitudeMinHeightM>
+      <altitudeMaxHeightM>125</altitudeMaxHeightM>
+      <altitudeDifferenceM>40</altitudeDifferenceM>
+      <totalAscentM>63</totalAscentM>
+      <totalDescentM>63</totalDescentM>
+    </track>
+    <track>
+      <title>Running03_Kaufe</title>
+      <fileId>mdvwakywubmdhnga</fileId>
+      <downloadLink>http://www.gpsies.com/download.do?fileId=mdvwakywubmdhnga&amp;filetype=kml</downloadLink>
+      <createdDate>2006-09-18 12:17:11.0</createdDate>
+      <changedDate>2012-01-11 00:03:35.0</changedDate>
+      <description>Runde in der Nähe von Meßkirch</description>
+      <startPointLat>47.9932173</startPointLat>
+      <startPointLon>9.10416841</startPointLon>
+      <endPointLat>47.9932173</endPointLat>
+      <endPointLon>9.10410940</endPointLon>
+      <startPointCountry>DE</startPointCountry>
+      <endPointCountry>DE</endPointCountry>
+      <trackLengthM>6688.646426926281</trackLengthM>
+      <countTrackpoints>77</countTrackpoints>
+      <trackProperty>roundTrip</trackProperty>
+      <altitudeMinHeightM>618</altitudeMinHeightM>
+      <altitudeMaxHeightM>646</altitudeMaxHeightM>
+      <altitudeDifferenceM>28</altitudeDifferenceM>
+      <totalAscentM>79</totalAscentM>
+      <totalDescentM>79</totalDescentM>
+    </track>
+    <track>
+      <title>Rhein-Herne Kanal - Emscher</title>
+      <fileId>hfoxkopsmymgaqew</fileId>
+      <downloadLink>http://www.gpsies.com/download.do?fileId=hfoxkopsmymgaqew&amp;filetype=kml</downloadLink>
+      <createdDate>2006-09-18 16:01:31.0</createdDate>
+      <changedDate>2012-01-11 00:03:35.0</changedDate>
+      <description>Die Runde führt entlang des Rhein-Herne Kanals hin und entlang der Emscher zurück. Wer will kann mit dem Auto bis zum Anfang der Rune fahren.</description>
+      <startPointLat>51.5593670</startPointLat>
+      <startPointLon>7.21734702</startPointLon>
+      <endPointLat>51.5593703</endPointLat>
+      <endPointLon>7.21734166</endPointLon>
+      <startPointCountry>DE</startPointCountry>
+      <endPointCountry>DE</endPointCountry>
+      <trackLengthM>16770.449166586</trackLengthM>
+      <countTrackpoints>127</countTrackpoints>
+      <trackProperty>roundTrip</trackProperty>
+      <externalLink>http://www.agelis.de</externalLink>
+      <altitudeMinHeightM>44</altitudeMinHeightM>
+      <altitudeMaxHeightM>64</altitudeMaxHeightM>
+      <altitudeDifferenceM>20</altitudeDifferenceM>
+      <totalAscentM>94</totalAscentM>
+      <totalDescentM>94</totalDescentM>
+    </track>
+    <track>
+      <title>Running02_Kaufe</title>
+      <fileId>tpwbqgzpiveiwmtd</fileId>
+      <downloadLink>http://www.gpsies.com/download.do?fileId=tpwbqgzpiveiwmtd&amp;filetype=kml</downloadLink>
+      <createdDate>2006-09-18 16:24:54.0</createdDate>
+      <changedDate>2012-01-11 00:03:35.0</changedDate>
+      <description>Rundweg um Messkirch</description>
+      <startPointLat>47.9931599</startPointLat>
+      <startPointLon>9.10396993</startPointLon>
+      <endPointLat>47.9932030</endPointLat>
+      <endPointLon>9.10378754</endPointLon>
+      <startPointCountry>DE</startPointCountry>
+      <endPointCountry>DE</endPointCountry>
+      <trackLengthM>14752.7863437002</trackLengthM>
+      <countTrackpoints>152</countTrackpoints>
+      <trackProperty>roundTrip</trackProperty>
+      <altitudeMinHeightM>598</altitudeMinHeightM>
+      <altitudeMaxHeightM>672</altitudeMaxHeightM>
+      <altitudeDifferenceM>74</altitudeDifferenceM>
+      <totalAscentM>246</totalAscentM>
+      <totalDescentM>246</totalDescentM>
+    </track>
+    <track>
+      <title>Schloss Oberschleissheim 1</title>
+      <fileId>smtbhbmykogipiys</fileId>
+      <downloadLink>http://www.gpsies.com/download.do?fileId=smtbhbmykogipiys&amp;filetype=kml</downloadLink>
+      <createdDate>2006-09-18 19:58:07.0</createdDate>
+      <changedDate>2012-01-11 00:03:35.0</changedDate>
+      <description>Weg von Zentrum Unterschleissheim nach Oberschleissheim und hinter der Schlossmauer entlang</description>
+      <startPointLat>48.2723611</startPointLat>
+      <startPointLon>11.5829318</startPointLon>
+      <endPointLat>48.2723361</endPointLat>
+      <endPointLon>11.5828996</endPointLon>
+      <startPointCountry>DE</startPointCountry>
+      <endPointCountry>DE</endPointCountry>
+      <trackLengthM>9221.36959069159</trackLengthM>
+      <countTrackpoints>158</countTrackpoints>
+      <trackProperty>roundTrip</trackProperty>
+      <altitudeMinHeightM>473</altitudeMinHeightM>
+      <altitudeMaxHeightM>492</altitudeMaxHeightM>
+      <altitudeDifferenceM>19</altitudeDifferenceM>
+      <totalAscentM>99</totalAscentM>
+      <totalDescentM>98</totalDescentM>
+    </track>
+    <track>
+      <title>Kemnader Stausee</title>
+      <fileId>yhtjoydtjrkajboo</fileId>
+      <downloadLink>http://www.gpsies.com/download.do?fileId=yhtjoydtjrkajboo&amp;filetype=kml</downloadLink>
+      <createdDate>2006-09-18 22:21:21.0</createdDate>
+      <changedDate>2012-01-11 00:03:35.0</changedDate>
+      <startPointLat>51.4380054</startPointLat>
+      <startPointLon>7.28183805</startPointLon>
+      <endPointLat>51.4380038</endPointLat>
+      <endPointLon>7.28183805</endPointLon>
+      <startPointCountry>DE</startPointCountry>
+      <endPointCountry>DE</endPointCountry>
+      <trackLengthM>8308.47582345187</trackLengthM>
+      <countTrackpoints>340</countTrackpoints>
+      <trackProperty>roundTrip</trackProperty>
+      <altitudeMinHeightM>67</altitudeMinHeightM>
+      <altitudeMaxHeightM>97</altitudeMaxHeightM>
+      <altitudeDifferenceM>30</altitudeDifferenceM>
+      <totalAscentM>292</totalAscentM>
+      <totalDescentM>292</totalDescentM>
+    </track>
+    <track>
+      <title>20km Lauf in 4:45</title>
+      <fileId>hfpmzdhtsiwhmbdw</fileId>
+      <downloadLink>http://www.gpsies.com/download.do?fileId=hfpmzdhtsiwhmbdw&amp;filetype=kml</downloadLink>
+      <createdDate>2006-09-19 13:22:10.0</createdDate>
+      <changedDate>2012-01-11 00:03:35.0</changedDate>
+      <description>Von Krommert nach Dingden und zurück ca. 21km</description>
+      <startPointLat>51.7897450</startPointLat>
+      <startPointLon>6.72444820</startPointLon>
+      <endPointLat>51.7898246</endPointLat>
+      <endPointLon>6.72459840</endPointLon>
+      <startPointCountry>DE</startPointCountry>
+      <endPointCountry>DE</endPointCountry>
+      <trackLengthM>25529.132618862397</trackLengthM>
+      <countTrackpoints>156</countTrackpoints>
+      <trackProperty>roundTrip</trackProperty>
+      <altitudeMinHeightM>26</altitudeMinHeightM>
+      <altitudeMaxHeightM>58</altitudeMaxHeightM>
+      <altitudeDifferenceM>32</altitudeDifferenceM>
+      <totalAscentM>167</totalAscentM>
+      <totalDescentM>167</totalDescentM>
+    </track>
+    <track>
+      <title>BRC Clubrunde</title>
+      <fileId>prdxpflzhwwjkevu</fileId>
+      <downloadLink>http://www.gpsies.com/download.do?fileId=prdxpflzhwwjkevu&amp;filetype=kml</downloadLink>
+      <createdDate>2006-09-19 21:30:21.0</createdDate>
+      <changedDate>2012-01-11 00:03:35.0</changedDate>
+      <startPointLat>52.4170790</startPointLat>
+      <startPointLon>13.1696891</startPointLon>
+      <endPointLat>52.4170266</endPointLat>
+      <endPointLon>13.1696033</endPointLon>
+      <startPointCountry>DE</startPointCountry>
+      <endPointCountry>DE</endPointCountry>
+      <trackLengthM>6743.57867860457</trackLengthM>
+      <countTrackpoints>37</countTrackpoints>
+      <trackProperty>roundTrip</trackProperty>
+      <altitudeMinHeightM>36</altitudeMinHeightM>
+      <altitudeMaxHeightM>57</altitudeMaxHeightM>
+      <altitudeDifferenceM>21</altitudeDifferenceM>
+      <totalAscentM>42</totalAscentM>
+      <totalDescentM>42</totalDescentM>
+    </track>
+    <track>
+      <title>Bag-Wies-Wer-Gles-Kölsa-Sietzsch</title>
+      <fileId>iiowoekkjrrslmnz</fileId>
+      <downloadLink>http://www.gpsies.com/download.do?fileId=iiowoekkjrrslmnz&amp;filetype=kml</downloadLink>
+      <createdDate>2006-09-20 09:52:46.0</createdDate>
+      <changedDate>2012-01-11 00:03:35.0</changedDate>
+      <startPointLat>51.4884447</startPointLat>
+      <startPointLon>12.1707916</startPointLon>
+      <endPointLat>51.4884381</endPointLat>
+      <endPointLon>12.1707916</endPointLon>
+      <startPointCountry>DE</startPointCountry>
+      <endPointCountry>DE</endPointCountry>
+      <trackLengthM>20251.5524937679</trackLengthM>
+      <countTrackpoints>167</countTrackpoints>
+      <trackProperty>roundTrip</trackProperty>
+      <altitudeMinHeightM>104</altitudeMinHeightM>
+      <altitudeMaxHeightM>123</altitudeMaxHeightM>
+      <altitudeDifferenceM>19</altitudeDifferenceM>
+      <totalAscentM>55</totalAscentM>
+      <totalDescentM>55</totalDescentM>
+    </track>
+    <track>
+      <title>BRC - Rund um den Schlachtensee</title>
+      <fileId>cxbanazqwndfomnb</fileId>
+      <downloadLink>http://www.gpsies.com/download.do?fileId=cxbanazqwndfomnb&amp;filetype=kml</downloadLink>
+      <createdDate>2006-09-20 10:07:20.0</createdDate>
+      <changedDate>2012-01-11 00:03:35.0</changedDate>
+      <description>Vom Berliner Ruderclub aus rund um den Schlachtensee und zurück</description>
+      <startPointLat>52.4172295</startPointLat>
+      <startPointLon>13.1703114</startPointLon>
+      <endPointLat>52.4172033</endPointLat>
+      <endPointLon>13.1703007</endPointLon>
+      <startPointCountry>DE</startPointCountry>
+      <endPointCountry>DE</endPointCountry>
+      <trackLengthM>12189.7088553087</trackLengthM>
+      <countTrackpoints>72</countTrackpoints>
+      <trackProperty>roundTrip</trackProperty>
+      <altitudeMinHeightM>37</altitudeMinHeightM>
+      <altitudeMaxHeightM>52</altitudeMaxHeightM>
+      <altitudeDifferenceM>15</altitudeDifferenceM>
+      <totalAscentM>94</totalAscentM>
+      <totalDescentM>94</totalDescentM>
+    </track>
+    <track>
+      <title>Wiedemar</title>
+      <fileId>mwclpaeqlypgooyu</fileId>
+      <downloadLink>http://www.gpsies.com/download.do?fileId=mwclpaeqlypgooyu&amp;filetype=kml</downloadLink>
+      <createdDate>2006-09-20 10:12:40.0</createdDate>
+      <changedDate>2012-01-11 00:03:35.0</changedDate>
+      <startPointLat>51.4884113</startPointLat>
+      <startPointLon>12.1705234</startPointLon>
+      <endPointLat>51.4884648</endPointLat>
+      <endPointLon>12.1704590</endPointLon>
+      <startPointCountry>DE</startPointCountry>
+      <endPointCountry>DE</endPointCountry>
+      <trackLengthM>12609.042294637</trackLengthM>
+      <countTrackpoints>117</countTrackpoints>
+      <trackProperty>roundTrip</trackProperty>
+      <altitudeMinHeightM>104</altitudeMinHeightM>
+      <altitudeMaxHeightM>118</altitudeMaxHeightM>
+      <altitudeDifferenceM>14</altitudeDifferenceM>
+      <totalAscentM>37</totalAscentM>
+      <totalDescentM>37</totalDescentM>
+    </track>
+    <track>
+      <title>Kalterherberg</title>
+      <fileId>afqldfktowrogwfo</fileId>
+      <downloadLink>http://www.gpsies.com/download.do?fileId=afqldfktowrogwfo&amp;filetype=kml</downloadLink>
+      <createdDate>2006-09-20 19:18:03.0</createdDate>
+      <changedDate>2012-01-11 00:03:35.0</changedDate>
+      <description>teststrecke</description>
+      <startPointLat>50.5658074</startPointLat>
+      <startPointLon>6.21403455</startPointLon>
+      <endPointLat>50.5658346</endPointLat>
+      <endPointLon>6.21429204</endPointLon>
+      <startPointCountry>DE</startPointCountry>
+      <endPointCountry>DE</endPointCountry>
+      <trackLengthM>19847.160007756698</trackLengthM>
+      <countTrackpoints>152</countTrackpoints>
+      <trackProperty>roundTrip</trackProperty>
+      <altitudeMinHeightM>434</altitudeMinHeightM>
+      <altitudeMaxHeightM>626</altitudeMaxHeightM>
+      <altitudeDifferenceM>192</altitudeDifferenceM>
+      <totalAscentM>487</totalAscentM>
+      <totalDescentM>487</totalDescentM>
+    </track>
+    <track>
+      <title>Altensteig1</title>
+      <fileId>kbaiollopgroohrz</fileId>
+      <downloadLink>http://www.gpsies.com/download.do?fileId=kbaiollopgroohrz&amp;filetype=kml</downloadLink>
+      <createdDate>2006-09-22 00:44:57.0</createdDate>
+      <changedDate>2012-01-11 00:03:35.0</changedDate>
+      <startPointLat>48.5912277</startPointLat>
+      <startPointLon>8.60890388</startPointLon>
+      <endPointLat>48.5908586</endPointLat>
+      <endPointLon>8.60304594</endPointLon>
+      <startPointCountry>DE</startPointCountry>
+      <endPointCountry>DE</endPointCountry>
+      <trackLengthM>7212.34082386378</trackLengthM>
+      <countTrackpoints>28</countTrackpoints>
+      <trackProperty>roundTrip</trackProperty>
+      <altitudeMinHeightM>444</altitudeMinHeightM>
+      <altitudeMaxHeightM>559</altitudeMaxHeightM>
+      <altitudeDifferenceM>115</altitudeDifferenceM>
+      <totalAscentM>138</totalAscentM>
+      <totalDescentM>188</totalDescentM>
+    </track>
+    <track>
+      <title>GPSies Track</title>
+      <fileId>hkiayyuhwfsmzsot</fileId>
+      <downloadLink>http://www.gpsies.com/download.do?fileId=hkiayyuhwfsmzsot&amp;filetype=kml</downloadLink>
+      <createdDate>2006-09-22 09:32:57.0</createdDate>
+      <changedDate>2012-01-11 00:03:35.0</changedDate>
+      <startPointLat>52.4264484</startPointLat>
+      <startPointLon>13.2256078</startPointLon>
+      <endPointLat>52.4263961</endPointLat>
+      <endPointLon>13.2252645</endPointLon>
+      <startPointCountry>DE</startPointCountry>
+      <endPointCountry>DE</endPointCountry>
+      <trackLengthM>16751.101040299003</trackLengthM>
+      <countTrackpoints>121</countTrackpoints>
+      <trackProperty>roundTrip</trackProperty>
+      <altitudeMinHeightM>34</altitudeMinHeightM>
+      <altitudeMaxHeightM>61</altitudeMaxHeightM>
+      <altitudeDifferenceM>27</altitudeDifferenceM>
+      <totalAscentM>175</totalAscentM>
+      <totalDescentM>176</totalDescentM>
+    </track>
+    <track>
+      <title>Wischlingen kl. Runde um den See</title>
+      <fileId>etgersjyrozommgj</fileId>
+      <downloadLink>http://www.gpsies.com/download.do?fileId=etgersjyrozommgj&amp;filetype=kml</downloadLink>
+      <createdDate>2006-09-22 22:21:44.0</createdDate>
+      <changedDate>2012-01-11 00:03:35.0</changedDate>
+      <startPointLat>51.5184472</startPointLat>
+      <startPointLon>7.40755587</startPointLon>
+      <endPointLat>51.5184472</endPointLat>
+      <endPointLon>7.40755587</endPointLon>
+      <startPointCountry>DE</startPointCountry>
+      <endPointCountry>DE</endPointCountry>
+      <trackLengthM>3516.51872208222</trackLengthM>
+      <countTrackpoints>166</countTrackpoints>
+      <trackProperty>roundTrip</trackProperty>
+      <altitudeMinHeightM>64</altitudeMinHeightM>
+      <altitudeMaxHeightM>79</altitudeMaxHeightM>
+      <altitudeDifferenceM>15</altitudeDifferenceM>
+      <totalAscentM>60</totalAscentM>
+      <totalDescentM>60</totalDescentM>
+    </track>
+    <track>
+      <title>Hannover-Eilenriede 3</title>
+      <fileId>kfdzcwzwjleizsaw</fileId>
+      <downloadLink>http://www.gpsies.com/download.do?fileId=kfdzcwzwjleizsaw&amp;filetype=kml</downloadLink>
+      <createdDate>2006-09-22 23:14:58.0</createdDate>
+      <changedDate>2012-01-11 00:03:35.0</changedDate>
+      <description>kleiner Rundurs in der Eilenriede Nähe List und Oststadt. Wird von vielen Läufern/innen gerne mehrfach durchlaufen.Nicht auf dem Radweg</description>
+      <startPointLat>52.3893122</startPointLat>
+      <startPointLon>9.75433588</startPointLon>
+      <endPointLat>52.3892598</endPointLat>
+      <endPointLon>9.75427150</endPointLon>
+      <startPointCountry>DE</startPointCountry>
+      <endPointCountry>DE</endPointCountry>
+      <trackLengthM>3662.8165094360597</trackLengthM>
+      <countTrackpoints>43</countTrackpoints>
+      <trackProperty>roundTrip</trackProperty>
+      <altitudeMinHeightM>60</altitudeMinHeightM>
+      <altitudeMaxHeightM>69</altitudeMaxHeightM>
+      <altitudeDifferenceM>9</altitudeDifferenceM>
+      <totalAscentM>40</totalAscentM>
+      <totalDescentM>40</totalDescentM>
+    </track>
+    <track>
+      <title>Hannover Lister Turm-Altwarmbuechener See-Mittellandkanal von Kilometerfresser</title>
+      <fileId>lkdaisdrrcdezpfe</fileId>
+      <downloadLink>http://www.gpsies.com/download.do?fileId=lkdaisdrrcdezpfe&amp;filetype=kml</downloadLink>
+      <createdDate>2006-09-22 23:37:52.0</createdDate>
+      <changedDate>2012-01-11 00:03:35.0</changedDate>
+      <description>Längere Strecke zum schönen Altwarmbüchener See auf überwiegend befestigten Schotterwegen mit nur wenig Asphalt. Gut für lange Läufe in der Marathonvorbereitung. Kann beliebig in der Eilenriede verlängert werden.</description>
+      <startPointLat>52.3897051</startPointLat>
+      <startPointLon>9.75487232</startPointLon>
+      <endPointLat>52.3896789</endPointLat>
+      <endPointLon>9.75497961</endPointLon>
+      <startPointCountry>DE</startPointCountry>
+      <endPointCountry>DE</endPointCountry>
+      <trackLengthM>22139.3183038729</trackLengthM>
+      <countTrackpoints>263</countTrackpoints>
+      <trackProperty>roundTrip</trackProperty>
+      <altitudeMinHeightM>51</altitudeMinHeightM>
+      <altitudeMaxHeightM>68</altitudeMaxHeightM>
+      <altitudeDifferenceM>17</altitudeDifferenceM>
+      <totalAscentM>154</totalAscentM>
+      <totalDescentM>154</totalDescentM>
+    </track>
+    <track>
+      <title>Hannover Maschsee-Runde von Kilometerfresser</title>
+      <fileId>jpdfsjojxbnztxxl</fileId>
+      <downloadLink>http://www.gpsies.com/download.do?fileId=jpdfsjojxbnztxxl&amp;filetype=kml</downloadLink>
+      <createdDate>2006-09-23 10:52:41.0</createdDate>
+      <changedDate>2012-01-11 00:03:35.0</changedDate>
+      <description>Eine Runde um den berühmten Maschsee in der Mitte Hannovers- Beliebtes Ausflugsziel für Spaziergänger</description>
+      <startPointLat>52.3630087</startPointLat>
+      <startPointLon>9.73873615</startPointLon>
+      <endPointLat>52.3630349</endPointLat>
+      <endPointLon>9.73882198</endPointLon>
+      <startPointCountry>DE</startPointCountry>
+      <endPointCountry>DE</endPointCountry>
+      <trackLengthM>6010.79468457607</trackLengthM>
+      <countTrackpoints>53</countTrackpoints>
+      <trackProperty>roundTrip</trackProperty>
+      <altitudeMinHeightM>50</altitudeMinHeightM>
+      <altitudeMaxHeightM>61</altitudeMaxHeightM>
+      <altitudeDifferenceM>11</altitudeDifferenceM>
+      <totalAscentM>56</totalAscentM>
+      <totalDescentM>56</totalDescentM>
+    </track>
+    <track>
+      <title>Berliner Grunewald</title>
+      <fileId>cyncknqcluazbasy</fileId>
+      <downloadLink>http://www.gpsies.com/download.do?fileId=cyncknqcluazbasy&amp;filetype=kml</downloadLink>
+      <createdDate>2006-09-24 12:01:51.0</createdDate>
+      <changedDate>2012-02-06 08:46:16.0</changedDate>
+      <description>Schöne Runde durch den Grunewald. Von der Clayallee bis zum Teufelssee</description>
+      <startPointLat>52.4604650</startPointLat>
+      <startPointLon>13.2754490</startPointLon>
+      <endPointLat>52.4603570</endPointLat>
+      <endPointLon>13.2756460</endPointLon>
+      <startPointCountry>DE</startPointCountry>
+      <endPointCountry>DE</endPointCountry>
+      <trackLengthM>17186.8192688069</trackLengthM>
+      <countTrackpoints>1436</countTrackpoints>
+      <trackProperty>roundTrip</trackProperty>
+      <altitudeMinHeightM>20</altitudeMinHeightM>
+      <altitudeMaxHeightM>94</altitudeMaxHeightM>
+      <altitudeDifferenceM>74</altitudeDifferenceM>
+      <totalAscentM>1024</totalAscentM>
+      <totalDescentM>1024</totalDescentM>
+    </track>
+    <track>
+      <title>Babelsberg</title>
+      <fileId>gqbytnxxihdunukf</fileId>
+      <downloadLink>http://www.gpsies.com/download.do?fileId=gqbytnxxihdunukf&amp;filetype=kml</downloadLink>
+      <createdDate>2006-09-25 07:22:46.0</createdDate>
+      <changedDate>2012-01-11 00:03:35.0</changedDate>
+      <startPointLat>52.3879634</startPointLat>
+      <startPointLon>13.0984497</startPointLon>
+      <endPointLat>52.3877538</endPointLat>
+      <endPointLon>13.0983638</endPointLon>
+      <startPointCountry>DE</startPointCountry>
+      <endPointCountry>DE</endPointCountry>
+      <trackLengthM>8045.735328002911</trackLengthM>
+      <countTrackpoints>26</countTrackpoints>
+      <trackProperty>roundTrip</trackProperty>
+      <altitudeMinHeightM>30</altitudeMinHeightM>
+      <altitudeMaxHeightM>65</altitudeMaxHeightM>
+      <altitudeDifferenceM>35</altitudeDifferenceM>
+      <totalAscentM>73</totalAscentM>
+      <totalDescentM>73</totalDescentM>
+    </track>
+    <track>
+      <title>Kreuzberg/Landwehrkanal/Hasenheide</title>
+      <fileId>zlomiechkwezrckt</fileId>
+      <downloadLink>http://www.gpsies.com/download.do?fileId=zlomiechkwezrckt&amp;filetype=kml</downloadLink>
+      <createdDate>2006-09-25 15:13:43.0</createdDate>
+      <changedDate>2012-01-11 00:03:35.0</changedDate>
+      <startPointLat>52.4921618</startPointLat>
+      <startPointLon>13.3931922</startPointLon>
+      <endPointLat>52.4922924</endPointLat>
+      <endPointLon>13.3931493</endPointLon>
+      <startPointCountry>DE</startPointCountry>
+      <endPointCountry>DE</endPointCountry>
+      <trackLengthM>8332.57316405848</trackLengthM>
+      <countTrackpoints>26</countTrackpoints>
+      <trackProperty>roundTrip</trackProperty>
+      <altitudeMinHeightM>36</altitudeMinHeightM>
+      <altitudeMaxHeightM>51</altitudeMaxHeightM>
+      <altitudeDifferenceM>15</altitudeDifferenceM>
+      <totalAscentM>29</totalAscentM>
+      <totalDescentM>29</totalDescentM>
+    </track>
+    <track>
+      <title>Trainingstour</title>
+      <fileId>euytzwiktazrsjrc</fileId>
+      <downloadLink>http://www.gpsies.com/download.do?fileId=euytzwiktazrsjrc&amp;filetype=kml</downloadLink>
+      <createdDate>2006-09-26 09:49:03.0</createdDate>
+      <changedDate>2012-01-11 00:03:35.0</changedDate>
+      <startPointLat>50.8178051</startPointLat>
+      <startPointLon>12.9345667</startPointLon>
+      <endPointLat>50.8177983</endPointLat>
+      <endPointLon>12.9345667</endPointLon>
+      <startPointCountry>DE</startPointCountry>
+      <endPointCountry>DE</endPointCountry>
+      <trackLengthM>18554.6594283038</trackLengthM>
+      <countTrackpoints>408</countTrackpoints>
+      <trackProperty>roundTrip</trackProperty>
+      <altitudeMinHeightM>296</altitudeMinHeightM>
+      <altitudeMaxHeightM>402</altitudeMaxHeightM>
+      <altitudeDifferenceM>106</altitudeDifferenceM>
+      <totalAscentM>426</totalAscentM>
+      <totalDescentM>426</totalDescentM>
+    </track>
+    <track>
+      <title>Dietramszell</title>
+      <fileId>omytqzzjkprpenhq</fileId>
+      <downloadLink>http://www.gpsies.com/download.do?fileId=omytqzzjkprpenhq&amp;filetype=kml</downloadLink>
+      <createdDate>2006-09-26 17:27:42.0</createdDate>
+      <changedDate>2012-01-11 00:03:35.0</changedDate>
+      <description>Rundstrecke zum spazieren oder joggen</description>
+      <startPointLat>47.8488200</startPointLat>
+      <startPointLon>11.5969580</startPointLon>
+      <endPointLat>47.8487770</endPointLat>
+      <endPointLon>11.5969060</endPointLon>
+      <startPointCountry>DE</startPointCountry>
+      <endPointCountry>DE</endPointCountry>
+      <trackLengthM>3197.476371597</trackLengthM>
+      <countTrackpoints>235</countTrackpoints>
+      <trackProperty>roundTrip</trackProperty>
+      <altitudeMinHeightM>676</altitudeMinHeightM>
+      <altitudeMaxHeightM>721</altitudeMaxHeightM>
+      <altitudeDifferenceM>45</altitudeDifferenceM>
+      <totalAscentM>101</totalAscentM>
+      <totalDescentM>97</totalDescentM>
+    </track>
+    <track>
+      <title>Micha´s Heimstrecke</title>
+      <fileId>bpqgliabbvckdslx</fileId>
+      <downloadLink>http://www.gpsies.com/download.do?fileId=bpqgliabbvckdslx&amp;filetype=kml</downloadLink>
+      <createdDate>2006-09-27 13:15:17.0</createdDate>
+      <changedDate>2012-01-11 00:03:35.0</changedDate>
+      <description>Asphalt und Waldwege gemischt</description>
+      <startPointLat>52.5794794</startPointLat>
+      <startPointLon>9.72985267</startPointLon>
+      <endPointLat>52.5793490</endPointLat>
+      <endPointLon>9.73011016</endPointLon>
+      <startPointCountry>DE</startPointCountry>
+      <endPointCountry>DE</endPointCountry>
+      <trackLengthM>5565.01161307168</trackLengthM>
+      <countTrackpoints>26</countTrackpoints>
+      <trackProperty>roundTrip</trackProperty>
+      <altitudeMinHeightM>38</altitudeMinHeightM>
+      <altitudeMaxHeightM>49</altitudeMaxHeightM>
+      <altitudeDifferenceM>11</altitudeDifferenceM>
+      <totalAscentM>14</totalAscentM>
+      <totalDescentM>14</totalDescentM>
+    </track>
+    <track>
+      <title>10 KM</title>
+      <fileId>absnvvovuebaisab</fileId>
+      <downloadLink>http://www.gpsies.com/download.do?fileId=absnvvovuebaisab&amp;filetype=kml</downloadLink>
+      <createdDate>2006-09-27 18:54:26.0</createdDate>
+      <changedDate>2012-01-11 00:03:35.0</changedDate>
+      <startPointLat>50.1419340</startPointLat>
+      <startPointLon>8.91535600</startPointLon>
+      <endPointLat>50.1416970</endPointLat>
+      <endPointLon>8.91343000</endPointLon>
+      <startPointCountry>DE</startPointCountry>
+      <endPointCountry>DE</endPointCountry>
+      <trackLengthM>9970.60225058293</trackLengthM>
+      <countTrackpoints>887</countTrackpoints>
+      <trackProperty>roundTrip</trackProperty>
+      <altitudeMinHeightM>85</altitudeMinHeightM>
+      <altitudeMaxHeightM>140</altitudeMaxHeightM>
+      <altitudeDifferenceM>55</altitudeDifferenceM>
+      <totalAscentM>785</totalAscentM>
+      <totalDescentM>783</totalDescentM>
+    </track>
+    <track>
+      <title>Hannover List-Mittellandkanal-Tiergarten-Eilenriede-List von Kilometerfresser</title>
+      <fileId>caaivlogftcnpupm</fileId>
+      <downloadLink>http://www.gpsies.com/download.do?fileId=caaivlogftcnpupm&amp;filetype=kml</downloadLink>
+      <createdDate>2006-09-27 20:42:10.0</createdDate>
+      <changedDate>2012-01-11 00:03:35.0</changedDate>
+      <description>Hannover- längere Laufstrecke vom Ortsteil List am Mittellandkanal entlang bis kurz vor die Anderter Schleuse</description>
+      <startPointLat>52.3925074</startPointLat>
+      <startPointLon>9.75199699</startPointLon>
+      <endPointLat>52.3924943</endPointLat>
+      <endPointLon>9.75246906</endPointLon>
+      <startPointCountry>DE</startPointCountry>
+      <endPointCountry>DE</endPointCountry>
+      <trackLengthM>22189.123892869102</trackLengthM>
+      <countTrackpoints>228</countTrackpoints>
+      <trackProperty>roundTrip</trackProperty>
+      <altitudeMinHeightM>51</altitudeMinHeightM>
+      <altitudeMaxHeightM>75</altitudeMaxHeightM>
+      <altitudeDifferenceM>24</altitudeDifferenceM>
+      <totalAscentM>138</totalAscentM>
+      <totalDescentM>138</totalDescentM>
+    </track>
+    <track>
+      <title>Hannover List - Burgdorf</title>
+      <fileId>wajufbexidumkhek</fileId>
+      <downloadLink>http://www.gpsies.com/download.do?fileId=wajufbexidumkhek&amp;filetype=kml</downloadLink>
+      <createdDate>2006-09-27 21:15:33.0</createdDate>
+      <changedDate>2012-01-11 00:03:35.0</changedDate>
+      <description>Hannover -Burgdorf über befestigte Wege</description>
+      <startPointLat>52.3902420</startPointLat>
+      <startPointLon>9.75697517</startPointLon>
+      <endPointLat>52.4519295</endPointLat>
+      <endPointLon>9.98468399</endPointLon>
+      <startPointCountry>DE</startPointCountry>
+      <endPointCountry>DE</endPointCountry>
+      <trackLengthM>22535.173225611998</trackLengthM>
+      <countTrackpoints>145</countTrackpoints>
+      <trackProperty>oneWayTrip</trackProperty>
+      <altitudeMinHeightM>51</altitudeMinHeightM>
+      <altitudeMaxHeightM>74</altitudeMaxHeightM>
+      <altitudeDifferenceM>23</altitudeDifferenceM>
+      <totalAscentM>127</totalAscentM>
+      <totalDescentM>127</totalDescentM>
+    </track>
+    <track>
+      <title>Berlin</title>
+      <fileId>nzrgfqkmonssswva</fileId>
+      <downloadLink>http://www.gpsies.com/download.do?fileId=nzrgfqkmonssswva&amp;filetype=kml</downloadLink>
+      <createdDate>2006-09-28 20:50:52.0</createdDate>
+      <changedDate>2012-01-11 00:03:35.0</changedDate>
+      <description>ca. 50% Asphalt</description>
+      <startPointLat>52.4185333</startPointLat>
+      <startPointLon>13.6152572</startPointLon>
+      <endPointLat>52.4184265</endPointLat>
+      <endPointLon>13.6151437</endPointLon>
+      <startPointCountry>DE</startPointCountry>
+      <endPointCountry>DE</endPointCountry>
+      <trackLengthM>11222.7447314209</trackLengthM>
+      <countTrackpoints>3567</countTrackpoints>
+      <trackProperty>roundTrip</trackProperty>
+      <altitudeMinHeightM>3</altitudeMinHeightM>
+      <altitudeMaxHeightM>56</altitudeMaxHeightM>
+      <altitudeDifferenceM>53</altitudeDifferenceM>
+      <totalAscentM>946</totalAscentM>
+      <totalDescentM>911</totalDescentM>
+    </track>
+    <track>
+      <title>Kemmnade 10km Runde</title>
+      <fileId>oleqschfzyiqzhnr</fileId>
+      <downloadLink>http://www.gpsies.com/download.do?fileId=oleqschfzyiqzhnr&amp;filetype=kml</downloadLink>
+      <createdDate>2006-09-28 22:59:46.0</createdDate>
+      <changedDate>2012-01-11 00:03:35.0</changedDate>
+      <startPointLat>51.4380121</startPointLat>
+      <startPointLon>7.28185415</startPointLon>
+      <endPointLat>51.4380088</endPointLat>
+      <endPointLon>7.28185415</endPointLon>
+      <startPointCountry>DE</startPointCountry>
+      <endPointCountry>DE</endPointCountry>
+      <trackLengthM>9976.243410139521</trackLengthM>
+      <countTrackpoints>415</countTrackpoints>
+      <trackProperty>roundTrip</trackProperty>
+      <altitudeMinHeightM>67</altitudeMinHeightM>
+      <altitudeMaxHeightM>94</altitudeMaxHeightM>
+      <altitudeDifferenceM>27</altitudeDifferenceM>
+      <totalAscentM>320</totalAscentM>
+      <totalDescentM>320</totalDescentM>
+    </track>
+  </tracks>
+</gpsies>
+
+
