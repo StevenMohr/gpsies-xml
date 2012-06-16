@@ -1,0 +1,78 @@
+<?xml version="1.0" ?>
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+  targetNamespace="https://github.com/StevenMohr/gpsies-xml/schema/database.xsd"
+  elementFormDefault="qualified"
+  attributeFormDefault="unqualified">
+  <xsd:complexType name="locationType">
+    <xsd:attribute name="latitude" type="double"/>
+    <xsd:attribute name="longitude" type="double"/>
+  </xsd:complexType>
+  <xsd:complexType name="poiType">
+    <xsd:attribute name="title" type="string" />
+    <xsd:attribute name="link" type="string" />
+    <xsd:attribute name="location" type="locationType"/>
+  </xsd:complexType>
+  <xsd:element name="database">
+    <xsd:complexType>
+      <xsd:sequence>
+        <xsd:element name="tracks">
+          <xsd:complexType>
+            <xsd:sequence>
+              <xsd:element name="track" minOccurs="0" maxOccurs="unbounded">
+                <xsd:complexType>
+                  <xsd:all>
+                    <xsd:element name="uid" type="xsd:string" />
+                    <xsd:element name="title" type="xsd:string" />
+                    <xsd:element name="description" type="xsd:string" />
+                    <xsd:element name="createdDate" type="xsd:dateTime" />
+                    <xsd:element name="startPoint" type="locationType" />
+                    <xsd:element name="endPoint" type="locationType" />
+                    <xsd:element name="trackLength" type="xsd:float" />
+                    <xsd:element name="countTrackpoints" type="xsd:integer" />
+                    <xsd:element name="altitudeMinHeight" type="xsd:float" />
+                    <xsd:element name="altitudeMaxHeight" type="xsd:float" />
+                    <xsd:element name="totalAscent" type="xsd:float" />
+                    <xsd:element name="totalDescent" type="xsd:float" />
+                    <xsd:element name="waypoints">
+                      <xsd:complexType>
+                        <xsd:sequence>
+                          <xsd:element name="waypoint"
+                            type="locationType"
+                            minOccurs="0"
+                            maxOccurs="unbounded" />
+                        </xsd:sequence>
+                      </xsd:complexType>
+                    </xsd:element>
+                    <xsd:element name="pois">
+                      <xsd:complexType>
+                        <xsd:sequence>
+                          <xsd:element name="poi"
+                            type="poiType"
+                            minOccurs="0"
+                            maxOccurs="unbounded" />
+                        </xsd:sequence>
+                      </xsd:complexType>
+                    </xsd:element>
+                  </xsd:sequence>
+                </xsd:complexType>
+              </xsd:element>
+            </xsd:sequence>
+          </xsd:complexType>
+        </xsd:element>
+      </xsd:sequence>
+    </xsd:complexType>
+  </xsd:element>
+</xsd:schema>
+
+
+
+
+<!--
+        <xsd:element name="tracks">
+          <xsd:complexType>
+            <xsd:sequence>
+              
+            </xsd:sequence>
+          </xsd:complexType>
+        </xsd:element>
+ -->

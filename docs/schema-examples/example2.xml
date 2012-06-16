@@ -1,0 +1,69 @@
+<?xml version="1.0" ?>
+<database>
+  <tracks>
+    <track>
+      <uid>1</uid>
+      <title>First Track</title>
+      <description>Lorem Ipsum Blah Blorgh Foobar.</description>
+      <createdDate>2012-06-12T13:37:00Z</createdDate>
+      <startPoint latitude="48.7736479" longitude="8.22421099" />
+      <endPoint latitude="48.7628189" longitude="8.26425997" />
+      <trackLength>123.4</trackLength>
+      <countTrackpoints>1234</countTrackpoints>
+      <altitudeMinHeight>11.0</altitudeMinHeight>
+      <altitudeMaxHeight>91.1</altitudeMaxHeight>
+      <totalAscent>101.0</totalAscent>
+      <totalDescent>10.0</totalDescent>
+      <waypoints></waypoints>
+      <pois></pois>
+    </track>
+    <track>
+      <uid>blah</uid>
+      <title>Second Track</title>
+      <description>Lorem Ipsum Blah Blorgh Foobar2.</description>
+      <createdDate>2012-06-12T13:38:00Z</createdDate>
+      <startPoint latitude="48.7837479" longitude="8.22841099" />
+      <endPoint latitude="48.7622479" longitude="8.26825997" />
+      <trackLength>1599.4</trackLength>
+      <countTrackpoints>12345</countTrackpoints>
+      <altitudeMinHeight>12.0</altitudeMinHeight>
+      <altitudeMaxHeight>81.1</altitudeMaxHeight>
+      <totalAscent>111.0</totalAscent>
+      <totalDescent>10.1</totalDescent>
+      <waypoints>
+        <waypoint latitude="48.7736479" longitude="8.22421099" />
+        <waypoint latitude="48.7752479" longitude="8.22421099" />
+        <waypoint latitude="48.7736479" longitude="8.22234099" />
+        <waypoint latitude="48.7622479" longitude="8.26825998" />
+      </waypoints>
+      <pois/>
+    </track>
+     <track>
+      <uid>blah-2</uid>
+      <title>Second Track (enriched)</title>
+      <description>Lorem Ipsum Blah Blorgh Foobar2dgapdjgnlans sf.</description>
+      <createdDate>2012-06-12T14:38:00Z</createdDate>
+      <startPoint latitude="48.7837479" longitude="8.22841099" />
+      <endPoint latitude="48.7622479" longitude="8.26825997" />
+      <trackLength>1599.4</trackLength>
+      <countTrackpoints>12345</countTrackpoints>
+      <altitudeMinHeight>12.0</altitudeMinHeight>
+      <altitudeMaxHeight>81.1</altitudeMaxHeight>
+      <totalAscent>111.0</totalAscent>
+      <totalDescent>10.1</totalDescent>
+      <waypoints>
+        <waypoint latitude="48.7736479" longitude="8.22421099" />
+        <waypoint latitude="48.7752479" longitude="8.22421099" />
+        <waypoint latitude="48.7736479" longitude="8.22234099" />
+        <waypoint latitude="48.7622479" longitude="8.26825998" />
+      </waypoints>
+      <pois>
+        <poi>
+          <title>Brandenburger Tor</title>
+          <link>https://de.wikipedia.org/Brandenburger_Tor/</link>
+          <location latitude="48.7752479" longitude="8.22421097"/>
+        </poi>
+      </pois>
+    </track>
+  </tracks>
+</database>
