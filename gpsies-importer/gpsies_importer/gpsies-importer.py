@@ -8,6 +8,7 @@ from threading import Thread
 from lxml import etree
 from extract.TrackExtract import TrackExtract
 from gpsies_importer.extract.KMLExtract import KMLExtract
+from gpsies_importer.basex_api import BaseXClient 
 
 URL_PATTERN = u"http://www.gpsies.org/api.do?key={api_key}&country=DE&limit=100&resultPage={page}&trackTypes=jogging&filetype=kml"
 
@@ -32,58 +33,60 @@ def main():
     #for thread in threads:
     #    thread.join()
       
-def analyze_track(track):
-    downloadLink = track.xpath("//downloadLink/text()") 
-    trackXML = TrackExtract(track_element_xml = track ).analyze()   
-    connection = urlopen(downloadLink[0], timeout=10)
-    answer = connection.read()
-    connection.close()
-    waypoints = KMLExtract(answer).analyze()
+def analyze_track(track, session):
+    try:
+        downloadLink = track.xpath("//downloadLink/text()") 
+        id = track.xpath("//fileId/text()")[0]
+        trackXML = TrackExtract(track_element_xml = track ).analyze()   
+        connection = urlopen(downloadLink[0], timeout=10)
+        answer = connection.read()
+        connection.close()
+        waypoints = KMLExtract(answer).analyze()
+        trackXML.getroot().append(waypoints)
+        session.add('tracks/' + id, etree.tostring(trackXML.getroot()))
+    except Error, e:
+        print e
     
-    trackXML.getroot().append(waypoints)
-    print etree.tostring(trackXML.getroot())
         
 def mainFromFile():
-    threadPool = ThreadPool(30)
-    file = open("data.xml")
-    root = etree.parse(file)
+    session = BaseXClient.Session('192.168.1.2',1984,'admin','admin')
+    session.execute("open database2")
+    file = open("data3.xml")
+    tmp_file = os.tmpfile()
+    first_xml = True
+    first_gps = True
+    for line in file:
+        if line.startswith("<?xml"):
+            if first_xml:
+                tmp_file.write(line)
+                first_xml = False
+                continue
+        elif line.startswith("</gps"):
+            pass
+        elif line.startswith("<gps"):
+            if first_gps:
+                tmp_file.write(line)
+                first_gps = False
+        else:
+            tmp_file.write(line)
+    tmp_file.write("</gpsies>")
+    tmp_file.flush()
+    tmp_file.seek(os.SEEK_SET, 0)
+    root = etree.parse(tmp_file)
     tracks = root.xpath("//track")
-    for track in tracks[0:10]:
-        threadPool.add_task(analyze_track, track)
-    threadPool.wait_completion()
-        
+    print len(tracks)
+    try:
+        for i, track in enumerate(tracks):
+            if i%100 == 0:
+                print i
+                session.close()
+                session = BaseXClient.Session('192.168.1.2',1984,'admin','admin')
+                session.execute("open database2")
+            analyze_track(track, session)
+        session.execute("close")
+        session.close()
+    except Error, e:
+        print e
     
-from Queue import Queue
-from threading import Thread
-
-class Worker(Thread):
-    """Thread executing tasks from a given tasks queue"""
-    def __init__(self, tasks):
-        Thread.__init__(self)
-        self.tasks = tasks
-        self.daemon = True
-        self.start()
-    
-    def run(self):
-        while True:
-            func, args, kargs = self.tasks.get()
-            try: func(*args, **kargs)
-            except Exception, e: print e
-            self.tasks.task_done()
-
-class ThreadPool:
-    """Pool of threads consuming tasks from a queue"""
-    def __init__(self, num_threads):
-        self.tasks = Queue(num_threads)
-        for _ in range(num_threads): Worker(self.tasks)
-
-    def add_task(self, func, *args, **kargs):
-        """Add a task to the queue"""
-        self.tasks.put((func, args, kargs))
-
-    def wait_completion(self):
-        """Wait for completion of all the tasks in the queue"""
-        self.tasks.join()        
-
 if __name__ == "__main__":
     mainFromFile()
