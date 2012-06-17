@@ -33,6 +33,41 @@ def querybuilder(points, interval)
   end
 end
 
+#builds a different query than querybuilder() for the same purpose 
+
+#TODO: test performance of both functions
+
+def querybuilder2(points, interval)
+  query = "SELECT DISTINCT ?subject ?label ?lat ?long WHERE
+    {
+       ?subject geo:lat ?lat.
+        ?subject geo:long ?long.
+        ?subject rdfs:label ?label.
+        OPTIONAL { ?subject dbpprop:type ?type } 
+        FILTER( ("
+    points.each do |p|
+    
+      query += "(
+        ?lat - #{p[:lat]} <= #{interval} && 
+        #{p[:lat]} - ?lat <= #{interval} && 
+        ?long - #{p[:long]} <= #{interval} &&
+        #{p[:long]} - ?long <= #{interval} )"
+  
+       query += "||" unless p == points.last
+    end
+ 
+  
+  if points.length==0
+    query=nil;
+  else
+     query += ") &&
+     lang(?label) = \"de\" && 
+     ?type != \"Quarter\"@en
+        ) .}"
+  end
+end
+
+
 #creates an array of hashes (latitude-longitude pairs :lat :long) 
 def create_coord_array(result)
    # extract waypoint information

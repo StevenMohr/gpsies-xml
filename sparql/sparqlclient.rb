@@ -12,7 +12,8 @@ def get_pois(id)
   coords = create_coord_array(result)
 
   interval = 0.005
-  queryString = querybuilder(coords, interval)
+  #queryString = querybuilder(coords, interval)
+  queryString = querybuilder2(coords, interval)
 
   if queryString
     query = sparql.query(queryString)
