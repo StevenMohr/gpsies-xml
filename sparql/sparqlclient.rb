@@ -4,48 +4,31 @@ require 'sparql/client'
 require 'xbaseaccess.rb'
 require 'queryhelper.rb'
 
-
-def get_pois(id)
-  sparql = SPARQL::Client.new("http://dbpedia.org/sparql")
-
-  result = get_waypoints(id)
-  coords = create_coord_array(result)
-
-  interval = 0.005
-  #queryString = querybuilder(coords, interval)
-  queryString = querybuilder2(coords, interval)
-
-  if queryString
-    query = sparql.query(queryString)
+#for a given ID gets waypoints from database,
+#fetches POIs from sparql
+#inserts them into our XML-database
+#returns POIs as XML string
+def fetch_POIs_from_SPARQL(id)
+  
+  points = get_waypoints(id)
+  
+  coords = create_coord_array(points)
+  
+  result = get_POIs(coords)
+  
+  if !result.nil?
+    res = insert_pois(id, result)
+    #TODO: define what happens if insert into database is not successful
     
-    result = Array.new
-    i = 0
-    
-    query.each_solution do |solution|
-      page = solution[:subject].to_s.split('/').last
-      link = "http://en.wikipedia.org/wiki/#{page}"
-      result[i] = ""
-      result[i] += "<poi>
-      <title>#{solution[:label]}</title>
-      <link>#{link}</link>
-      <location latitutde=\"#{solution[:lat]}\" longitude=\"#{solution[:long]}\" />
-      </poi>"
-      i += 1
-    end
-
-    return result
-  else
-    puts "No Waypoints found"
-    return nil
-  end
+    pois = "<pois>#{result}</pois>"
+  end 
 end
 
 #nullrequest
-#result = get_pois("1")
-#puts result if !result.nil?
+puts fetch_POIs_from_SPARQL("1")
 
+#proper request
 id = "blah"
-result = get_pois(id)
-puts result if !result.nil?
-
-insert_pois(id, result)
+start = Time.now
+puts fetch_POIs_from_SPARQL(id)
+puts (Time.now - start) *1000
