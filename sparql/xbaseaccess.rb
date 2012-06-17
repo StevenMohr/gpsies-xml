@@ -1,11 +1,11 @@
 require 'BaseXClient.rb'
 
+#returns waypoints as XML-String if successful, nil otherwise
 def get_waypoints(id) 
   # create session
   session = BaseXClient::Session.new("localhost", 1984, "admin", "admin")
 
   begin
-    # create query instance
     input = "for $x in doc('example2')/database/tracks/track
     where $x/uid = \"#{id}\"
     return $x/waypoints"
@@ -14,18 +14,19 @@ def get_waypoints(id)
     result = query.next
     
     query.close()
-    
-    return result
       
   rescue Exception => e
     # print exception
     puts e
+    result = nil
   end
 
   # close session
   session.close
+  return result
 end
 
+#returns "Insert successful" if insert was succcessful, nil otherwise
 def insert_pois(id, pois)
   begin
   session = BaseXClient::Session.new("localhost", 1984, "admin", "admin")
@@ -42,13 +43,16 @@ def insert_pois(id, pois)
     )"
     
     query = session.execute(queryString)
+    result = "Insert successful"
   end
 
   rescue Exception => e
-  # print exception
+  # print exception, return nil instead
     puts e
+    result = nil
   end
 
   # close session
   session.close
+  return result
 end
