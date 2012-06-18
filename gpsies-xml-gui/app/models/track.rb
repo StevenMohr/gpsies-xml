@@ -13,7 +13,15 @@ class Track
 	end
 	
 	def self.all()
-		[ Track.new( description: "Es klappt! :)", track_length: 123, title: "Testt!!") , Track.new ]
+		a = Array.new
+		i = 0
+		while i < 100
+			r = rand(100)
+			a.push( Track.new ( { description: "Ein Objekt", track_length: r, title: "Track Laenge: " } ) )
+			i += 1
+		end	
+# 		[ Track.new( description: "Es klappt! :)", track_length: 123, title: "Testt!!") , Track.new]
+		return a
 	end
 
 	def self.find(id)
