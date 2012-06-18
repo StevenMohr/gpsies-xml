@@ -25,3 +25,7 @@ pip-log.txt
 
 #Mr Developer
 .mr.developer.cfg
+
+#ignore tags file (code completion/navigation for vim et al)
+tags
+../tags

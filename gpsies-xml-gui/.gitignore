@@ -15,4 +15,5 @@
 /tmp
 
 #ignore tags file (code completion/navigation for vim et al)
-/tags
+tags
+../tags
