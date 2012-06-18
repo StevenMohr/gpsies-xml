@@ -1,0 +1,16 @@
+<h1>Deine Mudder</h1>
+
+
+<table>
+	<tr>
+		<th>Title</th>
+		<th>Description</th>
+		<th>track_length</th>
+	</tr>
+<% @tracks.each do |track| %>
+	<tr>
+		<td><%= track.title %></td>
+		<td><%= track.description %></td>
+		<td><%= track.track_length %></td>
+	</tr>
+<% end %>
