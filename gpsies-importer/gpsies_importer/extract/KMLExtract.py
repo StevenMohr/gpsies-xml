@@ -42,4 +42,4 @@ class KMLExtract(object):
             waypoint.attrib['longitude'] = point[1]
            
         return root
-            
+
