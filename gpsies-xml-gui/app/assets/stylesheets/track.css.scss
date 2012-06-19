@@ -1,0 +1,18 @@
+// Place all the styles related to the Track controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+
+.track {
+	table {
+		border-collapse: collapse;
+	}
+
+	.list_line_even {
+		background-color: #D1EDEA;
+	}
+	
+	.list_line_odd {
+		background-color: #EDD1D4;
+	}
+}

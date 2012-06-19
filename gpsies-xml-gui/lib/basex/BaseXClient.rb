@@ -31,7 +31,7 @@ module BaseXClient
       end
 
       @char_lead_byte = "\xFF"
-      @char_lead_byte.force_encoding('ASCII-8BIT')
+      #@char_lead_byte.force_encoding('ASCII-8BIT')
     end
 
     def execute(com)
