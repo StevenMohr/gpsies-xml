@@ -1,16 +1,18 @@
-<h1>Deine Mudder</h1>
+<h1>Overview</h1>
 
 
 <table>
 	<tr>
 		<th>Title</th>
-		<th>Description</th>
-		<th>track_length</th>
+		<th>Track Length</th>
+		<th>Created At</th>
+		<th>-</th>
 	</tr>
 <% @tracks.each do |track| %>
 	<tr>
 		<td><%= track.title %></td>
-		<td><%= track.description %></td>
 		<td><%= track.track_length %></td>
+		<td><%= track.created_date %></td>
+		<td><%= content_tag(:a, "Show Track", href: "track/"+track.uid ) %></td>
 	</tr>
 <% end %>

@@ -5,7 +5,7 @@ class Track
 
 	def initialize (params = {})
 		@uid = params[:uid]
-		@title = params[:title]
+		@title = params[:title] || "unnamed"
 		@description = params[:description]
 		@created_date = params[:created_date]
 		@track_length = params[:track_length]
@@ -19,7 +19,17 @@ class Track
 		session.execute("open database2")
 
 		begin
-			input = "for $x in track return $x"
+			input = 'for $x in track
+				return <track>
+					{$x/uid}
+					{$x/title}
+					{$x/description}
+					{$x/trackLength}
+					{$x/createdDate}
+				</track>'
+
+			input = "for $x in track return <track>{$x/uid}{$x/title}{$x/description}{$x/trackLength}{$x/createdDate}</track>"
+
 			query = session.query(input)
 
 			t = query.next
@@ -28,9 +38,11 @@ class Track
 #				result += t
 				xml = XmlSimple.xml_in(t)
 				
-				title = xml['title']
-
- 				result.push( Track.new( description: xml['description'], track_length: xml['trackLength'], title: xml['title']))
+ 				result.push( Track.new(description: xml['description'].first,
+									   track_length: xml['trackLength'].first,
+									   title: xml['title'].first,
+									   uid: xml['uid'].first,
+						   			   created_date: xml['createdDate'].first))
 				t = query.next
 			end
 			# result = query.next
