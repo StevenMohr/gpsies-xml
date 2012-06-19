@@ -1,4 +1,8 @@
+require 'rubygems'
+require 'sparql/client'
+
 require 'BaseXClient.rb'
+require 'queryhelper.rb'
 
 class XDatabase
   
