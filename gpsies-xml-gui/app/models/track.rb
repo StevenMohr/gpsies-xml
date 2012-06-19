@@ -14,7 +14,7 @@ class Track
 		[PointOfInterest.new("test1"), PointOfInterest.new("test2")]
 	end
 	
-	def _fetchAllTracks 
+	def self.all()
 		session = BaseXClient::Session.new("stevenmohr.de", 1984, "admin", "admin")
 		session.execute("open database2")
 
@@ -27,7 +27,10 @@ class Track
 			while !t.nil?
 #				result += t
 				xml = XmlSimple.xml_in(t)
-				result.push Track.new (	title: xml['title'],	description: xml['description'],track_length: xml['trackLength'] )
+				
+				title = xml['title']
+
+ 				result.push( Track.new( description: xml['description'], track_length: xml['trackLength'], title: xml['title']))
 				t = query.next
 			end
 			# result = query.next
@@ -38,9 +41,10 @@ class Track
 		return result
 	end
 	
-	def self.all()
- 		[ Track.new( description: "Es klappt! :)", track_length: 123, title: "Testt!!") , Track.new]
-	end
+#	def self.all()
+# 		[ Track.new( description: "Es klappt! :)", track_length: 123, title: "Testt!!") , Track.new]
+#		Track._fetchAllTracks
+#	end
 
 	def self.find(id)
 		Track.new(
