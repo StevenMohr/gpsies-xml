@@ -26,6 +26,5 @@ pip-log.txt
 #Mr Developer
 .mr.developer.cfg
 
-
 # exuberant/ctags tag file (code completion/navigation for vim et al)
 tags
