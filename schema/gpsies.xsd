@@ -7,17 +7,19 @@
   <xsd:element name="gpsies">
     <xsd:complexType>
       <xsd:sequence>
-        <xsd:element name="meta">
+        <xsd:element name="meta" minOccurs="0">
           <xsd:complexType>
             <xsd:sequence>
-              <xsd:element name="requestUrl" type="xsd:anyURI" />
-              <xsd:element name="country" type="xsd:string" />
-              <xsd:element name="trackType" type="xsd:string" maxOccurs="unbounded" />
-              <xsd:element name="resultPage" type="xsd:integer" />
-              <xsd:element name="limit" type="xsd:integer" />
-              <xsd:element name="filetype" type="xsd:string" />
-              <xsd:element name="downloadBaseUrl" type="xsd:anyURI" />
-              <xsd:element name="resultSize" type="xsd:integer" />
+              <xsd:choice minOccurs="0" maxOccurs="unbounded">
+                <xsd:element name="requestUrl" type="xsd:anyURI" />
+                <xsd:element name="country" type="xsd:string" />
+                <xsd:element name="trackType" type="xsd:string" />
+                <xsd:element name="resultPage" type="xsd:integer" />
+                <xsd:element name="limit" type="xsd:integer" />
+                <xsd:element name="filetype" type="xsd:string" />
+                <xsd:element name="downloadBaseUrl" type="xsd:anyURI" />
+                <xsd:element name="resultSize" type="xsd:integer" />
+              </xsd:choice>
             </xsd:sequence>
           </xsd:complexType>
         </xsd:element>
