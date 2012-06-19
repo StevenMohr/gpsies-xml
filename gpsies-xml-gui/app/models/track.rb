@@ -30,12 +30,13 @@ class Track
 
 
 				track_length = xml['trackLength'].first.to_f
+				created_date = DateTime.parse xml['createdDate'].first
 				
  				result.push( Track.new(description: xml['description'].first,
 									   track_length: track_length,
 									   title: xml['title'].first,
 									   uid: xml['uid'].first,
-						   			   created_date: xml['createdDate'].first))
+						   			   created_date: created_date))
 				t = query.next
 			end
 			query.close
