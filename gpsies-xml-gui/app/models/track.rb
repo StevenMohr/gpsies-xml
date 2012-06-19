@@ -5,10 +5,15 @@ class Track
 
 	def initialize (params = {})
 		@uid = params[:uid]
-		@title = params[:title] || "unnamed"
+		@title = params[:title]
 		@description = params[:description]
-		@created_date = params[:created_date]
-		@track_length = params[:track_length]
+		begin
+			@created_date = DateTime.parse params[:created_date]
+		rescue
+			@created_date = DateTime.now
+		end
+
+		@track_length = params[:track_length].to_f
 	end
 
 	def pois
@@ -29,14 +34,11 @@ class Track
 				xml = XmlSimple.xml_in(t)
 
 
-				track_length = xml['trackLength'].first.to_f
-				created_date = DateTime.parse xml['createdDate'].first
-				
  				result.push( Track.new(description: xml['description'].first,
-									   track_length: track_length,
+									   track_length: xml['trackLength'].first,
 									   title: xml['title'].first,
 									   uid: xml['uid'].first,
-						   			   created_date: created_date))
+						   			   created_date: xml['createdDate'].first))
 				t = query.next
 			end
 			query.close
