@@ -1,11 +1,4 @@
-require 'rubygems'
-require 'sparql/client'
-
-require 'xbaseaccess.rb'
-require 'queryhelper.rb'
-
-
-
+require 'XDatabase.rb'
 
 id="mpmwjphuiirkqlnp" #irgendwas in Köln
 #result = fetch_POIs_from_SPARQL(id)
