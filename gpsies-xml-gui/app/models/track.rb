@@ -10,6 +10,7 @@ class Track
 		@created_date = params[:created_date]
 		@track_length = params[:track_length]
 	end
+
 	def pois
 		[PointOfInterest.new("test1"), PointOfInterest.new("test2")]
 	end
@@ -19,45 +20,30 @@ class Track
 		session.execute("open database2")
 
 		begin
-			input = 'for $x in track
-				return <track>
-					{$x/uid}
-					{$x/title}
-					{$x/description}
-					{$x/trackLength}
-					{$x/createdDate}
-				</track>'
-
 			input = "for $x in track return <track>{$x/uid}{$x/title}{$x/description}{$x/trackLength}{$x/createdDate}</track>"
-
 			query = session.query(input)
 
 			t = query.next
 			result = Array.new
 			while !t.nil?
-#				result += t
 				xml = XmlSimple.xml_in(t)
+
+
+				track_length = xml['trackLength'].first.to_f
 				
  				result.push( Track.new(description: xml['description'].first,
-									   track_length: xml['trackLength'].first,
+									   track_length: track_length,
 									   title: xml['title'].first,
 									   uid: xml['uid'].first,
 						   			   created_date: xml['createdDate'].first))
 				t = query.next
 			end
-			# result = query.next
-
 			query.close
 		end
 		session.close
 		return result
 	end
 	
-#	def self.all()
-# 		[ Track.new( description: "Es klappt! :)", track_length: 123, title: "Testt!!") , Track.new]
-#		Track._fetchAllTracks
-#	end
-
 	def self.find(id)
 		Track.new(
 			description: "Es klappt! :)",
@@ -66,8 +52,4 @@ class Track
 			uid: id.to_s,
 			created_date: DateTime.now )
 	end
-
-
-
-
 end

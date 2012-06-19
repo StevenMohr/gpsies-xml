@@ -1,17 +1,17 @@
-<h1>Overview</h1>
+<h1>Overview: List all Tracks</h1>
 
 
 <table>
-	<tr>
+	<tr class="list_line_head">
 		<th>Title</th>
 		<th>Track Length</th>
 		<th>Created At</th>
 		<th>-</th>
 	</tr>
 <% @tracks.each do |track| %>
-	<tr>
+	<tr class='<%= cycle 'list_line_odd', 'list_line_even'  %>'>
 		<td><%= track.title %></td>
-		<td><%= track.track_length %></td>
+		<td><%= (track.track_length/1000).round(2) %>km</td>
 		<td><%= track.created_date %></td>
 		<td><%= content_tag(:a, "Show Track", href: "track/"+track.uid ) %></td>
 	</tr>
