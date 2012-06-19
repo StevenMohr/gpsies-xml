@@ -48,11 +48,33 @@ class Track
 	end
 	
 	def self.find(id)
-		Track.new(
-			description: "Es klappt! :)",
-			track_length: 123,
-			title: "Testt!!",
-			uid: id.to_s,
-			created_date: DateTime.now )
+		session = BaseXClient::Session.new("stevenmohr.de", 1984, "admin", "admin")
+        session.execute("open database2")
+
+		begin
+			input = 'for $x in track where $x/uid="'+id+'" return $x'
+			puts input
+			query = session.query(input)
+			t = query.next
+			query.close
+			session.close
+		end
+
+
+		puts "XXXXX: "+t.to_s
+
+		if !t.nil?
+			xml = XmlSimple.xml_in(t)
+
+			Track.new(description: xml['description'].first,
+					  track_length: xml['trackLength'].first,
+					  title: xml['title'].first,
+					  uid: xml['uid'].first,
+					  created_date: xml['createdDate'].first)
+		else
+			raise "Not found"
+		end
+
+
 	end
 end
