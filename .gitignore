@@ -26,12 +26,5 @@ pip-log.txt
 #Mr Developer
 .mr.developer.cfg
 
-<<<<<<< HEAD
-#ignore tags file (code completion/navigation for vim et al)
-tags
-../tags
-=======
-
 # exuberant/ctags tag file (code completion/navigation for vim et al)
 tags
->>>>>>> d79de3388c407b79d8bbfa275e1181c992fceb71
