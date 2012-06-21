@@ -38,8 +38,8 @@ class KMLExtract(object):
         
         for point in waypoints:
             waypoint = SubElement(root, "waypoint")
-            waypoint.attrib['latitude'] = point[0]
-            waypoint.attrib['longitude'] = point[1]
-           
+            waypoint.attrib['longitude'] = point[0]
+            waypoint.attrib['latitude'] = point[1]
+            
         return root
 
