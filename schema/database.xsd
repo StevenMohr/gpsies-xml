@@ -1,4 +1,4 @@
-<?xml version="1.0" ?>
+<?xml version="1.0" encoding="utf-8" ?>
 <xsd:schema xmlns="https://github.com/StevenMohr/gpsies-xml/schema/database.xsd"
   xmlns:xsd="http://www.w3.org/2001/XMLSchema"
   targetNamespace="https://github.com/StevenMohr/gpsies-xml/schema/database.xsd"
@@ -15,13 +15,7 @@
       <xsd:element name="location" type="locationType"/>
     </xsd:sequence>
   </xsd:complexType>
-  <xsd:element name="database">
-    <xsd:complexType>
-      <xsd:sequence>
-        <xsd:element name="tracks">
-          <xsd:complexType>
-            <xsd:sequence>
-              <xsd:element name="track" minOccurs="0" maxOccurs="unbounded">
+              <xsd:element name="track">
                 <xsd:complexType>
                   <xsd:all>
                     <xsd:element name="uid" type="xsd:string" />
@@ -43,7 +37,8 @@
                         </xsd:sequence>
                       </xsd:complexType>
                     </xsd:element>
-                    <xsd:element name="pois">
+                    <xsd:element name="pois" minOccurs ="0"
+            maxOccurs="1">
                       <xsd:complexType>
                         <xsd:sequence>
                           <xsd:element name="poi"
@@ -56,10 +51,4 @@
                   </xsd:all>
                 </xsd:complexType>
               </xsd:element>
-            </xsd:sequence>
-          </xsd:complexType>
-        </xsd:element>
-      </xsd:sequence>
-    </xsd:complexType>
-  </xsd:element>
 </xsd:schema>
