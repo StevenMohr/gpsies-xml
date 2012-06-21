@@ -7,7 +7,7 @@
                     <uid><xsl:value-of select="track/fileId"/></uid>
                     <title><xsl:value-of select="track/title"/></title>
                     <description><xsl:value-of select="track/description"/></description>
-                    <createdDate><xsl:value-of select="track/createdDate"/></createdDate>
+                    <createdDate><xsl:value-of select="datetime(xsd:date(substring(track/datetime,1,10)), xsd:time(substring(track/createdDate, 12, 8))"/></createdDate>
                     <trackLength><xsl:value-of select="track/trackLengthM"/></trackLength>
                     <altitudeMinHeight><xsl:value-of select="track/altitudeMinHeightM"/></altitudeMinHeight>
                     <altitudeMaxHeight><xsl:value-of select="track/altitudeMaxHeightM"/></altitudeMaxHeight>
