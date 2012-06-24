@@ -10,7 +10,7 @@ from urllib2 import urlopen
 from lxml import etree
 from extract.TrackExtract import TrackExtract
 from gpsies_importer.extract.KMLExtract import KMLExtract
-from gpsies_importer.basex_api import BaseXClient 
+from gpsies_importer.basex_api import BaseXClient
 
 URL_PATTERN = u"http://www.gpsies.org/api.do?key={api_key}&country=DE&limit=100&resultPage={page}&trackTypes=jogging&filetype=kml"
 PORT = 1984
@@ -18,20 +18,23 @@ PORT = 1984
 class GPiesQuery(object):
     def query(self, db_server_name, db_server_user, db_server_password, api_key, database, start_page, num_pages, **kwargs):
         session = BaseXClient.Session(db_server_name, PORT, db_server_user, db_server_password)
-        self._session.execute("open " + database)
-        track_analyzer = TrackAnalyzer(session)
-        for page in range(start_page, start_page + num_pages):
-            connection = urlopen(URL_PATTERN.format(api_key=api_key, page=page), timeout=10)
-            answer = connection.read()
-            root = etree.fromstring(answer)
-            track_analyzer.analyze_all_tracks(root)
-            connection.close()
-        session.close()
+        session.execute("open " + database)
+        try:
+            track_analyzer = TrackAnalyzer(session)
+            for page in range(start_page, start_page + num_pages):
+                connection = urlopen(URL_PATTERN.format(api_key=api_key, page=page), timeout=10)
+                answer = connection.read()
+                root = etree.fromstring(answer)
+                track_analyzer.analyze_all_tracks(root)
+                connection.close()
+        finally:
+            session.close()
 
 class FileQuery(object):
-    def query(self, db_server_name, db_server_user, db_server_password, file, **kwargs):
+    def query(self, db_server_name, db_server_user, db_server_password, database, file, **kwargs):
         try:
             session = BaseXClient.Session(db_server_name, PORT, db_server_user, db_server_password)
+            session.execute("open " + database)
             track_analyzer = TrackAnalyzer(session)
             file = open(file)
             
@@ -76,29 +79,28 @@ class TrackAnalyzer(object):
             self._analyze_track(track)
       
     def _analyze_track(self, track):
+        ns_dict = {'gps' : 'https://github.com/StevenMohr/gpsies-xml/schema/database.xsd'}
         try:
             dLink = None
             downloadLinks = track.xpath("//downloadLink/text()")
             
             trackXML = TrackExtract(track_element_xml = track ).analyze() 
-            id = trackXML.xpath("//uid/text()")[0]
+            id = trackXML.xpath("//gps:uid/text()", namespaces = ns_dict)[0]
             for link in downloadLinks:
                 if id in link:
                     dLink = link
                     break
-            print dLink  
             connection = urlopen(dLink, timeout=10)
             answer = connection.read()
             connection.close()
             waypoints = KMLExtract(answer).analyze()
-            trackXML = trackXML.getroot()
             trackXML.append(waypoints)
-            
+            self._xsd_schema.assertValid(trackXML)
             if self._xsd_schema.validate(trackXML):
                 result = etree.tostring(trackXML)
                 self._session.add('database2/tracks', result)
             else:
-                print "Validation failed"
+                print "Validation failed: " + etree.tostring(trackXML)
         except IOError as e:
             print e
 
