@@ -17,5 +17,21 @@
 	Created at: <%= @track.created_date %>
 	</div>
 </div>
+<div>
+	<table>
+	<% if @pointsOfInterest.nil? %>
+		<p>Keine Pois</p>
+	<% else %>
+		Pois:
+		<% @pointsOfInterest.each do |pointOfInterest| %>
+			<tr class='<%= cycle 'list_line_odd', 'list_line_even'  %>'>
+				<td><%= pointOfInterest.title %></td>
+				<td><%= link_to "Info", "#{pointOfInterest.link}" %></td>
+			</tr>
+		<% end %>
+	<% end %>
+	</table>
+</div>
+
 
 <%= content_tag :a, "List all tracks", :href => ".." %>

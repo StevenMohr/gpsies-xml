@@ -16,8 +16,10 @@ class Track
 		@track_length = params[:track_length].to_f
 	end
 
-	def pois
-		[PointOfInterest.new("test1"), PointOfInterest.new("test2")]
+	def pois(id)
+	  PointOfInterest.all(id)
+		#[PointOfInterest.new(title: "test1", link: "test"),
+		#   PointOfInterest.new(title: "test2", link: "test")]
 	end
 	
 	def self.all()

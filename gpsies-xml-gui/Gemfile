@@ -21,7 +21,7 @@ end
 
 gem 'jquery-rails'
 
-gem 'therubyracer'
+gem 'therubyracer', :platform => :ruby
 gem 'execjs'
 gem 'xml-simple'
 
