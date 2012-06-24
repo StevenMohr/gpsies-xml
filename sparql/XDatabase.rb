@@ -1,55 +1,52 @@
 require 'rubygems'
 require 'sparql/client'
 
-require 'BaseXClient.rb'
-require 'queryhelper.rb'
+require './BaseXClient.rb'
+require './queryhelper.rb'
+require './CustomExceptions.rb'
 
 class XDatabase
   
+  #raises DatabaseConnectionError
   def initialize(host,port,username,password)
     begin
       @session = BaseXClient::Session.new(host, port, username, password)
     rescue Exception => e
-      puts e
-      result = nil
+      raise DatabaseConnectionError
     end
   end
   
+  #raises DatabaseOpeningError
   def open(db)
     begin
       @session.execute("open #{db}")
       result = "DB #{db} successfully opened"
     rescue Exception => e
-      # print exception
-      puts e
-      result = nil
+       raise DatabaseOpeningError
     end      
   end
   
+  #raises QueryError
   def query(queryString)
     begin    
       query = @session.query(queryString)
       result = query.next      
       query.close()
     rescue Exception => e
-      # print exception
-      puts e
-      result = nil
+      raise QueryError
     end
     return result
   end
   
+  #raises QueryError
   def execute(queryString)
     begin
       query = @session.execute(queryString)
       result = "Execute successful"
 
     rescue Exception => e
-    # print exception, return nil instead
-      puts e
-      result = nil
-    end
-    
+       raise QueryError
+    end    
     return result
   end
   
@@ -58,13 +55,14 @@ class XDatabase
    #fetches POIs from sparql
    #inserts them into our XML-database
    #returns POIs as XML string
+   #raises QueryError
    def fetch_POIs_from_SPARQL(id)
-     
+     begin
       points = get_waypoints(id)
       #take only each 10th point:
       coords = create_coord_array(points,10)      
       result = get_POIs(coords)
-          
+            
       if !result.nil?
         res = insert_pois(id, result)
         if !res.nil?
@@ -73,10 +71,18 @@ class XDatabase
           pois=nil
         end
       end
-   end
-  
+      rescue Exception => e
+       raise e
+      end
+   end 
+
+  #raises DatabaseConnectionError
   def close
-    @session.close
+    begin
+      @session.close
+    rescue Exception => e
+       raise DatabaseConnectionError
+    end 
   end
   
   private
@@ -86,28 +92,16 @@ class XDatabase
       input = "for $x in track    
       where $x/uid = \"#{id}\"
       return $x/waypoints"
-    
-      #if !self.open(db)
-        #raise "Error while opening database"
-      #end
+
       result = self.query(input)
     rescue Exception => e
-      # print exception
-      puts e
-      result = nil
+      raise e
     end
-
-    # close session
-    #self.close
     return result
   end
   
   def insert_pois(id, pois)
     begin
-      #if !self.open(db)
-        #raise "Error while opening database"
-      #end
-      
       queryString = "xquery for $x in track where $x/uid = \"#{id}\"
         return (            
           insert node <pois></pois>
@@ -132,13 +126,8 @@ class XDatabase
       result = "Insert successful"
 
     rescue Exception => e
-    # print exception, return nil instead
-      puts e
-      result = nil
+      raise e
     end
-
-    # close session
-    #self.close
     return result
   end
 end 
