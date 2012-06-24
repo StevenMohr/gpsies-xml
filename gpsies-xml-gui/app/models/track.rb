@@ -23,7 +23,7 @@ class Track
 	end
 	
 	def self.all()
-		session = BaseXClient::Session.new("stevenmohr.de", 1984, "admin", "admin")
+		session = BaseXClient::Session.new(dbconfig[:host], dbconfig[:port], dbconfig[:user], dbconfig[:pass])
 		session.execute("open database2")
 
 		begin
@@ -63,7 +63,7 @@ class Track
 		end
 
 
-		puts "XXXXX: "+t.to_s
+		# puts "XXXXX: "+t.to_s
 
 		if !t.nil?
 			xml = XmlSimple.xml_in(t)

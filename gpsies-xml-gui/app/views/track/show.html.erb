@@ -8,7 +8,11 @@
 	Title: <%= @track.title %>
 	</div>
 	<div>
+	<% if !@track.description.empty? %>
 		Description: <p><%= @track.description %></p>
+	<% else %>
+		No Description
+	<% end %>
 	</div>
 	<div>
 	Track length: <%= (@track.track_length/1000).round(3) %>km
