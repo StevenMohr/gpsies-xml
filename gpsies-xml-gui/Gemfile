@@ -25,6 +25,8 @@ gem 'therubyracer', :platform => :ruby
 gem 'execjs'
 gem 'xml-simple'
 gem 'sparql-client'
+gem 'twitter'
+gem 'twitter-text'
 
 
 # To use ActiveModel has_secure_password
