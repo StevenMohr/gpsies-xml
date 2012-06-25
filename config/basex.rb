@@ -5,7 +5,8 @@ module Gpsies
                host: "stevenmohr.de", 
                port: 1984, 
                user: "admin",
-               pass: "admin"
+               pass: "admin",
+               database: "database2"
               }
   }
 end

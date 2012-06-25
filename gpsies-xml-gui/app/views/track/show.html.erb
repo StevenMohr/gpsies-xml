@@ -8,7 +8,11 @@
 	Title: <%= @track.title %>
 	</div>
 	<div>
+	<% if !@track.description.empty? %>
 		Description: <p><%= @track.description %></p>
+	<% else %>
+		No Description
+	<% end %>
 	</div>
 	<div>
 	Track length: <%= (@track.track_length/1000).round(3) %>km
@@ -17,5 +21,21 @@
 	Created at: <%= @track.created_date %>
 	</div>
 </div>
+<div>
+	<table>
+	<% if @pointsOfInterest.empty? %>
+		<p>Keine Pois</p>
+	<% else %>
+		Pois:
+		<% @pointsOfInterest.each do |pointOfInterest| %>
+			<tr class='<%= cycle 'list_line_odd', 'list_line_even'  %>'>
+				<td><%= pointOfInterest.title %></td>
+				<td><%= link_to "Info", "#{pointOfInterest.link}" %></td>
+			</tr>
+		<% end %>
+	<% end %>
+	</table>
+</div>
+
 
 <%= content_tag :a, "List all tracks", :href => ".." %>
