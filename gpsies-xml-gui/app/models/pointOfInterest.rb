@@ -31,17 +31,8 @@ class PointOfInterest
         sparclclient.execute("open database2")
         
         pois = sparclclient.fetch_POIs_from_SPARQL(id)
-        # puts pois
 
         sparclclient.close
-		# xml = XmlSimple.xml_in(pois)
-		# puts xml.to_s
-		# result = Array.new
-		# xml['pois'].each { |poi|
-		#	result.push( PointOfInterest.new(title: poi['title'].first,
-        #          link: poi['link'].first))
-		# }
-        #TODO: put pois in  result
       end
 	  query = session.query(input)
 	  t = query.next
@@ -50,14 +41,14 @@ class PointOfInterest
 	  while !t.nil?
 	    xml = XmlSimple.xml_in(t)
 		
-		tw = Twitter.search("#{xml['title'].first}", :lang => "de", :rpp => 1).first
-		if !tw.nil?
-		  puts tw.text
+		tweet = Twitter.search("#{xml['title'].first}", :lang => "de", :rpp => 1).first
+		if !tweet.nil?
+		  tweet = tweet.text
 		  result.push( PointOfInterest.new(title: xml['title'].first,
-			    link: xml['link'].first, tweet: Twitter.search("#{xml['title'].first}", :lang => "de", :rpp => 1).first.text))
+			    link: xml['link'].first, tweet: tweet))
 		else
 	      result.push( PointOfInterest.new(title: xml['title'].first,
-			    link: xml['link'].first, tweet: "Keine Tweets zu diesem POI"))#Twitter.search("#{xml['title'].first}", :lang => "de", :rpp => 1).first.text))
+			    link: xml['link'].first, tweet: "Keine Tweets zu diesem POI"))
 		end
 	    t = query.next
 	  end
