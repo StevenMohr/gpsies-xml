@@ -31,6 +31,7 @@
 			<tr class='<%= cycle 'list_line_odd', 'list_line_even'  %>'>
 				<td><%= pointOfInterest.title %></td>
 				<td><%= link_to "Info", "#{pointOfInterest.link}" %></td>
+				<td><%= pointOfInterest.tweet %></td>
 			</tr>
 		<% end %>
 	<% end %>

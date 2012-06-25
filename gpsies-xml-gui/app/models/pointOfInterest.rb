@@ -2,13 +2,15 @@ require 'basex/BaseXClient'
 require 'xmlsimple'
 require "../config/basex.rb"
 require 'sparql/SparqlClient.rb'
+require 'twitter'
 
 class PointOfInterest
-  attr_reader :title, :link
+  attr_reader :title, :link, :tweet
   
   def initialize(params = {})
 	@title = params[:title]
 	@link = params[:link]
+	@tweet = params[:tweet]
   end
 
   def self.all(id)
@@ -47,10 +49,16 @@ class PointOfInterest
 	  result = Array.new
 	  while !t.nil?
 	    xml = XmlSimple.xml_in(t)
-
-
-	    result.push( PointOfInterest.new(title: xml['title'].first,
-			    link: xml['link'].first))
+		
+		tw = Twitter.search("#{xml['title'].first}", :lang => "de", :rpp => 1).first
+		if !tw.nil?
+		  puts tw.text
+		  result.push( PointOfInterest.new(title: xml['title'].first,
+			    link: xml['link'].first, tweet: Twitter.search("#{xml['title'].first}", :lang => "de", :rpp => 1).first.text))
+		else
+	      result.push( PointOfInterest.new(title: xml['title'].first,
+			    link: xml['link'].first, tweet: "Keine Tweets zu diesem POI"))#Twitter.search("#{xml['title'].first}", :lang => "de", :rpp => 1).first.text))
+		end
 	    t = query.next
 	  end
       
