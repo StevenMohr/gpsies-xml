@@ -1,6 +1,8 @@
 GpsiesXmlGui::Application.routes.draw do
   get "track/index"
   get "track/show"
+  get "track/search"
+  post "track/search"
 
   match 'track/:id' => 'track#show'
   match 'track' => 'track#index'

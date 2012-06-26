@@ -5,9 +5,13 @@ class TrackController < ApplicationController
 	  @tracks = Track.all
   end
 
+  def search
+    @track = Track.find(:keyword => params[:keyword])
+  end
+
   def show
 	  begin
-		  @track = Track.find(params[:id])
+		  @track = Track.find(:id => params[:id])
 	  rescue
 		   render :file => "#{Rails.root}/public/404.html", :layout => false, :status => 404 
 	  end

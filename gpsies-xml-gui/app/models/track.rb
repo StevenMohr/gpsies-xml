@@ -47,12 +47,46 @@ class Track
 		return result
 	end
 	
-	def self.find(id)
+	def self.find(parameters = {:page => 0, :count => 20})
+
+        if parameters[:page].to_i >= 0
+          page = parameters[:page].to_i
+        else
+          page = 0;
+        end
+
+        if parameters[:limit].to_i > 0
+          limit = parameters[:limit]
+        else
+          limit = 20;
+        end
+
+
+        if parameters[:id]?
+          id = parameters[:id]
+        else if parameters[:keyword]?
+          keyword = parameters[:keyword]
+        end
+
+
+
+
 		session = BaseXClient::Session.new("stevenmohr.de", 1984, "admin", "admin")
         session.execute("open database2")
 
 		begin
-			input = 'for $x in track where $x/uid="'+id+'" return $x'
+			input = 'for $x in track '
+            if id?
+              input = input+'where $x/uid="'+id+'"'
+            else
+              if keyword?
+                input = input+'where $x/description="'+keyword+'" || title="'+keyword+'"'
+              end
+            end
+
+          # TODO: here, add limit/offset (pagination support)
+            input = input+"return $x"
+
 			puts input
 			query = session.query(input)
 			t = query.next
