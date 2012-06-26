@@ -14,11 +14,11 @@ class PointOfInterest
   end
 
   def self.all(id)
-    dbconfig =  Gpsies::CONFIG[:database]
-    session = BaseXClient::Session.new(dbconfig[:host], dbconfig[:port], dbconfig[:user], dbconfig[:pass])
-    session.execute("open database2")
+	result = []
+	dbconfig =  Gpsies::CONFIG[:database]
+	session = BaseXClient::Session.new(dbconfig[:host], dbconfig[:port], dbconfig[:user], dbconfig[:pass])
+	session.execute("open #{dbconfig[:database]}")
 
-	
     begin
 	  input = 'for $x in track where $x/uid="'+id+'" return $x/pois/poi'
 	  query = session.query(input)
@@ -28,7 +28,7 @@ class PointOfInterest
       if t.nil?
         #invoke SparqlClient
         sparclclient = Sparql::SparqlClient.new(dbconfig[:host], dbconfig[:port], dbconfig[:user], dbconfig[:pass])
-        sparclclient.execute("open database2")
+        sparclclient.execute("open #{dbconfig[:database]}")
         
         pois = sparclclient.fetch_POIs_from_SPARQL(id)
 
@@ -36,8 +36,7 @@ class PointOfInterest
       end
 	  query = session.query(input)
 	  t = query.next
-      
-	  result = Array.new
+
 	  while !t.nil?
 	    xml = XmlSimple.xml_in(t)
 		
@@ -56,12 +55,11 @@ class PointOfInterest
 	  query.close
     rescue Exception => e
       puts e
-      result = Array.new
     ensure    
       session.close
     end
-    
-    return result
+	
+    result
   end
 	
 end

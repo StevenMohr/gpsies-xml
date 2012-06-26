@@ -3,23 +3,20 @@ require 'pointOfInterest'
 
 class TrackController < ApplicationController
   def index
-	  @tracks = Track.all
+	  @tracks = Track.select(count: 15)
   end
 
   def search
-    unless params[:keyword].nil?
-      @track = Track.find(:keyword => params[:keyword])
-    else
-      @track = Track.find()
-	end
   end
 
   def show
-	  begin
-		  @track = Track.find(:id => params[:id])
-          @pointsOfInterest = PointOfInterest.all(params[:id])
-	  rescue
-		   render :file => "#{Rails.root}/public/404.html", :layout => false, :status => 404 
-	  end
+	@track = Track.find(params[:id])
+	unless @track
+		render(
+			file: "#{Rails.root}/public/404.html",
+			layout: false,
+			status: 404
+		)
+	end
   end
 end

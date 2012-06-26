@@ -18,114 +18,82 @@ class Track
 		@track_length = params[:track_length].to_f
 	end
 
-	def pois(id)
-	  PointOfInterest.all(id)
-		#[PointOfInterest.new(title: "test1", link: "test"),
-		#   PointOfInterest.new(title: "test2", link: "test")]
+	def pois
+	  PointOfInterest.all(@uid)
 	end
-	
-	def self.all()
-		#query("for $x in track return <track>{$x/uid}{$x/title}{$x/description}{$x/trackLength}{$x/createdDate}</track>")
-		findAll()
-	end
-	
-	def self.findAll(params = {})
+
+	def self.select(params = {})
+		uid = params[:uid]
 		offset = params[:offset] || 0
-		count = params[:count]
-		q = <<EOS
-let $tracks = track
-for $track at $position in $tracks
-where
-	$position > #{offset}
-	#{unless count.nil? then "and $position <= #{offset + count}" end}
-return
-	<track>
-		{$track/uid}
-		{$track/title}
-		{$track/description}
-		{$track/trackLength}
-		{$track/createdDate}
-	</track>
-EOS
-		q2 = <<EOS
-let $tracks = track
-for $track at $position in {
-	for $t in $tracks
-	order by $t/trackLength
-	return $t
-}
-where
-	$position > #{offset}
-	#{unless count.nil? then "and $position <= #{offset + count}" end}
-return
-	<track>
-		{$track/uid}
-		{$track/title}
-		{$track/description}
-		{$track/trackLength}
-		{$track/createdDate}
-	</track>
-EOS
+		count = params[:count] || 1
+		keywords = params[:keywords] || []
+		order_by = params[:order_by] || [[:created_date, :descending]]
+		
+		where_clauses = []
+		if uid then where_clauses << %{$track/uid = "#{uid}"} end
+		keywords.each do |keyword|
+			where_clauses << %{(
+				contains($track/title, "#{keyword}") or
+				contains($track/description, "#{keyword}")
+			)}
+		end
+		
+		order_by_clauses = []
+		order_by.each do |criterion|
+			column, order = *criterion
+			clause_column = case column
+				when :title
+					'$track/title'
+				when :description
+					'$track/description'
+				when :track_length
+					'number($track/trackLength)'
+				when :created_date
+					'$track/createdDate'
+			end
+			clause_order = case order
+				when :ascending
+					'ascending'
+				when :descending
+					'descending'
+				else
+					''
+			end
+			order_by_clauses << "#{clause_column} #{clause_order}"
+		end
+			
+		q = %{
+			let $tracks := (
+				for $track in track
+				#{
+					if where_clauses.empty? then ''
+					else 'where ' + where_clauses.join(' and ') end
+				}
+				#{
+					if order_by_clauses.empty? then ''
+					else 'order by ' + order_by_clauses.join(', ') end
+				}
+				return $track
+			)
+			for $track in subsequence($tracks, #{offset + 1}, #{count})
+			return
+				<track>
+					{$track/uid}
+					{$track/title}
+					{$track/description}
+					{$track/trackLength}
+					{$track/createdDate}
+				</track>
+		}
 		query(q)
 	end
 	
-	def self.find(parameters = {:page => 0, :count => 20})
-
-        if parameters[:page].to_i >= 0
-          page = parameters[:page].to_i
-        else
-          page = 0;
-        end
-
-        if parameters[:limit].to_i > 0
-          limit = parameters[:limit]
-        else
-          limit = 20;
-        end
-
-
-        if parameters[:id]
-          id = parameters[:id]
-        elsif parameters[:keyword]
-			keyword = parameters[:keyword]
-		end
-
-		session = BaseXClient::Session.new("stevenmohr.de", 1984, "admin", "admin")
-        session.execute("open database2")
-
-		begin
-			input = 'for $x in track '
-            if id?
-              input = input+'where $x/uid="'+id+'"'
-            else
-              if keyword?
-                input = input+'where $x/description="'+keyword+'" || title="'+keyword+'"'
-              end
-            end
-
-          # TODO: here, add limit/offset (pagination support)
-            input = input+"return $x"
-
-			puts input
-			query = session.query(input)
-			t = query.next
-			query.close
-			session.close
-		end
-
-
-		# puts "XXXXX: "+t.to_s
-
-		if !t.nil?
-			xml = XmlSimple.xml_in(t)
-
-			Track.new(description: xml['description'].first,
-					  track_length: xml['trackLength'].first,
-					  title: xml['title'].first,
-					  uid: xml['uid'].first,
-					  created_date: xml['createdDate'].first)
+	def self.find(id)
+		result = select(uid: id, count: 1)
+		if result
+			result.first 
 		else
-			raise "Not found"
+			nil
 		end
 	end
 
@@ -138,23 +106,30 @@ EOS
 			dbconfig[:user],
 			dbconfig[:pass]
 		)
-		session.execute("open database2")
-		query = session.query(str)
 		result = []
-		return nil unless session.ok
-		while query.more
-			t = query.next
-			xml = XmlSimple.xml_in(t)
-			result << Track.new(
-				description: xml['description'].first,
-				track_length: xml['trackLength'].first,
-				title: xml['title'].first,
-				uid: xml['uid'].first,
-				created_date: xml['createdDate'].first
-			)
+		begin
+			session.execute("open #{dbconfig[:database]}")
+			query = session.query(str)
+			return [] unless query
+			begin
+				while query.more
+					t = query.next
+					xml = XmlSimple.xml_in(t)
+					result << Track.new(
+						description: xml['description'].first,
+						track_length: xml['trackLength'].first,
+						title: xml['title'].first,
+						uid: xml['uid'].first,
+						created_date: xml['createdDate'].first
+					)
+				end
+			ensure
+				query.close
+			end
+		rescue # discard exception ;)
+		ensure
+			session.close
 		end
-		query.close
-		session.close
-		return result
+		result
 	end
 end
