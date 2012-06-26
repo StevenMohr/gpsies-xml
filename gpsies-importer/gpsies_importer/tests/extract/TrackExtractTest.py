@@ -8,8 +8,7 @@ import unittest
 from gpsies_importer.extract.TrackExtract import TrackExtract, convert_gpsies2isodate
 
 
-class TrackExtractTest(unittest.TestCase):
-
+class TrackExtractTestCase(unittest.TestCase):
 
     def test_analyze(self):
         test_data = """<track>
@@ -34,9 +33,7 @@ class TrackExtractTest(unittest.TestCase):
             </track> """
         track_extract = TrackExtract(track_string_xml = test_data)
         result_xml = track_extract.analyze()
-        assert len(result_xml.getroot()) > 0
-        print result_xml
-        #Validate against XSD 
+        assert len(result_xml) > 0
         
     def test_convert_gpisies2isodate(self):
         test_string = "2006-12-05 15:26:05.0"
