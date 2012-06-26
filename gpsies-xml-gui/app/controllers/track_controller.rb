@@ -6,7 +6,10 @@ class TrackController < ApplicationController
   end
 
   def search
-    @track = Track.find(:keyword => params[:keyword])
+    if params[:keyword]?
+      @track = Track.find(:keyword => params[:keyword])
+    else
+      @track = Track.find()
   end
 
   def show
