@@ -7,10 +7,11 @@ class TrackController < ApplicationController
   end
 
   def search
-    if params[:keyword]?
+    unless params[:keyword].nil?
       @track = Track.find(:keyword => params[:keyword])
     else
       @track = Track.find()
+	end
   end
 
   def show

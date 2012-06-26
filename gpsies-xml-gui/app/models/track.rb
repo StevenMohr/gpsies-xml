@@ -84,11 +84,11 @@ EOS
         end
 
 
-        if parameters[:id]?
+        if parameters[:id]
           id = parameters[:id]
-        else if parameters[:keyword]?
-          keyword = parameters[:keyword]
-        end
+        elsif parameters[:keyword]
+			keyword = parameters[:keyword]
+		end
 
 		session = BaseXClient::Session.new("stevenmohr.de", 1984, "admin", "admin")
         session.execute("open database2")
