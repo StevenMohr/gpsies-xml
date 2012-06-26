@@ -96,7 +96,7 @@ class TrackAnalyzer(object):
             connection.close()
             waypoints = KMLExtract(answer).analyze()
             trackXML.append(waypoints)
-            self._xsd_schema.assertValid(trackXML)
+            # self._xsd_schema.assertValid(trackXML) Uncomment to get description of validation errors
             if self._xsd_schema.validate(trackXML):
                 result = etree.tostring(trackXML)
                 self._session.add('database2/tracks', result)
