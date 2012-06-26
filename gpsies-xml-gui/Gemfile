@@ -26,7 +26,7 @@ gem 'execjs'
 gem 'xml-simple'
 gem 'sparql-client'
 gem 'twitter'
-gem 'twitter-text'
+gem 'rails_autolink'
 
 
 # To use ActiveModel has_secure_password
