@@ -6,6 +6,7 @@ Created on 11.06.2012
 
 import argparse
 import os
+import pkg_resources
 from urllib2 import urlopen
 from lxml import etree
 from extract.TrackExtract import TrackExtract
@@ -66,7 +67,7 @@ class FileQuery(object):
 
 class TrackAnalyzer(object):
     def __init__(self, session):
-        xsd_file = etree.parse(open("database.xsd"))
+        xsd_file = etree.parse(open(pkg_resources.resource_filename("gpsies_importer", "database.xsd")))
         self._xsd_schema = etree.XMLSchema(xsd_file)
         self._session = session
                     
