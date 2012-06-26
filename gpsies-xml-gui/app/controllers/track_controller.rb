@@ -1,4 +1,5 @@
 require 'date'
+require 'pointOfInterest'
 
 class TrackController < ApplicationController
   def index
@@ -15,6 +16,7 @@ class TrackController < ApplicationController
   def show
 	  begin
 		  @track = Track.find(:id => params[:id])
+          @pointsOfInterest = PointOfInterest.all(params[:id])
 	  rescue
 		   render :file => "#{Rails.root}/public/404.html", :layout => false, :status => 404 
 	  end

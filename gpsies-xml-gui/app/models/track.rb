@@ -1,5 +1,7 @@
 require 'basex/BaseXClient'
 require 'xmlsimple'
+require "../config/basex.rb"
+
 class Track
 	attr_reader :uid, :title, :description, :created_date, :track_length
 
@@ -16,8 +18,10 @@ class Track
 		@track_length = params[:track_length].to_f
 	end
 
-	def pois
-		[PointOfInterest.new("test1"), PointOfInterest.new("test2")]
+	def pois(id)
+	  PointOfInterest.all(id)
+		#[PointOfInterest.new(title: "test1", link: "test"),
+		#   PointOfInterest.new(title: "test2", link: "test")]
 	end
 	
 	def self.all()
@@ -86,9 +90,6 @@ EOS
           keyword = parameters[:keyword]
         end
 
-
-
-
 		session = BaseXClient::Session.new("stevenmohr.de", 1984, "admin", "admin")
         session.execute("open database2")
 
@@ -113,7 +114,7 @@ EOS
 		end
 
 
-		puts "XXXXX: "+t.to_s
+		# puts "XXXXX: "+t.to_s
 
 		if !t.nil?
 			xml = XmlSimple.xml_in(t)
