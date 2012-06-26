@@ -22,6 +22,7 @@ class Track
 	  PointOfInterest.all(@uid)
 	end
 
+	# WARNING: input will NOT be sanitized
 	def self.select(params = {})
 		uid = params[:uid]
 		offset = params[:offset] || 0

@@ -1,6 +1,6 @@
-<h1>Overview: List all Tracks</h1>
-
-
+<h1>Tracks</h1>
+<%= render "search" %>
+<%= render "paginator" %>
 <table>
 	<tr class="list_line_head">
 		<th>Title</th>
@@ -16,3 +16,5 @@
 		<td><%= link_to "Details", "track/#{track.uid}" %></td>
 	</tr>
 <% end %>
+</table>
+<%= render "paginator" %>

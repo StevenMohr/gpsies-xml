@@ -3,10 +3,18 @@ require 'pointOfInterest'
 
 class TrackController < ApplicationController
   def index
-	  @tracks = Track.select(count: 15)
-  end
+	  count = (params[:c] || 20).to_i
+	  page = (params[:p] || 1).to_i
+	  offset = (page - 1) * count
+	  query = params[:q]
+	  
+	  keywords = []
+	  if query
+		  keywords += query.split(' ')
+	  end
 
-  def search
+	  @tracks = Track.select(count: count, offset: offset, keywords: keywords)
+	  @page = page
   end
 
   def show
