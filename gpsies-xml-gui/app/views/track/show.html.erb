@@ -33,7 +33,7 @@
 				<td><%= link_to "Info", "#{pointOfInterest.link}" %></td>
 				
 			</tr>
-			<tr><td><%= auto_link(pointOfInterest.tweet).to_s %></td></tr>
+			<tr><td><%= auto_link(pointOfInterest.tweet).html_safe %></td></tr>
 		<% end %>
 	<% end %>
 	</table>
