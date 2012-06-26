@@ -21,30 +21,48 @@ class Track
 	end
 	
 	def self.all()
-		session = BaseXClient::Session.new("stevenmohr.de", 1984, "admin", "admin")
-		session.execute("open database2")
-
-		begin
-			input = "for $x in track return <track>{$x/uid}{$x/title}{$x/description}{$x/trackLength}{$x/createdDate}</track>"
-			query = session.query(input)
-
-			t = query.next
-			result = Array.new
-			while !t.nil?
-				xml = XmlSimple.xml_in(t)
-
-
- 				result.push( Track.new(description: xml['description'].first,
-									   track_length: xml['trackLength'].first,
-									   title: xml['title'].first,
-									   uid: xml['uid'].first,
-						   			   created_date: xml['createdDate'].first))
-				t = query.next
-			end
-			query.close
-		end
-		session.close
-		return result
+		#query("for $x in track return <track>{$x/uid}{$x/title}{$x/description}{$x/trackLength}{$x/createdDate}</track>")
+		findAll()
+	end
+	
+	def self.findAll(params = {})
+		offset = params[:offset] || 0
+		count = params[:count]
+		q = <<EOS
+let $tracks = track
+for $track at $position in $tracks
+where
+	$position > #{offset}
+	#{unless count.nil? then "and $position <= #{offset + count}" end}
+return
+	<track>
+		{$track/uid}
+		{$track/title}
+		{$track/description}
+		{$track/trackLength}
+		{$track/createdDate}
+	</track>
+EOS
+		q2 = <<EOS
+let $tracks = track
+for $track at $position in {
+	for $t in $tracks
+	order by $t/trackLength
+	return $t
+}
+where
+	$position > #{offset}
+	#{unless count.nil? then "and $position <= #{offset + count}" end}
+return
+	<track>
+		{$track/uid}
+		{$track/title}
+		{$track/description}
+		{$track/trackLength}
+		{$track/createdDate}
+	</track>
+EOS
+		query(q)
 	end
 	
 	def self.find(parameters = {:page => 0, :count => 20})
@@ -108,7 +126,34 @@ class Track
 		else
 			raise "Not found"
 		end
+	end
 
-
+	protected
+	def self.query(str)
+		dbconfig =  Gpsies::CONFIG[:database]
+		session = BaseXClient::Session.new(
+			dbconfig[:host],
+			dbconfig[:port],
+			dbconfig[:user],
+			dbconfig[:pass]
+		)
+		session.execute("open database2")
+		query = session.query(str)
+		result = []
+		return nil unless session.ok
+		while query.more
+			t = query.next
+			xml = XmlSimple.xml_in(t)
+			result << Track.new(
+				description: xml['description'].first,
+				track_length: xml['trackLength'].first,
+				title: xml['title'].first,
+				uid: xml['uid'].first,
+				created_date: xml['createdDate'].first
+			)
+		end
+		query.close
+		session.close
+		return result
 	end
 end
