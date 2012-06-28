@@ -1,0 +1,5 @@
+<%= form_tag("/track", method: "get") do %>
+	<%= label_tag :q, "Search for keywords:" %>
+	<%= text_field_tag :q, nil, {:maxlength => 64, :placeholder => "Enter search query here..."} %>
+	<%= submit_tag "Be Awesome!", name: nil %>
+<% end %>

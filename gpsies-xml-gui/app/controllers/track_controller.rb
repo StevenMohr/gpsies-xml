@@ -3,15 +3,29 @@ require 'pointOfInterest'
 
 class TrackController < ApplicationController
   def index
-	  @tracks = Track.all
+	  count = (params[:c] || 20).to_i
+	  page = (params[:p] || 1).to_i
+	  offset = (page - 1) * count
+	  query = params[:q]
+	  
+	  keywords = []
+	  if query
+		  keywords += query.split(' ')
+	  end
+
+	  @tracks = Track.select(count: count, offset: offset, keywords: keywords)
+	  @page = page
+      @query = query
   end
 
   def show
-	  begin
-		  @track = Track.find(params[:id])
-          @pointsOfInterest = PointOfInterest.all(params[:id])
-	  rescue
-		   render :file => "#{Rails.root}/public/404.html", :layout => false, :status => 404 
-	  end
+	@track = Track.find(params[:id])
+	unless @track
+		render(
+			file: "#{Rails.root}/public/404.html",
+			layout: false,
+			status: 404
+		)
+	end
   end
 end
