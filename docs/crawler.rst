@@ -42,6 +42,7 @@ which will show you this help page::
     db_server_name        Address of BaseX server
     db_server_user        User name for BaseX server
     db_server_password    Password for BaseX server
+    --port PORT           Port of BaseXServer
     -d DATABASE, --database-name DATABASE
                           Name of database to use
 
