@@ -44,3 +44,8 @@ img.tweeticon {
 table#trackstable {
   width: 1000px;
 }
+
+div#requirediconbacklink {
+  font-size: 0.7em;
+  margin-top: 15px;
+}

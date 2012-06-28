@@ -13,3 +13,7 @@ Wikipedia:
 Twitter:
 	http://twitter.com/logo
 
+Our Icon comes from:
+	http://www.iconarchive.com/show/touchdown-3D-icons-by-dario-arnaez/My-world-icon.html
+	Backlink to: http://www.ohmyicons.com
+
