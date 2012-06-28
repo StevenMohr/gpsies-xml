@@ -15,6 +15,7 @@ class TrackController < ApplicationController
 
 	  @tracks = Track.select(count: count, offset: offset, keywords: keywords)
 	  @page = page
+      @query = query
   end
 
   def show
