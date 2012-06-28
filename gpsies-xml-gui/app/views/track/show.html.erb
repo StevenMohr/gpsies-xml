@@ -1,39 +1,52 @@
 <h1>Track: <%= @track.title %></h1>
 
-<div id="show">
+<div id="show" class="nexttoheader">
 	<div>
-	ID: <%= @track.uid %>
+      <b>ID</b> <%= @track.uid %>
 	</div>
 	<div>
-	Title: <%= @track.title %>
+      <b>Title</b> <%= @track.title %>
 	</div>
 	<div>
 	<% if !@track.description.empty? %>
-		Description: <p><%= @track.description %></p>
+      <b>Description</b> <p style="margin-left: 15px;"><%= @track.description %></p>
 	<% else %>
 		No Description
 	<% end %>
 	</div>
 	<div>
-	Track length: <%= (@track.track_length / 1000).round(3) %>km
+      <b>Track length</b> <%= (@track.track_length / 1000).round(3) %>km
 	</div>
 	<div>
-	Created at: <%= @track.created_date %>
+      <b>Created at</b> <%= @track.created_date %>
 	</div>
 </div>
-<div>
+<div id="poi">
+  <h2>Interessante Punkte auf dieser Strecke:</h2>
 	<table>
 	<% if @track.pois.empty? %>
-		<p>Keine Pois</p>
+		<p>Keine Points of Interests. :(</p>
 	<% else %>
-		Pois:
 		<% @track.pois.each do |poi| %>
-			<tr class='<%= cycle 'list_line_odd', 'list_line_even'  %>'>
+            <% c = cycle 'list_line_odd', 'list_line_even' %>
+			<tr class='<%= c  %>'>
 				<td><%= poi.title %></td>
-				<td><%= link_to "Info", "#{poi.link}" %></td>
+				<td><%= link_to image_tag("wikipedia.png"), "#{poi.link}" %></td>
 				
 			</tr>
-			<tr><td><%= auto_link (poi.tweet).html_safe %></td></tr>
+            <tr class="<%= c %>">
+              <td>
+                <% if poi.tweet %>
+                  <%= image_tag("twitter.png", class:"tweeticon") %>
+                  .o(
+                  <%= auto_link (poi.tweet).html_safe %>)
+                <% else %>
+                  <%= image_tag("twitter_notweets.png", class:"tweeticon notweet") %>
+                  <span>Keine Tweets zu diesem Punkt</span>
+                <% end %>
+              </td>
+              <td></td>
+            </tr>
 		<% end %>
 	<% end %>
 	</table>

@@ -40,14 +40,14 @@ class PointOfInterest
 	  while !t.nil?
 	    xml = XmlSimple.xml_in(t)
 		
-		tweet = Twitter.search("#{xml['title'].first}", :lang => "de", :rpp => 1).first
-		if !tweet.nil?
-		  tweet = tweet.text
+		twitterresult = Twitter.search("#{xml['title'].first}", :lang => "de", :rpp => 1).first
+		unless twitterresult.nil?
+		  tweet = twitterresult.text
 		  result.push( PointOfInterest.new(title: xml['title'].first,
 			    link: xml['link'].first, tweet: tweet))
 		else
 	      result.push( PointOfInterest.new(title: xml['title'].first,
-			    link: xml['link'].first, tweet: "Keine Tweets zu diesem POI"))
+			    link: xml['link'].first, tweet: nil))
 		end
 	    t = query.next
 	  end
