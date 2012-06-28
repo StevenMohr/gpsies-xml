@@ -60,11 +60,20 @@ which will show you this help page::
                           web service.
 
 Examples
-++++++++++
+------------
 
 Let's assume that your BaseX server is installed using the default configuration (port: 1984, user name: admin, password: admin) on localhost with a database named 'database3'. In order to crawl GPSies.org for 100,000 tracks (with is the default amount of tracks) you will use the import like this::
 
-  gpsies-import localhost admin admin -d database3
+  gpsies-import localhost admin admin MyAPIKey -d database3
 
+
+If your last crawling attempt failed after you downloaded 500 tracks and you don't want to start at the beginning again, you can tell the crawler to skip the first 5 pages (of 100 tracks each) and start with page 6::
+
+  gpsies-import localhost admin admin MyAPIKey -d database3 -p 6
+
+
+Another interesting way is to read GPSies responses from a file instead of retrieving them from network. It's basically the same, you only have to specify the file to read from (you have to specify a API but it will not be used so it can be any combination of character :-)).::
+
+  gpsies-import localhost admin admin MyAPIKey -d database3 -f data.xml
 
 
