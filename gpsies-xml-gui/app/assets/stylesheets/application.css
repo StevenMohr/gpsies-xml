@@ -11,3 +11,36 @@
  *= require_self
  *= require_tree .
  */
+
+* {
+  font-family:sans;
+}
+
+
+div#no_tracks_found {
+margin-top: 5px;
+padding-left: 40px;
+}
+
+a + h1 {
+  font-size: 2.1em;
+}
+
+img#headerimg {
+  float:left;
+  margin-right:15px;
+}
+
+div.nexttoheader + * {
+  clear:both;
+}
+
+img.tweeticon {
+  float:left;
+  width: 45px;
+  height: 45px;
+}
+
+table#trackstable {
+  width: 1000px;
+}
