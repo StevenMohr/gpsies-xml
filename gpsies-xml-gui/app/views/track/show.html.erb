@@ -14,6 +14,12 @@
 		No Description
 	<% end %>
 	</div>
+    <div>
+      <b>Start:</b> <%= @track.start_point %>
+    </div>
+    <div>
+      <b>End:</b> <%= @track.end_point %>
+    </div>
 	<div>
       <b>Track length</b> <%= (@track.track_length / 1000).round(3) %>km
 	</div>
@@ -23,15 +29,16 @@
 </div>
 <div id="poi">
   <h2>Interessante Punkte auf dieser Strecke:</h2>
+    <%= render "paginator" %>
 	<table>
-	<% if @track.pois.empty? %>
+	<% if @pois.empty? %>
 		<p>Keine Points of Interests. :(</p>
 	<% else %>
-		<% @track.pois.each do |poi| %>
+		<% @pois.each do |poi| %>
             <% c = cycle 'list_line_odd', 'list_line_even' %>
 			<tr class='<%= c  %>'>
 				<td><%= poi.title %></td>
-				<td><%= link_to image_tag("wikipedia.png"), "#{poi.link}" %></td>
+				<td><%= link_to image_tag("wikipedia.png"), "#{poi.link}", :target => '_blank' %></td>
 				
 			</tr>
             <tr class="<%= c %>">
@@ -39,7 +46,7 @@
                 <% if poi.tweet %>
                   <%= image_tag("twitter.png", class:"tweeticon") %>
                   .o(
-                  <%= auto_link (poi.tweet).html_safe %>)
+                  <%= auto_link(poi.tweet, :html => { :target => '_blank' }) %>)
                 <% else %>
                   <%= image_tag("twitter_notweets.png", class:"tweeticon notweet") %>
                   <span>Keine Tweets zu diesem Punkt</span>
@@ -50,6 +57,12 @@
 		<% end %>
 	<% end %>
 	</table>
+    <%= render "paginator" %>
 </div>
 
+<%= gmaps({ "polylines" => { "data" => @json } } ) %>
+
+
 <%= link_to "Back to track list", "/track" %>
+
+<%= yield :scripts %>

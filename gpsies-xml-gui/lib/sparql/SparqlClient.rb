@@ -3,6 +3,7 @@ require 'sparql/client'
 require 'basex/BaseXClient.rb'
 require 'sparql/queryhelper.rb'
 require 'sparql/CustomExceptions.rb'
+require "../config/basex.rb"
 
 module Sparql
   class SparqlClient
@@ -36,8 +37,9 @@ module Sparql
       begin
         points = get_waypoints(id)
         #take only each 10th point:
-        coords = create_coord_array(points,10)      
+        coords = create_coord_array(points,20) 
         result = get_POIs(coords)
+        puts result
               
         if !result.nil?
           res = insert_pois(id, result)
@@ -48,7 +50,7 @@ module Sparql
           end
         end
         rescue Exception => e
-          raise e
+          puts e
         end
     end 
 
@@ -85,11 +87,10 @@ module Sparql
         return result
       end
     
-    private
-    
       def get_waypoints(id)
-      begin 
-        input = "for $x in track    
+      begin
+        dbconfig =  Gpsies::CONFIG[:database]
+        input = "#{dbconfig[:nsdec]} for $x in track    
         where $x/uid = \"#{id}\"
         return $x/waypoints"
 
@@ -100,27 +101,36 @@ module Sparql
       return result
     end
     
+    private
+    
     def insert_pois(id, pois)
       begin
-        queryString = "xquery for $x in track where $x/uid = \"#{id}\"
-          return (            
-            insert node <pois></pois>
-            as last into $x
-          )"
+        dbconfig =  Gpsies::CONFIG[:database]
         
-        if !self.execute(queryString)
-          raise "Error while execetung query \"#{queryString}\""
-        end
+        puts "Anzahl POIs: #{pois.length}"
       
         pois.each do |point|
-          queryString = "xquery for $x in track
-          where $x/uid = \"#{id}\"
-          return (            
-            insert node #{point}
-            as last into $x/pois
-          )"
+          if point == pois.first            
+            queryString = "xquery #{dbconfig[:nsdec]}
+            for $x in track
+            where $x/uid = \"#{id}\"
+            return (            
+              insert nodes <pois>#{point}</pois>
+              as last into $x
+            )"
+            puts queryString
+          else
+            queryString = "xquery #{dbconfig[:nsdec]}
+            for $x in track
+            where $x/uid = \"#{id}\"
+            return (            
+              insert nodes #{point}
+              as last into $x/pois
+            )"
+            puts queryString
+            end
           if !self.execute(queryString)
-            raise "Error while execetung query \"#{queryString}\""
+            raise "Error while executing query \"#{queryString}\""
           end
         end
         result = "Insert successful"

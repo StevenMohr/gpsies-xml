@@ -86,7 +86,7 @@ def create_coord_array(result, n)
         
         #temporary change because of mixed up values in DB
         coords[j][:lat] = ele.attributes["longitude"]
-        coords[j][:long] = ele.attributes["latitude"]
+        coords[j][:lng] = ele.attributes["latitude"]
         
         #coords[j][:lat] = ele.attributes["latitude"]
         #coords[j][:long] = ele.attributes["longitude"]
@@ -144,7 +144,7 @@ def get_POIs(coords)
             result[j] += "<poi>
             <title>#{solution[:label]}</title>
             <link>#{link}</link>
-            <location latitutde=\"#{solution[:lat]}\" longitude=\"#{solution[:long]}\" />
+            <location latitutde=\"#{solution[:lat]}\" longitude=\"#{solution[:lng]}\" />
             </poi>"
             j += 1
             poi_IDs.push(solution[:label])         

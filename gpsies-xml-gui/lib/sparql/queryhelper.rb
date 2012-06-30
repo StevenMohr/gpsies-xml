@@ -3,42 +3,7 @@ require 'rexml/document'
 #takes an array of hashes (latitude-longitude pairs :lat :long)
 #and an interval for the points
 #returns a SPARQL-Query
-#probably obsolete
 def querybuilder(points, interval)
-  query = "SELECT DISTINCT ?subject ?label ?lat ?long WHERE
-    {"
-    points.each do |p|
-    
-      query += " {
-        ?subject geo:lat ?lat.
-        ?subject geo:long ?long.
-        ?subject rdfs:label ?label.
-        OPTIONAL { ?subject dbpprop:type ?type } 
-        FILTER(
-        ?lat - #{p[:lat]} <= #{interval} && 
-        #{p[:lat]} - ?lat <= #{interval} && 
-        ?long - #{p[:long]} <= #{interval} &&
-        #{p[:long]} - ?long <= #{interval} && 
-        lang(?label) = \"de\" && 
-        ?type != \"Quarter\"@en
-        ).
-        "
-       query += "} UNION " unless p == points.last
-    end
- 
-  
-  if points.length==0
-    query=nil;
-  else
-     query += "} }"
-  end
-end
-
-#builds a different query than querybuilder() for the same purpose 
-
-#TODO: test performance of both functions
-#querybuilder appears to be wayyyyyyyyyyyyyyyyyyy faster
-def querybuilder2(points, interval)
   #puts points.last
   query = "SELECT DISTINCT ?subject ?label ?lat ?long WHERE
     {
@@ -86,7 +51,7 @@ def create_coord_array(result, n)
         
         #temporary change because of mixed up values in DB
         coords[j][:lat] = ele.attributes["longitude"]
-        coords[j][:long] = ele.attributes["latitude"]
+        coords[j][:lng] = ele.attributes["latitude"]
         
         #coords[j][:lat] = ele.attributes["latitude"]
         #coords[j][:long] = ele.attributes["longitude"]
@@ -131,7 +96,7 @@ def get_POIs(coords)
     #size of chunks
     n=10
     for i in 0..coords.length/n
-        queryString = querybuilder2(coords[i*n..(i+1)*n-1], interval)
+        queryString = querybuilder(coords[i*n..(i+1)*n-1], interval)
         #puts queryString
         
         query = sparql.query(queryString)

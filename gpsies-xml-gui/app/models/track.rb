@@ -1,9 +1,11 @@
 require 'basex/BaseXClient'
 require 'xmlsimple'
 require "../config/basex.rb"
+require 'sparql/SparqlClient.rb'
+require 'sparql/queryhelper.rb'
 
 class Track
-	attr_reader :uid, :title, :description, :created_date, :track_length
+	attr_reader :uid, :title, :description, :created_date, :track_length, :start_point, :end_point, :total_count
 
 	def initialize (params = {})
 		@uid = params[:uid]
@@ -14,13 +16,30 @@ class Track
 		rescue
 			@created_date = DateTime.now
 		end
-
-		@track_length = params[:track_length].to_f
+        @track_length = params[:track_length].to_f
+        @start_point = params[:start_point]
+        @end_point = params[:end_point]        
+        @total_count = params[:total_count]
+		
 	end
-
-	def pois
-	  PointOfInterest.all(@uid)
-	end
+    
+    def self.map(uid)
+      begin
+        dbconfig =  Gpsies::CONFIG[:database]
+        sparclclient = Sparql::SparqlClient.new(dbconfig[:host], dbconfig[:port], dbconfig[:user], dbconfig[:pass])
+        sparclclient.execute("open #{dbconfig[:database]}")
+      
+        waypoints = sparclclient.get_waypoints(uid)
+        
+        result = create_coord_array(waypoints, 1)
+    
+      rescue Exception => e
+        raise e
+      ensure
+        sparclclient.close
+      end
+      result
+    end
 
 	# WARNING: input will NOT be sanitized
 	def self.select(params = {})
@@ -62,9 +81,11 @@ class Track
 			end
 			order_by_clauses << "#{clause_column} #{clause_order}"
 		end
-			
+		
+        dbconfig =  Gpsies::CONFIG[:database]
 		q = %{
-			let $tracks := (
+             #{dbconfig[:nsdec]}
+             let $tracks := (
 				for $track in track
 				#{
 					if where_clauses.empty? then ''
@@ -76,14 +97,17 @@ class Track
 				}
 				return $track
 			)
-			for $track in subsequence($tracks, #{offset + 1}, #{count})
+			for $track at $count in subsequence($tracks, #{offset + 1}, #{count})
 			return
 				<track>
-					{$track/uid}
-					{$track/title}
-					{$track/description}
-					{$track/trackLength}
-					{$track/createdDate}
+                  {$track/uid}
+                  {$track/title}
+                  {$track/description}
+                  {$track/trackLength}
+                  {$track/createdDate}
+                  <startpoint>Lat: {data($track/waypoints/waypoint[1]/@latitude)}; Long: {data($track/waypoints/waypoint[1]/@longitude)}</startpoint>
+                  <endpoint>Lat: {data($track/waypoints/waypoint[last()]/@latitude)}; Long: {data($track/waypoints/waypoint[last()]/@longitude)}</endpoint>
+                   {if ($count=1) then <count>{count($tracks)}</count> else ()}
 				</track>
 		}
 		query(q)
@@ -116,13 +140,29 @@ class Track
 				while query.more
 					t = query.next
 					xml = XmlSimple.xml_in(t)
-					result << Track.new(
-						description: xml['description'].first,
-						track_length: xml['trackLength'].first,
-						title: xml['title'].first,
-						uid: xml['uid'].first,
-						created_date: xml['createdDate'].first
-					)
+                    
+                    if result.empty?
+                      result << Track.new(
+                          description: xml['description'].first,
+                          track_length: xml['trackLength'].first,
+                          title: xml['title'].first,
+                          uid: xml['uid'].first,
+                          created_date: xml['createdDate'].first,
+                          start_point: xml['startpoint'].first,
+                          end_point: xml['endpoint'].first,
+                          total_count: xml['count'].first
+                      )
+                    else
+                      result << Track.new(
+                          description: xml['description'].first,
+                          track_length: xml['trackLength'].first,
+                          title: xml['title'].first,
+                          uid: xml['uid'].first,
+                          created_date: xml['createdDate'].first,
+                          start_point: xml['startpoint'].first,
+                          end_point: xml['endpoint'].first
+                      )
+                    end
 				end
 			ensure
 				query.close

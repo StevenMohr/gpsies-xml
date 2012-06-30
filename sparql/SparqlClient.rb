@@ -87,9 +87,9 @@ module Sparql
         return result
       end
     
-    private
     
-      def get_waypoints(id)
+    
+   def get_waypoints(id)
       begin
         dbconfig =  Gpsies::CONFIG[:database]
         input = "#{dbconfig[:nsdec]} for $x in track    
@@ -102,6 +102,8 @@ module Sparql
       end
       return result
     end
+    
+    private
     
     def insert_pois(id, pois)
       begin
