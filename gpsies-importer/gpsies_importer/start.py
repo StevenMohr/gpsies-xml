@@ -14,11 +14,10 @@ from gpsies_importer.extract.KMLExtract import KMLExtract
 from gpsies_importer.basex_api import BaseXClient
 
 URL_PATTERN = u"http://www.gpsies.org/api.do?key={api_key}&country=DE&limit=100&resultPage={page}&trackTypes=jogging&filetype=kml"
-PORT = 1984
 
 class GPiesQuery(object):
-    def query(self, db_server_name, db_server_user, db_server_password, api_key, database, start_page, num_pages, **kwargs):
-        session = BaseXClient.Session(db_server_name, PORT, db_server_user, db_server_password)
+    def query(self, db_server_name, db_server_user, db_server_password, api_key, database, start_page, num_pages,port, **kwargs):
+        session = BaseXClient.Session(db_server_name, port, db_server_user, db_server_password)
         session.execute("open " + database)
         try:
             track_analyzer = TrackAnalyzer(session)
@@ -32,9 +31,9 @@ class GPiesQuery(object):
             session.close()
 
 class FileQuery(object):
-    def query(self, db_server_name, db_server_user, db_server_password, database, file, **kwargs):
+    def query(self, db_server_name, db_server_user, db_server_password, database, file, port, **kwargs):
         try:
-            session = BaseXClient.Session(db_server_name, PORT, db_server_user, db_server_password)
+            session = BaseXClient.Session(db_server_name, port, db_server_user, db_server_password)
             session.execute("open " + database)
             track_analyzer = TrackAnalyzer(session)
             file = open(file)
@@ -112,6 +111,7 @@ def main():
     basex_group.add_argument("db_server_name", help="Address of BaseX server")
     basex_group.add_argument("db_server_user", help="User name for BaseX server")
     basex_group.add_argument("db_server_password", help="Password for BaseX server")
+    basex_group.add_argument("--port", help="Port of BaseXServer", dest="port", type=int, default=1984) 
     basex_group.add_argument("-d", "--database-name", dest="database", help="Name of database to use", default="database2")
     
     net_group = parser.add_argument_group(description="Arguments for network access")
