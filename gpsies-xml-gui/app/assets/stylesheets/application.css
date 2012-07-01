@@ -13,7 +13,7 @@
  */
 
 * {
-  font-family:sans;
+  font-family: Georgia, serif;
 }
 
 
@@ -40,6 +40,13 @@ img.tweeticon {
   width: 45px;
   height: 45px;
 }
+
+img.wikiicon {
+  float:right;
+  width: 48px;
+  height: 48px;
+}
+
 
 table#trackstable {
   width: 1000px;

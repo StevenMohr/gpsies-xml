@@ -59,19 +59,6 @@ def create_coord_array(result, n)
       end
       i += 1
     end
-
-=begin
-#example coordinates to get more POIs
-    coords[i] = Hash.new
-    #Coordinates of Ulm Minster 
-    coords[i][:lat] = 48.3986
-    coords[i][:long] = 9.9925
-
-    # print all coordinates
-    coords.each do |c|
-      puts "Latitude: #{c[:lat]}, Longitude: #{c[:long]}"
-    end
-=end
     return coords
 end
 
@@ -79,10 +66,6 @@ end
 #for an array of lat-long coords
 #fethces POIs from sparql
 #returns POIs as XML-string
-
-#TODO: extend to enable tracks with many coordinates
-#IDEA: group waypoints in groups of 10, query sparql for each of them
-#save label(title) of POI in a list, for each new solution check if already in list
 def get_POIs(coords)
   begin
     sparql = SPARQL::Client.new("http://dbpedia.org/sparql")
@@ -93,11 +76,9 @@ def get_POIs(coords)
     poi_IDs = Array.new
     j=0
     
-    #size of chunks
-    n=10
+    n=10 #n = number of waypoints per SPARQL-query
     for i in 0..coords.length/n
         queryString = querybuilder(coords[i*n..(i+1)*n-1], interval)
-        #puts queryString
         
         query = sparql.query(queryString)
         
@@ -111,16 +92,16 @@ def get_POIs(coords)
             <link>#{link}</link>
             <location latitutde=\"#{solution[:lat]}\" longitude=\"#{solution[:long]}\" />
             </poi>"
+             #TODO: Fix spelling of latitude
             j += 1
             poi_IDs.push(solution[:label])         
           end
         end
     end
     
-    rescue Exception => e
-    # print exception, return nil instead
-      puts e
-      result = nil
-    end
-    return result
+  rescue Exception => e
+    puts e
+    result = nil
+  end
+    result
 end
