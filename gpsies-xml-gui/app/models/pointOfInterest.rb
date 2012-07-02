@@ -32,6 +32,19 @@ class PointOfInterest
         subsequence = "subsequence($pois, #{offset + 1}, #{count})"
       end        
 
+      q = "#{dbconfig[:nsdec]} for $track in track where $track/uid = \"#{uid}\"
+              return count($track/pois/poi)"
+    
+      poi_count = query(query: q, twitter: false, count_only: true).to_i
+        
+      if poi_count==0 && sparql
+        sparclclient = Sparql::SparqlClient.new(dbconfig[:host], dbconfig[:port], dbconfig[:user], dbconfig[:pass])
+        sparclclient.execute("open #{dbconfig[:database]}")
+        
+        new_pois = sparclclient.fetch_POIs_from_SPARQL(uid)
+        sparclclient.close
+      end
+      
       q = "#{dbconfig[:nsdec]} let $pois := (for $track in track where $track/uid = \"#{uid}\" return $track/pois/poi)
               for $poi at $count in #{subsequence}
               return
@@ -42,20 +55,9 @@ class PointOfInterest
                     {if ($count=1) then <count>{count($pois)}</count> else ()}
                 </poi>"
                 #TODO: Fix spelling of latitude
-    
-      pois = query(query: q)
-        
-      if pois.empty? && sparql
-        sparclclient = Sparql::SparqlClient.new(dbconfig[:host], dbconfig[:port], dbconfig[:user], dbconfig[:pass])
-        sparclclient.execute("open #{dbconfig[:database]}")
-        
-        new_pois = sparclclient.fetch_POIs_from_SPARQL(uid)
-        sparclclient.close
-      end
+                
+        pois = query(query: q, twitter: twitter)
       
-      if twitter
-        pois = query(query: q, twitter: true)
-      end
       
       rescue Exception => e
         puts e
@@ -68,6 +70,7 @@ class PointOfInterest
     def self.query(params = {})
       str = params[:query] || nil
       twitter = params[:twitter] || false
+      count_only = params[:count_only] || false 
         
       dbconfig =  Gpsies::CONFIG[:database]
       session = BaseXClient::Session.new(
@@ -81,6 +84,11 @@ class PointOfInterest
       begin
         session.execute("open #{dbconfig[:database]}")
         query = session.query(str)
+        
+        if count_only
+            return query.next
+        end
+         
         return [] unless query
         
         while query.more

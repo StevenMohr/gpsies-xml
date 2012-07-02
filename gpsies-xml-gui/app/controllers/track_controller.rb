@@ -42,13 +42,13 @@ class TrackController < ApplicationController
       )
     end
     
-    @pois = PointOfInterest.all(uid: uid, page: page, offset: offset, twitter: true, sparql: true)
+    @pois = PointOfInterest.all(uid: uid, page: page, count: count, offset: offset, twitter: true, sparql: true)
     
     #get coordinates for map
     @route_json = Track.map(uid).to_json
     @points_json = []    
     
-    @points_json << { title: "Startpoint", description: "Startpoint", lng: @track.start_point[:lng], lat: @track.start_point[:lat] }
+    @points_json << { title: "Startpoint", description: "Starting point", lng: @track.start_point[:lng], lat: @track.start_point[:lat] }
     @points_json << { title: "Endpoint", description: "Endpoint", lng: @track.end_point[:lng], lat: @track.end_point[:lat] }
     
     #TODO: decide if all POIs or just paginated ones
