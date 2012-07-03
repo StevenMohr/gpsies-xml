@@ -10,10 +10,10 @@
 	<% end %>
 	</div>
     <div>
-      <b>Start:</b> <%= "Long: #{@track.start_point[:lng]}; Lat: #{@track.start_point[:lat]}" %>
+    <b>Start:</b> <div class="geo">Longitude: <span class="longitude"><%= @track.start_point[:lng]%></span> Latitude: <span class='latitiude'><%= @track.start_point[:lat]%></span></div>
     </div>
     <div>
-      <b>End:</b> <%= "Long: #{@track.end_point[:lng]}; Lat: #{@track.end_point[:lat]}" %>
+      <b>End:</b> <div class="geo">Longitude: <span class="longitude"><%= @track.end_point[:lng]%></span> Latitude: <span class='latitiude'><%= @track.end_point[:lat]%></span></div>
     </div>
 	<div>
       <b>Track length</b> <%= (@track.track_length / 1000).round(3) %>km
