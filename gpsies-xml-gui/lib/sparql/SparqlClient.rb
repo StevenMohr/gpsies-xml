@@ -36,10 +36,9 @@ module Sparql
     def fetch_POIs_from_SPARQL(id)
       begin
         points = get_waypoints(id)
-        #take only each 10th point:
+        #take only each 20th point:
         coords = create_coord_array(points,20) 
         result = get_POIs(coords)
-        puts result
               
         if !result.nil?
           res = insert_pois(id, result)
@@ -104,8 +103,6 @@ module Sparql
     def insert_pois(id, pois)
       begin
         dbconfig =  Gpsies::CONFIG[:database]
-        
-        puts "Anzahl POIs: #{pois.length}"
       
         pois.each do |point|
           if point == pois.first            
@@ -116,7 +113,6 @@ module Sparql
               insert nodes <pois>#{point}</pois>
               as last into $x
             )"
-            puts queryString
           else
             queryString = "xquery #{dbconfig[:nsdec]}
             for $x in track
@@ -125,7 +121,6 @@ module Sparql
               insert nodes #{point}
               as last into $x/pois
             )"
-            puts queryString
             end
           if !self.execute(queryString)
             raise "Error while executing query \"#{queryString}\""

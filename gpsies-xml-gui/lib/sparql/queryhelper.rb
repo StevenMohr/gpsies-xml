@@ -17,8 +17,8 @@ def querybuilder(points, interval)
       query += "(
         ?lat - #{p[:lat]} <= #{interval} && 
         #{p[:lat]} - ?lat <= #{interval} && 
-        ?long - #{p[:long]} <= #{interval} &&
-        #{p[:long]} - ?long <= #{interval} )"
+        ?long - #{p[:lng]} <= #{interval} &&
+        #{p[:lng]} - ?long <= #{interval} )"
        i += 1
        query += "||" unless i == points.length
     end
@@ -35,7 +35,7 @@ def querybuilder(points, interval)
 end
 
 
-#creates an array of hashes (latitude-longitude pairs :lat :long)
+#creates an array of hashes (latitude-longitude pairs :lat :lng)
 # takes only each n-th point
 def create_coord_array(result, n)
    # extract waypoint information
@@ -50,11 +50,11 @@ def create_coord_array(result, n)
         coords[j] = Hash.new
         
         #temporary change because of mixed up values in DB
-        coords[j][:lat] = ele.attributes["longitude"]
-        coords[j][:lng] = ele.attributes["latitude"]
+        #coords[j][:lat] = ele.attributes["longitude"]
+        #coords[j][:lng] = ele.attributes["latitude"]
         
-        #coords[j][:lat] = ele.attributes["latitude"]
-        #coords[j][:long] = ele.attributes["longitude"]
+        coords[j][:lat] = ele.attributes["latitude"]
+        coords[j][:lng] = ele.attributes["longitude"]
         j +=1
       end
       i += 1
@@ -90,9 +90,9 @@ def get_POIs(coords)
             result[j] += "<poi>
             <title>#{solution[:label]}</title>
             <link>#{link}</link>
-            <location latitutde=\"#{solution[:lat]}\" longitude=\"#{solution[:long]}\" />
+            <location latitude=\"#{solution[:lat]}\" longitude=\"#{solution[:long]}\" />
             </poi>"
-             #TODO: Fix spelling of latitude
+
             j += 1
             poi_IDs.push(solution[:label])         
           end

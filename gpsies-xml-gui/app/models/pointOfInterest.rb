@@ -19,9 +19,9 @@ class PointOfInterest
       uid = params[:uid]
       offset = params[:offset] || 0
       count = params[:count] || 5
-      all = params[:all] || false
-      twitter = params[:twitter] || true
-      sparql = params[:sparql] || false
+      all = params[:all] || false               #if true, will ignore pagination and return all POIs
+      twitter = params[:twitter] || true        #if true, will include tweets in the result
+      sparql = params[:sparql] || false         #if true, will try to fetch POIs from SPARQL if there a no POIs in the database
               
     begin
       dbconfig =  Gpsies::CONFIG[:database]
@@ -36,6 +36,7 @@ class PointOfInterest
               return count($track/pois/poi)"
     
       poi_count = query(query: q, twitter: false, count_only: true).to_i
+      puts poi_count
         
       if poi_count==0 && sparql
         sparclclient = Sparql::SparqlClient.new(dbconfig[:host], dbconfig[:port], dbconfig[:user], dbconfig[:pass])
@@ -45,16 +46,16 @@ class PointOfInterest
         sparclclient.close
       end
       
-      q = "#{dbconfig[:nsdec]} let $pois := (for $track in track where $track/uid = \"#{uid}\" return $track/pois/poi)
+      q = "#{dbconfig[:nsdec]}
+           let $pois := (for $track in track where $track/uid = \"#{uid}\" return $track/pois/poi)
               for $poi at $count in #{subsequence}
               return
                 <poi>
                     {$poi/title}
                     {$poi/link}
-                    <location><lat>{data($poi/location/@latitutde)}</lat><lng>{data($poi/location/@longitude)}</lng></location>
+                    <location><lat>{data($poi/location/@latitude)}</lat><lng>{data($poi/location/@longitude)}</lng></location>
                     {if ($count=1) then <count>{count($pois)}</count> else ()}
                 </poi>"
-                #TODO: Fix spelling of latitude
                 
         pois = query(query: q, twitter: twitter)
       
@@ -129,8 +130,8 @@ class PointOfInterest
         rescue Exception => e
           puts e
         ensure
-          query.close
-            session.close
+          query.close unless query.nil?
+          session.close unless session.nil?
         end
         result
     end	
