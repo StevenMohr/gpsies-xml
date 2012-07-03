@@ -36,6 +36,7 @@ which will show you this help page::
 
     optional arguments:
     -h, --help            show this help message and exit
+    --no-namespaces       Do not use own namespace for XML
 
     Arguments for BaseX db access
 
@@ -74,6 +75,6 @@ If your last crawling attempt failed after you downloaded 500 tracks and you don
 
 Another interesting way is to read GPSies responses from a file instead of retrieving them from network. It's basically the same, you only have to specify the file to read from (you have to specify a API but it will not be used so it can be any combination of character :-)).::
 
-  gpsies-import localhost admin admin MyAPIKey -d database3 -f data.xml
+  gpsies-import localhost admin admin MyAPIKey -d database4 -f data.xml
 
 
