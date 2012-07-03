@@ -16,7 +16,7 @@ from gpsies_importer.basex_api import BaseXClient
 URL_PATTERN = u"http://www.gpsies.org/api.do?key={api_key}&country=DE&limit=100&resultPage={page}&trackTypes=jogging&filetype=kml"
 
 class GPiesQuery(object):
-    def query(self, db_server_name, db_server_user, db_server_password, api_key, database, start_page, num_pages,port, **kwargs):
+    def query(self, db_server_name, db_server_user, db_server_password, api_key, database, use_namespaces, start_page, num_pages,port, **kwargs):
         session = BaseXClient.Session(db_server_name, port, db_server_user, db_server_password)
         session.execute("open " + database)
         try:
@@ -25,24 +25,24 @@ class GPiesQuery(object):
                 connection = urlopen(URL_PATTERN.format(api_key=api_key, page=page), timeout=10)
                 answer = connection.read()
                 root = etree.fromstring(answer)
-                track_analyzer.analyze_all_tracks(root)
+                track_analyzer.analyze_all_tracks(root, use_namespaces)
                 connection.close()
         finally:
             session.close()
 
 class FileQuery(object):
-    def query(self, db_server_name, db_server_user, db_server_password, database, file, port, **kwargs):
+    def query(self, db_server_name, db_server_user, db_server_password, database, file, port, use_namespaces, **kwargs):
         try:
             session = BaseXClient.Session(db_server_name, port, db_server_user, db_server_password)
             session.execute("open " + database)
             track_analyzer = TrackAnalyzer(session)
-            file = open(file)
+            file_object = open(file)
             
             # Sanitization of input file if more than one GPSies query is saved in file.
             tmp_file = os.tmpfile()
             first_xml = True
             first_gps = True
-            for line in file:
+            for line in file_object:
                 if line.startswith("<?xml"):
                     if first_xml:
                         tmp_file.write(line)
@@ -60,7 +60,7 @@ class FileQuery(object):
             tmp_file.flush()
             tmp_file.seek(os.SEEK_SET, 0)
             root = etree.parse(tmp_file)
-            track_analyzer.analyze_all_tracks(root)  
+            track_analyzer.analyze_all_tracks(root, use_namespaces)  
         except IOError as e:
             print e
 
@@ -70,22 +70,25 @@ class TrackAnalyzer(object):
         self._xsd_schema = etree.XMLSchema(xsd_file)
         self._session = session
                     
-    def analyze_all_tracks(self, root_element):
+    def analyze_all_tracks(self, root_element, namespaces):
         tracks = root_element.xpath("//track")
         print tracks
 
         for i, track in enumerate(tracks):
             print i
-            self._analyze_track(track)
+            self._analyze_track(track, namespaces)
       
-    def _analyze_track(self, track):
+    def _analyze_track(self, track, namespaces):
         ns_dict = {'gps' : 'https://github.com/StevenMohr/gpsies-xml/schema/database.xsd'}
         try:
             dLink = None
             downloadLinks = track.xpath("//downloadLink/text()")
             
-            trackXML = TrackExtract(track_element_xml = track ).analyze() 
-            id = trackXML.xpath("//gps:uid/text()", namespaces = ns_dict)[0]
+            trackXML = TrackExtract(track_element_xml = track ).analyze(namespaces)
+            if namespaces: 
+                id = trackXML.xpath("//gps:uid/text()", namespaces = ns_dict)[0]
+            else:
+                id = trackXML.xpath("//uid/text()")[0]
             for link in downloadLinks:
                 if id in link:
                     dLink = link
@@ -93,10 +96,10 @@ class TrackAnalyzer(object):
             connection = urlopen(dLink, timeout=10)
             answer = connection.read()
             connection.close()
-            waypoints = KMLExtract(answer).analyze()
+            waypoints = KMLExtract(answer).analyze(namespaces)
             trackXML.append(waypoints)
             # self._xsd_schema.assertValid(trackXML) Uncomment to get description of validation errors
-            if self._xsd_schema.validate(trackXML):
+            if (not namespaces) or (self._xsd_schema.validate(trackXML)): # Only validate if namespaces is true
                 result = etree.tostring(trackXML)
                 self._session.add('database2/tracks', result)
             else:
@@ -106,6 +109,9 @@ class TrackAnalyzer(object):
 
 def main():
     parser = argparse.ArgumentParser(description='Queries gpsies.org for tracks and saves them.')
+    
+    parser.add_argument("--no-namespaces", help="Do not use own namespace for XML",
+                        action="store_false", dest="use_namespaces", default=True)
     
     basex_group = parser.add_argument_group(description="Arguments for BaseX db access")
     basex_group.add_argument("db_server_name", help="Address of BaseX server")

@@ -32,7 +32,7 @@ class TrackExtractTestCase(unittest.TestCase):
             <totalDescentM>251</totalDescentM>
             </track> """
         track_extract = TrackExtract(track_string_xml = test_data)
-        result_xml = track_extract.analyze()
+        result_xml = track_extract.analyze(False)
         assert len(result_xml) > 0
         
     def test_convert_gpisies2isodate(self):
