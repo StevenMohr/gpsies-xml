@@ -21,18 +21,26 @@ class TrackExtract(object):
         self._raw_xml_string = track_string_xml
         self._raw_xml_element = track_element_xml
         
-    def analyze(self):
+    def analyze(self, namespaces):
         if self._raw_xml_string is not None:
             root = etree.fromstring(self._raw_xml_string)
         else:
             root = self._raw_xml_element
-        xslt_root = etree.parse(open(pkg_resources.resource_filename("gpsies_importer",'gpsies-internal.xsl')))    
+        
+        if namespaces:
+            xslt_root = etree.parse(open(pkg_resources.resource_filename("gpsies_importer",'gpsies-internal.xsl')))  
+        else:
+            xslt_root = etree.parse(open(pkg_resources.resource_filename("gpsies_importer",'gpsies-internal-no-ns.xsl')))  
         #xslt_root = etree.XML(self.xsl)
         transform = etree.XSLT(xslt_root)
         result_tree = transform(root)
         result = result_tree.getroot()
+        if namespaces:
+            compare_tag = '{https://github.com/StevenMohr/gpsies-xml/schema/database.xsd}createdDate'
+        else:
+            compare_tag = 'createdDate'
         for child in result:
-            if child.tag == '{https://github.com/StevenMohr/gpsies-xml/schema/database.xsd}createdDate':
+            if child.tag == compare_tag:
                 child.text = convert_gpsies2isodate(child.text)
         return result
     

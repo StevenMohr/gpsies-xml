@@ -19,8 +19,15 @@ class KMLExtract(object):
         '''
         self._raw_data = kml_data
         
-    def analyze(self):
-        root = Element("{https://github.com/StevenMohr/gpsies-xml/schema/database.xsd}waypoints")
+    def analyze(self, namespaces):
+        element = "waypoints"
+        sub_elements = "waypoint"
+        if namespaces:
+            namespace = "{https://github.com/StevenMohr/gpsies-xml/schema/database.xsd}"
+            element = namespace + element
+            sub_elements = namespace + sub_elements
+        
+        root = Element(element)
         data = etree.fromstring(self._raw_data)
         r = data.xpath('//kml:coordinates', namespaces={'kml':'http://www.opengis.net/kml/2.2'} )
         waypoints = list()
@@ -36,7 +43,7 @@ class KMLExtract(object):
                     old_geo = new_geo
         
         for point in waypoints:
-            waypoint = SubElement(root, "{https://github.com/StevenMohr/gpsies-xml/schema/database.xsd}waypoint")
+            waypoint = SubElement(root, sub_elements)
             waypoint.attrib['longitude'] = point[0]
             waypoint.attrib['latitude'] = point[1]
             

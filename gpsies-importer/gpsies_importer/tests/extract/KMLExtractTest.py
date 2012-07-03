@@ -15,13 +15,13 @@ class KMLExtractTestCase(unittest.TestCase):
 
     def test_analyze(self):
         analyze = KMLExtract(self.test_kml)
-        result = analyze.analyze()
+        result = analyze.analyze(True)
         self.assertGreater(len(result), 0, 'Result tree is empty!')
         self.assertEqual(etree.tostring(result), '<ns0:waypoints xmlns:ns0="https://github.com/StevenMohr/gpsies-xml/schema/database.xsd"><ns0:waypoint longitude="8.55" latitude="47.3666667"/></ns0:waypoints>', 'waypoint sub-tree incorrect')
         
     def test_analyze_long(self):
         analyze = KMLExtract(open(pkg_resources.resource_filename("gpsies_importer.tests.extract","54KmTeltowkanal.kml")).read())
-        result = analyze.analyze()
+        result = analyze.analyze(True)
         assert len(result) > 0  
 
 if __name__ == "__main__":
