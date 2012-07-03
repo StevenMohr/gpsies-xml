@@ -13,6 +13,7 @@ Contents:
 
    project-overview
    crawler
+   gui
    apidoc/modules
    
 

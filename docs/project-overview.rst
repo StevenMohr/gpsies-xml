@@ -7,3 +7,13 @@ them with Points of Interest (POI) from dbPedia and tweets about these POIs.
 
 .. image:: /_static/tech-overview.png
    :scale: 50%
+
+
+General setup
+===============
+
+Debian packages::
+
+  sudo apt-get install build-essentials
+
+
