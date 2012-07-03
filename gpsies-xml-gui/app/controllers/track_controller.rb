@@ -16,7 +16,7 @@ class TrackController < ApplicationController
 	  @tracks = Track.select(count: count, offset: offset, keywords: keywords)
       
       if !@tracks.empty?
-        @total_count = @tracks.first.total_count.to_f
+        @total_count = @tracks.first.total_count.to_f   #retrieve total count of results for pagination (saved in first track)
       else
         @total_count = 0
       end
@@ -48,14 +48,14 @@ class TrackController < ApplicationController
     @route_json = Track.map(uid).to_json
     @points_json = []    
     
-    @points_json << { title: "Startpoint", description: "Starting point", lng: @track.start_point[:lng], lat: @track.start_point[:lat] }
-    @points_json << { title: "Endpoint", description: "Endpoint", lng: @track.end_point[:lng], lat: @track.end_point[:lat] }
+    @points_json << { title: "Startpoint", description: "Starting point", lng: @track.start_point[:lng], lat: @track.start_point[:lat], picture: "https://dl.dropbox.com/u/23665031/mapicons/start-race-2.png" }
+    @points_json << { title: "Endpoint", description: "Endpoint", lng: @track.end_point[:lng], lat: @track.end_point[:lat], picture: "https://dl.dropbox.com/u/23665031/mapicons/finish.png" }
     
     #TODO: decide if all POIs or just paginated ones
     #all_pois = PointOfInterest.all(uid: uid, all: true, twitter: false) 
         
     @pois.each do |poi| 
-       @points_json << { description: poi.title, lng: poi.location[:lng], lat: poi.location[:lat] }
+       @points_json << { description: poi.title, lng: poi.location[:lng], lat: poi.location[:lat], picture: "https://dl.dropbox.com/u/23665031/mapicons/sight-2.png" }
     end
     
     @points_json = @points_json.to_json    

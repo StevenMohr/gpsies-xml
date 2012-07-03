@@ -1,3 +1,4 @@
+#obsolete, use config/basex.rb in gpsies-xml root folder
 module Gpsies
   CONFIG = 
   { 

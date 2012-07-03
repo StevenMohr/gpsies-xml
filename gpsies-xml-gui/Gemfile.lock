@@ -43,6 +43,7 @@ GEM
       multi_json (~> 1.0)
     faraday (0.8.1)
       multipart-post (~> 1.1)
+    gmaps4rails (1.5.2)
     hike (1.2.1)
     i18n (0.6.0)
     journey (1.0.4)
@@ -128,6 +129,7 @@ PLATFORMS
 DEPENDENCIES
   coffee-rails (~> 3.2.1)
   execjs
+  gmaps4rails
   jquery-rails
   rails (= 3.2.6)
   rails_autolink

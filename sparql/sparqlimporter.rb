@@ -1,8 +1,6 @@
-require './XDatabase.rb'
+require './SparqlClient.rb'
 require '../config/basex.rb'
 
-#id="mpmwjphuiirkqlnp" #irgendwas in Köln
-#id="gqbytnxxihdunukf" # irgendwas in Potsdam
 begin
   dbconfig =  Gpsies::CONFIG[:database]
   
@@ -12,7 +10,7 @@ begin
   queryString = "for $x in track return $x/uid/text()"
   query = session.query(queryString)
   
-  sparqlclient = XDatabase.new(dbconfig[:host], dbconfig[:port], dbconfig[:user], dbconfig[:pass])
+  sparqlclient = Sparql::SparqlClient.new(dbconfig[:host], dbconfig[:port], dbconfig[:user], dbconfig[:pass])
   sparqlclient.execute("open #{dbconfig[:database]}")
 
   uid = query.next
@@ -22,13 +20,11 @@ begin
     
     pois = query2.next
     
-    puts uid
+    puts "Importing Track #{uid}"
     
     if pois.nil?
       sparqlclient.fetch_POIs_from_SPARQL(uid)
-    end
-
-     
+    end 
      
      uid = query.next
   end
@@ -39,10 +35,10 @@ begin
   session.close
 rescue Exception => e
    puts e
-end 
-#command to delete nodes:
-#xquery for $x in track where $x/uid="caaivlogftcnpupm" return (delete node $x/pois)
-#xquery for $x in track where $x/uid="gqbytnxxihdunukf" return (delete node $x/pois)
-
-#xquery for $x in track where $x/uid="gqbytnxxihdunukf" return $x/pois
+ensure
+  puts "POI-Import abgeschlossen."
+  sparqlclient.close unless sparqlclient.nil?
+  query.close unless query.nil?
+  session.close unless session.nil?
+end
 

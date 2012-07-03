@@ -31,8 +31,7 @@ class Track
         waypoints = sparclclient.get_waypoints(uid)
         
         result = []
-        result << create_coord_array(waypoints, 1) 
-    
+        result << create_coord_array(waypoints, 1)    
       rescue Exception => e
         raise e
       ensure
@@ -85,31 +84,31 @@ class Track
 		
     dbconfig =  Gpsies::CONFIG[:database]
 	q = %{
-             #{dbconfig[:nsdec]}
+          #{dbconfig[:nsdec]}
           let $tracks := (
-          for $track in track
-          #{
-            if where_clauses.empty? then ''
-            else 'where ' + where_clauses.join(' and ') end
-          }
-          #{
-            if order_by_clauses.empty? then ''
-            else 'order by ' + order_by_clauses.join(', ') end
-          }
-          return $track
-          )
-          for $track at $count in subsequence($tracks, #{offset + 1}, #{count})
-          return
-            <track>
-              {$track/uid}
-              {$track/title}
-              {$track/description}
-              {$track/trackLength}
-              {$track/createdDate}
-              <startpoint><lat>{data($track/waypoints/waypoint[1]/@latitude)}</lat><lng>{data($track/waypoints/waypoint[1]/@longitude)}</lng></startpoint>
-              <endpoint><lat>{data($track/waypoints/waypoint[last()]/@latitude)}</lat><lng>{data($track/waypoints/waypoint[last()]/@longitude)}</lng></endpoint>
-              {if ($count=1) then <count>{count($tracks)}</count> else ()}
-			</track>
+            for $track in track
+            #{
+              if where_clauses.empty? then ''
+              else 'where ' + where_clauses.join(' and ') end
+            }
+            #{
+              if order_by_clauses.empty? then ''
+              else 'order by ' + order_by_clauses.join(', ') end
+            }
+            return $track
+            )
+            for $track at $count in subsequence($tracks, #{offset + 1}, #{count})
+            return
+              <track>
+                {$track/uid}
+                {$track/title}
+                {$track/description}
+                {$track/trackLength}
+                {$track/createdDate}
+                <startpoint><lat>{data($track/waypoints/waypoint[1]/@latitude)}</lat><lng>{data($track/waypoints/waypoint[1]/@longitude)}</lng></startpoint>
+                <endpoint><lat>{data($track/waypoints/waypoint[last()]/@latitude)}</lat><lng>{data($track/waypoints/waypoint[last()]/@longitude)}</lng></endpoint>
+                {if ($count=1) then <count>{count($tracks)}</count> else ()}
+              </track>
 		}
 	query(q)
   end
@@ -145,9 +144,9 @@ class Track
           xml = XmlSimple.xml_in(t)
                     
           if result.empty?
-                      #TODO: switch longitude/latitude
-            startp = { lng: xml['startpoint'].first['lat'].first, lat: xml['startpoint'].first['lng'].first }
-            endp = { lng: xml['endpoint'].first['lat'].first, lat: xml['endpoint'].first['lng'].first }
+            #if it's the first (or only) result also include total_count of results for pagination and coordinates to include on track page
+            startp = { lng: xml['startpoint'].first['lng'].first, lat: xml['startpoint'].first['lat'].first }
+            endp = { lng: xml['endpoint'].first['lng'].first, lat: xml['endpoint'].first['lat'].first }
                       
             result << Track.new(
                         description: xml['description'].first,
@@ -172,8 +171,8 @@ class Track
       rescue Exception => e
         puts e
       ensure
-        query.close
-        session.close
+        query.close unless query.nil?
+        session.close unless session.nil?
       end
 		result
     end
