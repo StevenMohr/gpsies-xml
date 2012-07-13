@@ -1,10 +1,8 @@
-XML GUI
+Graphical User Interface
 ===============
 
 Installation 
 ------------
-
-
 
 Prerequisites
 +++++++++++++
@@ -52,3 +50,41 @@ Using the GUI
 +++++++++++++
 
 We tried to focus on ease of use. Once you open up the main page you'll be able to search for tracks. Hit "Berlin" in there and see what comes out of the database. Once you get the listing of available tracks (if there are any), click on "Details" to see the track details, including a list of points of interests, a map and some tweets that were sent from that area.
+
+
+Code Aspects
+------------
+
+The graphical user interface is fully implemented in http://www.rubyonrails.org. In the following chapter we're focussing on some coding aspects, mainly regarding the XML parts of the implementation.
+
+However, the rails framework needs to be discussed in some words: Ruby on Rails (we're relying on the very recent version v3.2) is a modern web framework that enforces the Model-View-Controller (MVC) design pattern. This simplifies the seperation of content and logics.
+
+As the name suggests, Ruby on Rails 3.2 uses ruby 1.9 as backing programming language, but also domain specific languages like ERB (a mix between HTML and ruby) for rendering the Views and SCSS for easier stylesheets management.
+
+All the XML work is done inside the Ruby on Rails models code, as the MVC pattern suggests all database work to be done in the Model code.
+
+The whole GUI code (i.e. the RoR application itself) can be found in the gpsies-xml-gui/ path.
+
+Ruby on Rails reflects the seperation of concerns (models, views, controllers) in the respective subdirectories under app/ in the root directory of the RoR project.
+
+One interesting aspect of MVC is, that all segments of the functionality are logically seperated, in fact, we only use one logical entitiy that is the Model of a "Track". Therefor we only need a TrackController which can be found under app/controllers/track_controller.rb. However, each track has some subconcepts, such as Points of Interests. These conceptual ideas are represented in the app/models/ directory.
+
+Query Forms and presentation of found tracks
+++++++++++++++++++++++++++++++++++++++++++++
+
+In fact, the rendering of HTML forms (for querying) and HTML tables (for listing found tracks) is one of the mere unfascinating parts of the application. The TrackController's index and show methods invoke the respective views under app/views/track/[index|show].html.erb. These files simply render HTML5 with passed tracks-data. See all \*.html.erb files below app/views/ to gain deeper understanding of how the rendering engine in our application works.
+
+Query Processing: BaseX communication
++++++++++++++++++++++++++++++++++++++
+
+All basex database communication (i.e. querying for tracks) is done in the app/models/track.rb as this is the concern of the Track model code.
+
+If a user queries for a track, he or she will put a keyword into the query form on the application's main website http://localhost:3000/. This keyword is passed to the controller which in fact passes it to the model code. The model code communicates with the database to find matching tracks. Those are given back to the controller who passes it to the renderer ("view").
+
+Generally, we need two implementations of a query functionality. First, we need to be able to query for a keyword (just for users being able to  "search a track"), second, we need to be able to query for the ID, that uniquely identifies each track. This is necessary to be able to select a single track (i.e. to open up the details page).
+
+PoI-Enrichment via dbpedia and SparQL
++++++++++++++++++++++++++++++++++++++
+
+PoI-Enrichment via Twitter
+++++++++++++++++++++++++++
