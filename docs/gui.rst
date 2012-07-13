@@ -87,8 +87,14 @@ If a user queries for a track, he or she will put a keyword into the query form 
 
 Generally, we need two implementations of a query functionality. First, we need to be able to query for a keyword (just for users being able to  "search a track"), second, we need to be able to query for the ID, that uniquely identifies each track. This is necessary to be able to select a single track (i.e. to open up the details page).
 
+TODO Hendrik Issue #50
+
 PoI-Enrichment via dbpedia and SparQL
 +++++++++++++++++++++++++++++++++++++
 
+TODO Rainer? Issue #49
+
 PoI-Enrichment via Twitter
 ++++++++++++++++++++++++++
+
+TODO Tobias? Issue #50
