@@ -14,6 +14,7 @@ Contents:
    project-overview
    crawler
    gui
+   pearls
    apidoc/modules
    
 
