@@ -5,7 +5,7 @@ Our GPSies Importer is a Python program that queries GPSies for tracks, download
 
 The importer has its own installer (a standard Python setup.py script) which takes care of the needed dependencies and install the gpsies-import script.
 
-Install the importer
+Installing the importer
 ---------------------
 Installation is quite easy, just type::
 

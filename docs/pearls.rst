@@ -3,6 +3,8 @@ Spotlight on some interesting parts (Code pearls)
 
 GPSies schema
 -----------------
+The following code shows the "schema" of the responses of GPSies.org. As you can see, most of the elements are optional. They are available if the user made some entries to the specific topics.
+
 .. literalinclude:: ../schema/gpsies.xsd
    :language: xml
    :linenos:
@@ -10,6 +12,8 @@ GPSies schema
 
 Database schema
 ------------------
+The following schema shows the structure of the track documents as they are stored in our database. We adopted the GPSies.org schema for our needs and added some more types to it like a "real" date time format. As we also store the KML waypoints in this documents we created a waypoint type to store waypoints. We also added a type for POIs which are also stored in this document after they were loaded.
+
 .. literalinclude:: ../gpsies-importer/gpsies_importer/database.xsd
    :language: xml
    :linenos:
@@ -17,15 +21,20 @@ Database schema
 
 Database XSLT
 ----------------
+We use XSLT to transform the GPSies.org document to our own internal format. Because of some problems with our SPARQL client there are two versions of the XSLT stylesheets: One with namespaces:
+
 .. literalinclude:: ../gpsies-importer/gpsies_importer/gpsies-internal.xsl
    :language: xslt
    :linenos:
 
+and one without namespaces:
 
 .. literalinclude:: ../gpsies-importer/gpsies_importer/gpsies-internal-no-ns.xsl
    :language: xslt
    :linenos: 
 
+The only difference is that the second does not declare a gps namespace and does not set a standard namespace for the document.
+The crawler has an option which allows to create both of them but the portal only works with the no namespaces version.
 
 .. _sparql:
 
