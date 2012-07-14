@@ -92,7 +92,10 @@ TODO Hendrik Issue #50
 PoI-Enrichment via dbpedia and SparQL
 +++++++++++++++++++++++++++++++++++++
 
-TODO Rainer? Issue #49
+Each track detail site is enriched by Point of Interests retrieved from DBPedia. As direct querying to DBPedia can take quite some time (especially for long tracks), these POIs are stored 
+in the BaseX-database. They are also paginated (in groups of 5) to further increase performance.
+
+Only if there are no Point of Interests found in our database, the SPARQL-Endpoint at DBPedia is queried. See :ref:`sparql` for detailed information about this process. 
 
 PoI-Enrichment via Twitter
 ++++++++++++++++++++++++++
