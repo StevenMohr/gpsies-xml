@@ -1,3 +1,5 @@
+.. _codepearls:
+
 Spotlight on some interesting parts (Code pearls)
 ===================================================
 
@@ -35,6 +37,8 @@ and one without namespaces:
 
 The only difference is that the second does not declare a gps namespace and does not set a standard namespace for the document.
 The crawler has an option which allows to create both of them but the portal only works with the no namespaces version.
+
+.. _codepearls_basex_query:
 
 Querying the database
 --------------------------
