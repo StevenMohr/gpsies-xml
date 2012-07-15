@@ -31,3 +31,6 @@ tags
 
 *~
 *.swp
+
+# sphinx documentation builds
+docs/_build
