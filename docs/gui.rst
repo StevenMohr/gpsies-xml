@@ -96,4 +96,10 @@ Only if there are no Point of Interests found in our database, the SPARQL-Endpoi
 PoI-Enrichment via Twitter
 ++++++++++++++++++++++++++
 
-TODO Tobias? Issue #50
+Each Point of Interest is enriched by Tweets found on Twitter using the title of the Point of Interest as keyword. The search is easily done using the Twitter-gem for Rails.
+
+Code::
+	
+	twitterresult = Twitter.search("#{xml['title'].first}", :lang => "de", :rpp => 1).first
+
+The pagination of the Points of Interest also helps increasing the performance of the Twitter search if there are many Points of Interests.
