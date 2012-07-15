@@ -36,6 +36,23 @@ and one without namespaces:
 The only difference is that the second does not declare a gps namespace and does not set a standard namespace for the document.
 The crawler has an option which allows to create both of them but the portal only works with the no namespaces version.
 
+Querying the database
+--------------------------
+
+The model code for the Track model resides in gpsies-xml-gui/app/model/track.rb. However, the code is merely complex, yet we want to present the XQuery line that primarily selects a defined track which is one central aspect of the functionality.
+
+.. literalinclude:: codepearls/ruby/track_select.rb
+    :language: ruby
+    :linenos:
+
+
+What you can see here is the XQuery query line generation that is later sent to the basex database. XQuery is a language to select nodes in a XML structure, that match certain criteria.
+
+This query selects all nodes that match certain criteria given in the where_clauses structure.
+
+A main concept is recomposition of the database XML structure. One track in the database might hold very much track nodes. Querying, loading and transmitting these might take a lot of time. Therefor (starting in line 17) found tracks are being restructured. The original XML structure is loaded and only needed information parts are transfered into the result set.
+
+
 .. _sparql:
 
 SPARQL query

@@ -55,7 +55,7 @@ After the database was created you can leave the BaseX client with::
 
 Next steps
 -------------
-Now you can proceed with the steps to install the crawler and the portal in the corresponding chapters.
+Now you can proceed with the steps to install the crawler and the portal (GUI, graphical user interface) in the corresponding chapters.
 
 How to generate this document?
 -----------------------------------

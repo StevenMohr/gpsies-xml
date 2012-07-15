@@ -1,8 +1,8 @@
 Graphical User Interface
-===============
+========================
 
-Installation 
-------------
+Installing the GUI 
+------------------
 
 Prerequisites
 +++++++++++++
@@ -38,8 +38,8 @@ Code::
 
     sudo apt-get install libv8-dev ruby-json
 
-Running the GUI
-+++++++++++++++
+Using the GUI
++++++++++++++
 
 By now, you should have ruby, the bundler and all our dependencies, including Rails itself set up. If that's really the case, you can start up the rails server by typing 
 
@@ -48,10 +48,6 @@ Code::
     rails server
 
 If all goes well, the server will fire up by printing out some status lines. Now, open up your browser and hit the URL http://localhost:3000/ - and start praying. If something goes wrong, there's probably something wrong with the database connection. Make sure you have the ../config/basex.rb file properly set up to be able to connect to your database.
-
-
-Using the GUI
-+++++++++++++
 
 We tried to focus on ease of use. Once you open up the main page you'll be able to search for tracks. Hit "Berlin" in there and see what comes out of the database. Once you get the listing of available tracks (if there are any), click on "Details" to see the track details, including a list of points of interests, a map and some tweets that were sent from that area.
 
