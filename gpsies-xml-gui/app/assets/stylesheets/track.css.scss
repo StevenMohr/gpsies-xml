@@ -16,3 +16,24 @@
 		background-color: #EDD1D4;
 	}
 }
+
+#poi
+{
+  width: 49%;
+  table
+  {
+    width: 100%;
+  }
+}
+
+#poihead
+{
+  height: 75px; //should be the same as margin-top of map
+}
+
+
+div.geo, span.latitude, span.longitude {
+  margin-right:10px;
+  display: inline;
+  clear:none;
+}

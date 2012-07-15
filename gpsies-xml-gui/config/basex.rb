@@ -1,3 +1,4 @@
+#obsolete, use config/basex.rb in gpsies-xml root folder
 module Gpsies
   CONFIG = 
   { 
@@ -6,7 +7,8 @@ module Gpsies
                port: 1984, 
                user: "admin",
                pass: "admin",
-               database: "database2"
+               database: "database2",
+               nsdec: ""
               }
   }
 end

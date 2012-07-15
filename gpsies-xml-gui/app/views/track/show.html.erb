@@ -1,43 +1,66 @@
-<h1>Track: <%= @track.title %></h1>
-
-<div id="show">
+<div id="show" class="nexttoheader">
 	<div>
-	ID: <%= @track.uid %>
-	</div>
-	<div>
-	Title: <%= @track.title %>
+      <h1>Track: <%= @track.title %></h1>
 	</div>
 	<div>
 	<% if !@track.description.empty? %>
-		Description: <p><%= @track.description %></p>
+      <b>Description</b> <p style="margin-left: 15px;"><%= @track.description %></p>
 	<% else %>
 		No Description
 	<% end %>
 	</div>
+    <div>
+    <b>Start:</b> <div class="geo">Longitude: <span class="longitude"><%= @track.start_point[:lng]%></span> Latitude: <span class='latitiude'><%= @track.start_point[:lat]%></span></div>
+    </div>
+    <div>
+      <b>End:</b> <div class="geo">Longitude: <span class="longitude"><%= @track.end_point[:lng]%></span> Latitude: <span class='latitiude'><%= @track.end_point[:lat]%></span></div>
+    </div>
 	<div>
-	Track length: <%= (@track.track_length/1000).round(3) %>km
+      <b>Track length</b> <%= (@track.track_length / 1000).round(3) %>km
 	</div>
 	<div>
-	Created at: <%= @track.created_date %>
+      <b>Created at</b> <%= @track.created_date %>
 	</div>
 </div>
 <div>
-	<table>
-	<% if @pointsOfInterest.empty? %>
-		<p>Keine Pois</p>
-	<% else %>
-		Pois:
-		<% @pointsOfInterest.each do |pointOfInterest| %>
-			<tr class='<%= cycle 'list_line_odd', 'list_line_even'  %>'>
-				<td><%= pointOfInterest.title %></td>
-				<td><%= link_to "Info", "#{pointOfInterest.link}" %></td>
-				
-			</tr>
-			<tr><td><%= auto_link(pointOfInterest.tweet).html_safe %></td></tr>
-		<% end %>
-	<% end %>
-	</table>
+  <%= gmaps({ "markers" => { "data" => @points_json }, "polylines" => { "data" => @route_json } } ) %>
+
+  <div id="poi">
+    <div id="poihead">
+      <h2>Interessante Punkte auf dieser Strecke (<%= @total_count.to_i %>):</h2>
+      <%= render "paginator" %>
+    </div>
+      <table>
+      <% if @pois.empty? %>
+          <p>Keine Points of Interests. :(</p>
+      <% else %>
+          <% @pois.each do |poi| %>
+              <% c = cycle 'list_line_odd', 'list_line_even' %>
+              <tr class='<%= c  %>'>
+                  <td><%= poi.title %></td>
+                  <td><%= link_to image_tag("wikipedia.png", class:"wikiicon"), "#{poi.link}", :target => '_blank' %></td>
+                  
+              </tr>
+              <tr class="<%= c %>">
+                <td>
+                  <% if poi.tweet %>
+                    <%= image_tag("twitter.png", class:"tweeticon") %>
+                    .o(
+                    <%= auto_link(poi.tweet, :html => { :target => '_blank' }) %>)
+                  <% else %>
+                    <%= image_tag("twitter_notweets.png", class:"tweeticon notweet") %>
+                    <span>Keine Tweets zu diesem Punkt</span>
+                  <% end %>
+                </td>
+                <td></td>
+              </tr>
+          <% end %>
+      <% end %>
+      </table>
+      <%= render "paginator" %>
+  </div>
 </div>
 
+<%= link_to "Back to track list", "/track" %>
 
-<%= content_tag :a, "List all tracks", :href => ".." %>
+<%= yield :scripts %>

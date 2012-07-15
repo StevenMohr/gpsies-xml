@@ -3,6 +3,7 @@ require 'sparql/client'
 require 'basex/BaseXClient.rb'
 require 'sparql/queryhelper.rb'
 require 'sparql/CustomExceptions.rb'
+require '../config/basex.rb'
 
 module Sparql
   class SparqlClient
@@ -35,8 +36,8 @@ module Sparql
     def fetch_POIs_from_SPARQL(id)
       begin
         points = get_waypoints(id)
-        #take only each 10th point:
-        coords = create_coord_array(points,10)      
+        #take only each 20th point:
+        coords = create_coord_array(points,20) 
         result = get_POIs(coords)
               
         if !result.nil?
@@ -48,7 +49,7 @@ module Sparql
           end
         end
         rescue Exception => e
-        raise e
+          puts e
         end
     end 
 
@@ -60,36 +61,33 @@ module Sparql
         raise DatabaseConnectionError
       end 
     end
-    
-        #raises QueryError
-      def query(queryString)
-        begin    
-      query = @session.query(queryString)
-      result = query.next      
-      query.close()
-        rescue Exception => e
-      raise QueryError
-        end
-        return result
-      end
-      
-      #raises QueryError
-      def execute(queryString)
-        begin
-      query = @session.execute(queryString)
-      result = "Execute successful"
 
-        rescue Exception => e
-      raise QueryError
-        end    
-        return result
+    def query(queryString)
+      begin    
+        query = @session.query(queryString)
+        result = query.next      
+        query.close()
+      rescue Exception => e
+        raise QueryError
+      end
+        result
+    end
+
+    def execute(queryString)
+      begin
+        query = @session.execute(queryString)
+        result = "Execute successful"
+
+      rescue Exception => e
+          raise QueryError
+      end    
+        result
       end
     
-    private
-    
-      def get_waypoints(id)
-      begin 
-        input = "for $x in track    
+    def get_waypoints(id)
+      begin
+        dbconfig =  Gpsies::CONFIG[:database]
+        input = "#{dbconfig[:nsdec]} for $x in track    
         where $x/uid = \"#{id}\"
         return $x/waypoints"
 
@@ -97,30 +95,37 @@ module Sparql
       rescue Exception => e
         raise e
       end
-      return result
+      result
     end
+    
+    private
     
     def insert_pois(id, pois)
       begin
-        queryString = "xquery for $x in track where $x/uid = \"#{id}\"
-          return (            
-            insert node <pois></pois>
-            as last into $x
-          )"
+        dbconfig =  Gpsies::CONFIG[:database]
         
-        if !self.execute(queryString)
-          raise "Error while execetung query \"#{queryString}\""
-        end
+        puts "Anzahl POIs: #{pois.length}"
       
         pois.each do |point|
-          queryString = "xquery for $x in track
-          where $x/uid = \"#{id}\"
-          return (            
-            insert node #{point}
-            as last into $x/pois
-          )"
+          if point == pois.first            
+            queryString = "xquery #{dbconfig[:nsdec]}
+            for $x in track
+            where $x/uid = \"#{id}\"
+            return (            
+              insert nodes <pois>#{point}</pois>
+              as last into $x
+            )"
+          else
+            queryString = "xquery #{dbconfig[:nsdec]}
+            for $x in track
+            where $x/uid = \"#{id}\"
+            return (            
+              insert nodes #{point}
+              as last into $x/pois
+            )"
+            end
           if !self.execute(queryString)
-            raise "Error while execetung query \"#{queryString}\""
+            raise "Error while executing query \"#{queryString}\""
           end
         end
         result = "Insert successful"
@@ -128,7 +133,7 @@ module Sparql
       rescue Exception => e
         raise e
       end
-      return result
+        result
     end
   end
 end

@@ -1,0 +1,8 @@
+<% number_of_pages = (@total_count/@count).ceil %>
+<% if @page > 1 %>
+	<%= link_to "< Previous", params.merge(p: @page - 1) %> |
+<% end %>
+Page <%= @page %> <%= " of #{number_of_pages}" unless number_of_pages==0 %>
+<% if @page < number_of_pages %>
+| <%= link_to "Next >", params.merge(p: @page + 1) %>
+<% end %>

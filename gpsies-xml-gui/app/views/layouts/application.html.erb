@@ -1,14 +1,20 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>GpsiesXmlGui</title>
+  <title>Semantic Enrichment Overlay for gpsies.org</title>
   <%= stylesheet_link_tag    "application", :media => "all" %>
   <%= javascript_include_tag "application" %>
+  <%= stylesheet_link_tag 'gmaps4rails' %>
   <%= csrf_meta_tags %>
 </head>
 <body class='<%= controller.controller_name  %>'>
+  <%=
+    content_tag(:a, image_tag("logo.png", title: "semantic track enrichment", alt: "semantic track enrichment", id:"headerimg") , href: "/", id:"headerimglink", rel:"home, directory")
+  %>
 
 <%= yield %>
+<div id="requirediconbacklink"><a href="http://www.ohmyicons.com" target="_blank">Big up for the icon!</a></div>
+<div id="requirediconbacklink"><a href="http://mapicons.nicolasmollet.com/" target="_blank">Another big up for the map icons!</a></div>
 
 </body>
 </html>

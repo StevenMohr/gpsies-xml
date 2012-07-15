@@ -28,3 +28,9 @@ pip-log.txt
 
 # exuberant/ctags tag file (code completion/navigation for vim et al)
 tags
+
+*~
+*.swp
+
+# sphinx documentation builds
+docs/_build
